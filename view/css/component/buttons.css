@@ -1,0 +1,30 @@
+:root {
+  --color-button-custom: #8fc92b;
+  --color-button-hover-custom: #a2ff00;
+  --color-button-click-custom: #507e00;
+}
+
+.boton-custom {
+  background-color: var(--color-button-custom);
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 13px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 15px;
+  border-style: none;
+  transition: 0.3s;
+}
+
+.boton-custom:hover {
+  background-color: var(--color-button-hover-custom);
+  cursor: pointer;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.boton-custom:active {
+  background-color: var(--color-button-click-custom);
+  transition: 0.2s;
+}
