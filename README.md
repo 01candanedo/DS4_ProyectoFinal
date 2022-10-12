@@ -45,11 +45,11 @@ https://1drv.ms/w/s!AvFU3UIau3iex1melo50RJPnWIQl?e=pMBwpF
 <h2>Funcionalidades a programar:</h2>
 <ol>
     <li>Página principal = <b>Ñurinda</b></li>
-    <li>Inicio de sesión o “login” = <b>Jordan</b></li>
+    <li>Inicio de sesión o “login” = <b>Ruben</b></li>
     <li>Registro de usuario = <b>Arosemena</b> </li>
     <li>Perfil y administración del mismo. = <b>Candanedo</b></li>
     <li>Página de acerca del proyecto   = <b>Chacon</b></li>
-    <li>Página de contacto = <b>Ruben</b></li>
+    <li>Página de contacto = <b>Jordan</b></li>
     <li>Página de descripción de lo seleccionado. = <b></b></li>
     <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b></b></li>
     <li>Página de revisión del contenido cargado. = <b></b></li>
