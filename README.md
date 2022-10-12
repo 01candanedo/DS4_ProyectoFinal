@@ -37,7 +37,7 @@ https://1drv.ms/w/s!AvFU3UIau3iex1melo50RJPnWIQl?e=pMBwpF
       <li>Introducción = <b>Candanedo, Ruben</b></li>
       <li>Contenido = <b>Todos</b>(Se debe anexar las imágenes o páginas del prototipo inicial con su respectivas explicaciones)</li>
       <li>Recomendaciones = <b>Jordan, Chacon</b></li>
-      <li>Conclusiones = <b>Rosa</b></li>
+      <li>Conclusiones = <b>Guadamuz</b></li>
       <li>Bibliografía = <b>Cada uno</b></li>
 </ol>
 
@@ -50,11 +50,11 @@ https://1drv.ms/w/s!AvFU3UIau3iex1melo50RJPnWIQl?e=pMBwpF
     <li>Perfil y administración del mismo. = <b>Candanedo</b></li>
     <li>Página de acerca del proyecto   = <b>Chacon</b></li>
     <li>Página de contacto = <b>Jordan</b></li>
-    <li>Página de descripción de lo seleccionado. = <b></b></li>
-    <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b></b></li>
-    <li>Página de revisión del contenido cargado. = <b></b></li>
-    <li>Página para búsqueda o resultado de búsqueda.    = <b>Rosa</b></li>
-    <li>Página de reportes en general.</li>
+    <li>Página de descripción de lo seleccionado. = <b>Todos</b></li>
+    <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b>Irving, Ruben, Candanedo</b></li>
+    <li>Página de revisión del contenido cargado. = <b>Por definir</b></li>
+    <li>Página para búsqueda o resultado de búsqueda.    = <b>Guadamuz</b></li>
+    <li>Página de reportes en general.<b>Jordan</b></li>
 </ol>
 
 <hr>
