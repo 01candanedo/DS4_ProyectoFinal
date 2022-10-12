@@ -51,10 +51,10 @@ https://1drv.ms/w/s!AvFU3UIau3iex1melo50RJPnWIQl?e=pMBwpF
     <li>Página de acerca del proyecto   = <b>Chacon</b></li>
     <li>Página de contacto = <b>Jordan</b></li>
     <li>Página de descripción de lo seleccionado. = <b>Todos</b></li>
-    <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b>Irving, Ruben, Candanedo</b></li>
+    <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b>Irving, Ruben, Candanedo, Ñurinda</b></li>
     <li>Página de revisión del contenido cargado. = <b>Por definir</b></li>
     <li>Página para búsqueda o resultado de búsqueda.    = <b>Guadamuz</b></li>
-    <li>Página de reportes en general.<b>Jordan</b></li>
+    <li>Página de reportes en general. = <b>Jordan</b></li>
 </ol>
 
 <hr>
