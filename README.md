@@ -50,14 +50,11 @@ https://1drv.ms/w/s!AvFU3UIau3iex1melo50RJPnWIQl?e=pMBwpF
     <li>Perfil y administración del mismo. = <b>Candanedo</b></li>
     <li>Página de acerca del proyecto   = <b>Chacon</b></li>
     <li>Página de contacto = <b>Ruben</b></li>
-    <li>--Página de descripción de lo seleccionado. = <b></b></li>
-    <li>--Página para cargar (Administración CRUD) contenido sobre el sitio = <b></b></li>
-    <li>--Página de revisión del contenido cargado. = <b></b></li>
+    <li>Página de descripción de lo seleccionado. = <b></b></li>
+    <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b></b></li>
+    <li>Página de revisión del contenido cargado. = <b></b></li>
     <li>Página para búsqueda o resultado de búsqueda.    = <b>Rosa</b></li>
-    <li>--Páginas de aprendizaje del tema</li>
-    <li>--Páginas de jugabilidad del sistema.</li>
-    <li>--Página de Ranking</li>
-    <li>--Página de reportes en general.</li>
+    <li>Página de reportes en general.</li>
 </ol>
 
 <hr>
@@ -65,7 +62,6 @@ https://1drv.ms/w/s!AvFU3UIau3iex1melo50RJPnWIQl?e=pMBwpF
 # Uso
 
 <ul type="square">
-    <li>Importar las clases de la carpeta de componentes si se usaran botones, fuentes etc.</li>
     <li>Usar flexbox responsive.</li>
 </ul>
 
