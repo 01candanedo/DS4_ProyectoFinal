@@ -20,8 +20,8 @@
 
 <p align="left">
 
-Link del Equipo en Figma(Para prototipar):<br>
-https://www.figma.com/team_invite/redeem/P1i14PcobW6azvGq6T4c8a
+Link del Figma(Para prototipar):<br>
+https://www.figma.com/file/HaIEaNw9p9C3brfYYJkW5P/DS4_Proyecto_Final_Estandares?node-id=64%3A2365
 
 Link del documento en word: <br>
 https://1drv.ms/w/s!AvFU3UIau3iex1melo50RJPnWIQl?e=pMBwpF
