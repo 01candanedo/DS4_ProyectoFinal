@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'Paris 2024';
+    src: url('../font/Paris2024.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Paris 2024';
+    src: url('../font/Paris2024-Italic\ Regular.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Paris 2024';
+    src: url('../font/Paris2024-Bold.ttf') format('truetype');
+    font-style: bold;
+    font-weight: 700;
+}
+
+/*
+@font-face {
+    font-family: "Paris 2024";
+    font-display: auto; 
+    font-weight: 700; 
+    src: url(https://olympics.onlocationexp.com/paris2024/wp-content/uploads/2022/06/Paris2024-Bold-1.woff) 
+    format('woff'), 
+    url(https://olympics.onlocationexp.com/paris2024/wp-content/uploads/2022/06/Paris2024-Bold-1.ttf) 
+    format('TrueType'), 
+    url(https://olympics.onlocationexp.com/paris2024/wp-content/uploads/2022/06/Paris2024-Bold.otf) 
+    format('OpenType');
+}
+*/
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    outline: none;
+    font-size:100%;
+    background: transparent;
+    background-color: none;
+    box-sizing: border-box;
+    list-style: none;
+    vertical-align: baseline;
+    text-decoration: none;
+    font-family: 'Montserrat', 'Paris 2024', sans-serif;
+}
+
+
+:root {
+    /* ----- Text ----- */
+    --text-light: #fff;
+    --text-dark: #1b1b1b;
+    --super-title: 4em;
+    --super-subtitle: 2em;
+    --h1-font: 24px;
+    --h2-font: 18px;
+    --p-font: 16px;
+    
+
+    /* ----- Colors ----- */
+    /* -- Brand -- */
+    --main-color: #d7c378;
+    --main-color-d: #a99962;
+    --blue-ring: #0185C6;
+    --black-ring: #000101;
+    --red-ring: #E00023;
+    --yellow-ring: #F3C300;
+    --green-ring: #009F3D;
+    /* -- background-color -- */
+    --bg-light: #ffffff;
+    --bg-dark: #1b1b1b;
+    /* -- info -- */
+    --blue50: #dce0ff;
+    --blue100: #268ddc;
+    --blue200: #2a3ffa;
+    --blue300: #0c1fd0;
+    /* -- Warning -- */
+    --orange50: #FFF7DA;
+    --orange100: #ffc400;
+    --orange200: #ffa927;
+    /* -- Success -- */
+    --green50: #d8f7e0;
+    --green100: #129c49;
+    --green200: #068238;
+    /* -- Danger -- */
+    --red50: #ffebea;
+    --red100: #dd1f13;
+    --red200: #b61208;
+    /* -- Neutral -- */
+    --grey0: #ffffff;
+    --grey50: #f7f8f9;
+    --grey100: #e2e4e7;
+    --grey200: #acafb8;
+    --grey300: #6f757f;
+    --grey400: #36373b;
+    --grey500: #202227;
+    --Alpha500: rgba(31, 33, 38, 0.7);
+
+
+    /* ----- Spacing ----- */
+    --space50: 4px;
+    --space100: 8px;
+    --space200: 12px;
+    --space300: 16px;
+    --space400: 20px;
+    --space500: 24px;
+    --space600: 32px;
+    --space700: 40px;
+    --space800: 48px;
+    --space900: 60px;
+
+
+    /* ----- Radius ----- */
+    --radius50: 4px;
+    --radius100: 8px;
+    --radius200: 12px;
+    --radius300: 16px;
+    --radius400: 50px;
+    --radius500: 100px;
+
+
+    /* ----- Shadows ----- */
+    --shadow50: 0px 0px 1px rgba(27, 29, 34, 0.02), 0px 1px 1px rgba(27, 29, 34, 0.05);;
+    --shadow100: 0px 0px 2px rgba(27, 29, 34, 0.05), 0px 1px 2px rgba(27, 29, 34, 0.02), 0px 2px 4px rgba(27, 29, 34, 0.04), 0px 3px 4px rgba(27, 29, 34, 0.02);;
+    --shadow200: 0px 0px 2px rgba(27, 29, 34, 0.05), 0px 1px 2px rgba(27, 29, 34, 0.02), 0px 2px 4px rgba(27, 29, 34, 0.04), 0px 6px 8px rgba(27, 29, 34, 0.02), 0px 16px 16px rgba(27, 29, 34, 0.02);;
+    --shadow300: 0px 1px 2px rgba(27, 29, 34, 0.05), 0px 2px 2px rgba(27, 29, 34, 0.02), 0px 4px 4px rgba(27, 29, 34, 0.04), 0px 8px 8px rgba(27, 29, 34, 0.02), 0px 12px 15px rgba(27, 29, 34, 0.02);;
+    --shadow400: 0px 2px 4px rgba(27, 29, 34, 0.05), 0px 4px 4px rgba(27, 29, 34, 0.02), 0px 8px 8px rgba(27, 29, 34, 0.04), 0px 16px 16px rgba(27, 29, 34, 0.02), 0px 24px 30px rgba(27, 29, 34, 0.02);
+    --shadow500: 0px 4px 8px rgba(27, 29, 34, 0.05), 0px 8px 8px rgba(27, 29, 34, 0.02), 0px 16px 16px rgba(27, 29, 34, 0.04), 0px 32px 32px rgba(27, 29, 34, 0.02), 0px 48px 60px rgba(27, 29, 34, 0.02);;
+}
