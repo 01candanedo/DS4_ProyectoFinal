@@ -1,0 +1,17 @@
+.main-div{
+    display: flex;
+    width: 100%;
+    background-color: #6f757f;
+}
+
+.left-div{
+    display: flex;
+    width: 50%;
+    background-color: #2a3ffa;
+}
+
+.right-div{
+    display: flex;
+    width: 50%;
+    background-color: #009F3D;
+}
