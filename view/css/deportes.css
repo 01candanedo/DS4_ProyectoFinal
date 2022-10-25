@@ -333,6 +333,12 @@ section{
     margin-bottom: 20px;
     justify-content: center;
   }
+
+  .game-card:hover{
+    transform: scale(1.01) translateY(-5px);
+	  border-top: 5px solid var(--main-color);
+    cursor: pointer;
+  }
   
   .load-more-product-container .game-image {
     position: relative;
@@ -357,4 +363,32 @@ section{
 
 .title h2{
     color:var(--text-light);
+}
+
+.btn{
+  margin: 0 2px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-color: white;
+    color: var(--text-color-w);
+    background: var(--grey100);
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: var(--p-font);
+    transition: 0.5s;
+}
+
+.card-btn {
+  background: var(--bg-light);
+  position: absolute;
+  padding: 10px;
+  bottom: 10px;
+  left: 14px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+  text-transform: capitalize;
 }

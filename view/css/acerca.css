@@ -1,0 +1,54 @@
+.home .content h1{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 900;
+    font-size: var(--super-title);
+    margin-bottom: 30px;
+    font-family: "Paris 2024";
+    font-style: bold;
+    text-align: center;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+}
+
+.card1, .card2, .card3{
+    background-color: #d9d9d9;
+    width: 30%;
+    border-radius: 10px;
+    transition: .4s;
+}
+
+.card1:hover, .card2:hover, .card3:hover{
+    transition: .4s;
+    background-color: #f8e2a8;
+    width: 30%;
+    border-radius: 10px;
+}
+
+h1{
+    text-align: center;
+    margin: 25px;
+}
+
+section div img{
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    align-self: center;
+}
+
+section div p{
+    margin: 25px;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
