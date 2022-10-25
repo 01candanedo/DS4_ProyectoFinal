@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 @import url(standard.css);
 
 *{
@@ -8,9 +6,7 @@
   outline: none;
   box-sizing: border-box;
 }
-
 /*registro */
->>>>>>> 081cb4fd2fc68e22f9de562d13af7eabe87da319
 
 body {
     height: 100vh;
@@ -24,13 +20,10 @@ body {
     color: var(--text-light);
 }
 
-<<<<<<< HEAD
-=======
 .seccion-formulario{
   padding-top: 45px;
 }
 
->>>>>>> 081cb4fd2fc68e22f9de562d13af7eabe87da319
 .container-form {
   width: 90%;
   height: 90vh;

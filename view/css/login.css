@@ -40,6 +40,9 @@ body {
     justify-content: space-around;
     margin: auto;
 }
+.registrate{
+    color: aqua;
+}
 
 .font-awesome-icon {
     height: 20px;
