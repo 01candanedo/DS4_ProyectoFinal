@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+@import url(standard.css);
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/*registro */
+>>>>>>> 081cb4fd2fc68e22f9de562d13af7eabe87da319
 
 body {
     height: 100vh;
@@ -8,87 +21,100 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
+    color: var(--text-light);
 }
 
+<<<<<<< HEAD
+=======
+.seccion-formulario{
+  padding-top: 45px;
+}
+
+>>>>>>> 081cb4fd2fc68e22f9de562d13af7eabe87da319
 .container-form {
-    width: 90%;
-    height: 90vh;
-    display: flex;
-    justify-content: space-around;
-    transition:  all .5s ease-out;
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  transition:  all .5s ease-out;
 }
 
 
 .formulario {
-    width: 400px;
-    height: 550px;
-    padding: 1rem;
-    margin: 2rem;
-    background-color: rgb(51, 51, 51, 0.602);
-    text-align: center;
+  width: 400px;
+  height: 550px;
+  padding: 16px;
+  margin: 32px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius:var(--radius100);
+  text-align: center;
 }
 
 .create-account {
-    padding: 2.7rem 0;
-    font-size: 1.7rem;
+  padding: 42px 0;
+  font-size: var(--h1-font);
 }
 
 .iconos {
-    width: 200px;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
 }
 
 .font-awesome-icon {
-    height: 20px;
-    width: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    border: solid thin white;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    transition: all .3s ease-in;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: solid thin var(--grey0);
+  border-radius: 50%;
+  font-size: var(--h2-font);
+  transition: all .3s ease-in;
 }
 
 .font-awesome-icon:hover {
-    background-color: #4a4aee;
-    cursor: pointer;
+  background-color: var(--main-color);
+  cursor: pointer;
+  color: var(--text-dark);
 }
 
 .cuenta-gratis {
-    padding: 2rem 0;
+  padding: 32px 0;
 }
 
 .formulario input {
-    width: 70%;
-    display: block;
-    margin: auto;
-    margin-bottom: 2rem;
-    background-color: transparent;
-    border: none;
-    border-bottom: white thin solid;
-    text-align: center;
-    outline: none;
-    padding: .2rem 0;
-    font-size: .9rem;
-    color: white;
+  width: 70%;
+  display: block;
+  margin: auto;
+  margin-bottom: 32px;
+  border-bottom: var(--grey0) thin solid;
+  text-align: center;
+  outline: none;
+  padding: 4px 0;
+  font-size: var(--p-font);
+  color: var(--text-light);
 }
 
 .formulario input[type="button"] {
-    width: 60%;
-    margin: auto;
-    border: solid thin white;
-    padding: .7rem;
-    border-radius: 2rem;
-    background-color: white;
-    font-weight: 600;
-    margin-top: 3rem;
-    font-size: .8rem;
-    cursor: pointer;
-    color: #222;
+  width: 60%;
+  margin: auto;
+  border: solid thin var(--grey0);
+  padding: 12px;
+  border-radius: 32px;
+  background-color: var(--grey0);
+  font-weight: 600;
+  margin-top: 48px;
+  font-size: var(--p-font);
+  cursor: pointer;
+  color: #222;
+}
+
+.formulario input::placeholder { 
+  color: var(--grey100); 
 }
 
