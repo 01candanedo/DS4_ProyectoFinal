@@ -9,16 +9,11 @@
 <div align="center">
 
 | Integrantes       |   Cédula   | Grupo | Salon  |    Profesor |
-| ----------------- | :--------: | :---: | :----: | ----------: |
+|-------------------|:----------:|:-----:|:------:|------------:|
 | Ñurinda, Marcos   | 20-53-4479 |   2   | 1LS123 | Juan Zamora |
 | Arosemena, Irving | 8-967-101  |
 | Candanedo, Marcos | 8-960-2099 |
-| Chacon, Jeremi    |            |
-| Guadamuz, Rosa    | 20-53-4830 |
-| Jordan, Michael   | 8-922-1838 |
-| Jaén, Rubén       | 8-947-1049 |
 
-<p align="left">
 
 Link del Figma(Para prototipar):<br>
 https://www.figma.com/file/HaIEaNw9p9C3brfYYJkW5P/DS4_Proyecto_Final_Estandares?node-id=64%3A2365
@@ -26,6 +21,7 @@ https://www.figma.com/file/HaIEaNw9p9C3brfYYJkW5P/DS4_Proyecto_Final_Estandares?
 Link del documento en word: <br>
 https://1drv.ms/w/s!AvFU3UIau3iex1melo50RJPnWIQl?e=pMBwpF
 
+Link del documento en word: 
 </div>
 
 <hr>
