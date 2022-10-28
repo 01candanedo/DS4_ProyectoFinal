@@ -48,6 +48,6 @@ https://1drv.ms/w/s!AvFU3UIau3iex1nPqBD3RcbB9bVG?e=CV0uOG
     <li>Página de descripción de lo seleccionado. = <b>Todos</b></li>
     <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b>Todos</b></li>
     <li>Página de revisión del contenido cargado. = <b></b></li>
-    <li>Página para búsqueda o resultado de búsqueda = <b></b></li>
-    <li>Página de reportes en general. = <b></b></li>
+    <li>Página para búsqueda o resultado de búsqueda = <b>Ñurinda</b></li>
+    <li>Página de reportes en general. = <b>Candanedo</b></li>
 </ol>
