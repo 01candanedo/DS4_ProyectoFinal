@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: 'Paris 2024';
-    src: url('../font/Paris2024-Italic\ Regular.ttf') format('truetype');
+    src: url('../font/Paris2024-Italic Regular.ttf') format('truetype');
     font-style: italic;
     font-weight: 300;
 }
@@ -43,14 +43,12 @@
     outline: none;
     font-size:100%;
     background: transparent;
-    background-color: none;
     box-sizing: border-box;
     list-style: none;
     vertical-align: baseline;
     text-decoration: none;
     font-family: 'Montserrat', 'Paris 2024', sans-serif;
 }
-
 
 :root {
     /* ----- Text ----- */

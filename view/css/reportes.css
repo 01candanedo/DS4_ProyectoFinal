@@ -4,12 +4,15 @@ body{
 
 .main-div {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    height: auto;
     margin-top: 40px;
 }
 
 .box0{
     width: 100%;
+    height: auto;
     color: var(--text-light);
     font-size: 2vw;
     text-align: center;
@@ -18,19 +21,21 @@ body{
 }
 
 .box1{
-    width: 55%;
-    background-color: #36393f;
+    width: 53%;
+    background: #e2e2e2;
     color: #e2e2e2;
     border-radius: 8px;
-    margin: 5% 2% 5% 5%;
+    margin: 5%;
+    margin-right: 2%;
 }
 
 .box2{
-    width: 31%;
-    background-color: #36393f;
+    width: 33%;
+    background: #e2e2e2;
     color: #e2e2e2;
     border-radius: 8px;
-    margin: 5% 5% 5% 2%;
+    margin: 5%;
+    margin-left: 2%;
 }
 
 .box3{
@@ -38,10 +43,22 @@ body{
     overflow-x: auto;
     width: 90%;
     border-radius: 8px;
-    margin: 0 5% 5% 5%;
+    margin: 1% 5% 5% 5%;
 }
 
-section table {
+.graficaLin{
+    position: relative;
+    height: auto;
+    width: 50vw;
+}
+
+.graficaBar{
+    position: relative;
+    height: auto;
+    width: 32vw;
+}
+
+table {
     background-color: var(--main-color);
     text-align: left;
     border-collapse: collapse;
@@ -73,22 +90,22 @@ tr:nth-child(even){
     background: var(--main-color-d);
 }
 
-thead {
-    background-color: var(--main-color);
-    border-bottom: solid 5px var(--grey300);
-    color: var(--text-dark);
-}
-
 @media only screen and (max-width: 1200px){
     .main-div {
-        display: flex;
-        width: 100%;
         flex-direction: column;
+    }
+    .box0{
+        font-size: 4vw;
+        margin-top: 10%;
     }
 
     .box1, .box2, .box3{
-        width: 100%;
+        width: 90%;
         margin: 5%;
+    }
+
+    .graficaLin, .graficaBar{
+        width: 80vw;
     }
 
 }
