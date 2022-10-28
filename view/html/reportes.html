@@ -18,6 +18,7 @@
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
   />
+  <script src="../../view/js/chart.js"></script>
   <title>Reportes</title>
 </head>
 <body>
@@ -61,9 +62,67 @@
   </nav>
 </header>
 
+<main class="main-div">
+  <div class="box0">
+    <p>Reportes Generados</p>
+  </div>
+  <div class="box1" style="background-color: #e2e2e2;">
+    <div style="position: relative; height: 55vh; width:50vw;">
+      <canvas id="graficaLineas"></canvas>
+    </div>
+  </div>
+  <div class="box2" style="background-color: #e2e2e2;">
+    <div style="position: relative; height: 55vh; width:30vw">
+      <canvas id="graficaBarra"></canvas>
+    </div>
+  </div>
+  <div class="box3">
+    <section>
+      <center>
+        <h2>Registros de Usuarios</h2>
+      </center>
+      <table>
+        <thead>
+        <tr>
+          <th>N°</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Tipo</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td class="txt-oflo">Marcos</td>
+          <td class="txt-oflo">Candanedo</td>
+          <td class="txt-oflo">Roca@</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="txt-oflo">Irving</td>
+          <td class="txt-oflo">Arosemena</td>
+          <td class="txt-oflo">Roca@</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="txt-oflo">Marcos</td>
+          <td class="txt-oflo">Ñurinda</td>
+          <td class="txt-oflo">Roca@</td>
+        </tr>
+        </tbody>
+      </table>
+      <br>
+    </section>
+  </div>
+</main>
+
 
 
 
 
 </body>
+<script src="../../view/js/bar.js"></script>
+<script src="../../view/js/wave.js"></script>
 </html>
