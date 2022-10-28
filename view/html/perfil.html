@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/navbar.css"/>
-    <link rel="stylesheet" href="../css/standard.css"/>
-    <link rel="stylesheet" href="../css/perfil.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/standard.css" />
+    <link rel="stylesheet" href="../css/perfil.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <title>Perfil</title>
   </head>
   <body>
@@ -20,7 +26,9 @@
           <span><i class="fa-solid fa-bars"></i></span>
         </div>
         <div class="logo">
-          <a href="../../index.html"><img src="../img/Olympics_logo.svg" alt="Olimpiadas_logo"></a>
+          <a href="../../index.html"
+            ><img src="../img/Olympics_logo.svg" alt="Olimpiadas_logo"
+          /></a>
         </div>
         <div class="nav-items">
           <li><a href="../../index.html">Inicio</a></li>
@@ -28,95 +36,147 @@
           <li><a href="../html/noticias.html">Noticias</a></li>
           <li><a href="../html/acerca.html">Acerca de</a></li>
           <li><a href="../html/contact.html">Contacto</a></li>
-          <li><a href="#">Reportes</a></li>
+          <li><a href="../html/reportes.html">Reportes</a></li>
           <li><a href="../html/perfil.html">Perfil</a></li>
         </div>
-        <div class="search-icon"><span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <div class="search-icon">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
         </div>
         <div class="cancel-icon">
           <span><i class="fa-solid fa-xmark"></i></span>
         </div>
         <form action="#">
-          <input type="search" class="search-data" placeholder="Buscar" required>
+          <input
+            type="search"
+            class="search-data"
+            placeholder="Buscar"
+            required
+          />
           <button type="submit" class="fas fa-search"></button>
         </form>
+<<<<<<< HEAD
         <input type="button" value="">
         <script src="../js/navbar.js"></script>
+=======
+        <input type="button" value="" />
+        <script src="../../view/js/navbar.js"></script>
+>>>>>>> 000fb9219dfbcbea8a18b44a2404622925081113
       </nav>
     </header>
 
     <main>
-
       <div class="main-div">
-
-        <div class="left-div">
-          <div>
-            <p id="nombrecomp">James Adam</p>
-            <p id="usuario">@Jam12</p>
-            <center>
-              <img class="foto-usuario" src="../img/profanime.jpg" alt="photo-user"><br>
-              <button class="btn-charge" type="submit">Cargar Foto</button>
-            </center>
-
-          </div>
-          <div>
-            <div class="info-photo">
-              Su imagen sera subida y reajustada
-            </div>
-            <p id="union">Se unió el 02 de Octubre del 2022</p>
-          </div>
-        </div>
-
-        <div class="right-div">
-          <div class="up">
-            <h1>Editar Perfil</h1>
+        <div class="cajon">
+          <div class="left-div">
             <div>
-              <button class="options">Informacion</button>
-              <button class="options">Descripcion</button>
+              <p id="nombrecomp">James Adam</p>
+              <p id="usuario">@Jam12</p>
+              <center>
+                <img
+                  class="foto-usuario"
+                  src="../img/profanime.jpg"
+                  alt="photo-user"
+                /><br />
+                <button class="btn-charge" type="submit">Cargar Foto</button>
+              </center>
             </div>
-
+            <div>
+              <div class="info-photo">Su imagen sera subida y reajustada</div>
+              <p id="union">Se unió el 02 de Octubre del 2022</p>
+            </div>
           </div>
-          <div class="down">
-            <form action="">
-              <div class="grilla">
-                <div class="e1">
-                  <label for="">Nombre Completo</label><br>
-                  <input class="input-form" type="text" name="nombre" placeholder="Ingrese su nombre.." required>
-                </div>
-                <div class="e2">
-                  <label for="">Usuario</label><br>
-                  <input class="input-form" type="text" name="usuario" placeholder="Ingrese su usuario.." required>
-                </div>
-                <div class="e3">
-                  <label for="">Contraseña</label><br>
-                  <input class="input-form" type="password" name="contraseña" placeholder="Ingrese su contraseña.." required>
-                </div>
-                <div class="e4">
-                  <label for="">Repetir Contraseña</label><br>
-                  <input class="input-form" type="password" name="contraseña" placeholder="Repita su contraseña.." required>
-                </div>
-                <div class="e5">
-                  <label for="">Correo Electronico</label><br>
-                  <input class="input-form" type="email" name="correo" placeholder="Ingrese su correo.." required>
-                </div>
-                <div class="e6">
-                  <label for="">Redes Sociales</label><br>
-                  <input class="input-form" type="text" placeholder="Usuario facebook" name="facebook">
-                </div>
-                <div class="e7">
-                  <br>
-                  <input class="input-form" type="text" name="instagram" placeholder="Usuario instagram">
-                </div>
-                <div class="e8">
-                  <button class="btn-actualizar" type="submit">Actualizar</button>
-                </div>
+
+          <div class="right-div">
+            <div class="up">
+              <h1>Editar Perfil</h1>
+              <div>
+                <button class="options">Informacion</button>
+                <button class="options">Descripcion</button>
               </div>
-            </form>
+            </div>
+            <div class="down">
+              <form action="">
+                <div class="grilla">
+                  <div class="box b1">
+                    <label>Nombre Completo</label><br />
+                    <input
+                      class="input-form"
+                      type="text"
+                      name="nombre"
+                      placeholder="Ingrese su nombre.."
+                      required
+                    />
+                  </div>
+                  <div class="box b2">
+                    <label>Usuario</label><br />
+                    <input
+                      class="input-form"
+                      type="text"
+                      name="usuario"
+                      placeholder="Ingrese su usuario.."
+                      required
+                    />
+                  </div>
+                  <div class="box b3">
+                    <label>Contraseña</label><br />
+                    <input
+                      class="input-form"
+                      type="password"
+                      name="contraseña"
+                      placeholder="Ingrese su contraseña.."
+                      required
+                    />
+                  </div>
+                  <div class="box b4">
+                    <label>Repetir Contraseña</label><br />
+                    <input
+                      class="input-form"
+                      type="password"
+                      name="contraseña"
+                      placeholder="Repita su contraseña.."
+                      required
+                    />
+                  </div>
+                  <div class="box b5">
+                    <label>Correo Electronico</label><br />
+                    <input
+                      class="input-form"
+                      type="email"
+                      name="correo"
+                      placeholder="Ingrese su correo.."
+                      required
+                    />
+                  </div>
+                  <div class="box b6">
+                    <label><b>Redes Sociales</b></label
+                    ><br />
+                    <input
+                      class="input-form"
+                      type="text"
+                      placeholder="Usuario facebook"
+                      name="facebook"
+                    />
+                  </div>
+                  <div class="box b7">
+                    <br />
+                    <input
+                      class="input-form"
+                      type="text"
+                      name="instagram"
+                      placeholder="Usuario instagram"
+                    />
+                  </div>
+                  <div class="box b8">
+                    <button class="btn-actualizar" type="submit">
+                      Actualizar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-
       </div>
-
     </main>
     <footer></footer>
   </body>
