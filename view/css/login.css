@@ -11,6 +11,10 @@ body {
     color: #fff;
 }
 
+.seccion-formulario{
+    padding-top: 45px;
+  }
+
 .container-form {
     width: 90%;
     height: 90vh;
@@ -21,11 +25,13 @@ body {
 
 
 .formulario {
-    width: 400px;
+    width: 320px;
     height: 550px;
     padding: 1rem;
     margin: 2rem;
-    background-color: rgb(51, 51, 51, 0.602);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
     text-align: center;
 }
 
@@ -58,7 +64,7 @@ body {
 }
 
 .font-awesome-icon:hover {
-    background-color: #4a4aee;
+    background-color: var(--main-color);
     cursor: pointer;
 }
 
