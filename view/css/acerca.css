@@ -74,6 +74,7 @@ section div p{
 }
 
 .btn-mas {
+    text-align: center;
     background: var(--text-light);
     color: var(--text-dark);
     width: 90%;
@@ -94,6 +95,10 @@ section div p{
     cursor: pointer;
 }
 
+.enlaces-cv{
+
+}
+
 .presentacion{
     background: var(--grey100);
     display: flex;
@@ -105,6 +110,7 @@ section div p{
 
 .pres1, .pres2, .pres3{
     width: 30%;
+    height: auto;
     background: rgba(255, 255, 255, 0.70);
     border-radius: 10px;
     box-shadow: 0 35px 80px rgba(0,0,0,0.15);
@@ -115,11 +121,18 @@ section div p{
     background: linear-gradient(45deg, #fbda61, #ff5acd);
     display: flex;
     width: 100%;
+    height: auto;
     flex-direction: column;
     align-items: center;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+.nombres{
+    font-size: large;
+    text-align: center;
+}
+
 
 @media only screen and (max-width: 700px){
     .about, .presentacion{
