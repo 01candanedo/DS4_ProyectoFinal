@@ -77,9 +77,12 @@
         <canvas id="graficaBarra"></canvas>
       </div>
     </div>
+    <div class="box0">
+      <p>Administracion de Usuarios (CRUD)</p>
+    </div>
     <div class="box3">
       <section>
-        <h2>Registros de Usuarios</h2>
+        <h2 class="titulo-repo">Registros de Usuarios</h2>
         <table>
           <tr>
             <th>N°</th>
@@ -87,28 +90,71 @@
             <th>Apellido</th>
             <th>Email</th>
             <th>Tipo</th>
+            <th><center>Accion</center></th>
           </tr>
-
           <tr>
             <td>1</td>
-            <td class="txt-oflo">Marcos</td>
-            <td class="txt-oflo">Candanedo</td>
-            <td class="txt-oflo">Roca@</td>
-            <td class="txt-oflo">Administrador</td>
+            <td>Marcos</td>
+            <td>Candanedo</td>
+            <td>marcos.candanedo1@utp.ac.pa</td>
+            <td>Administrador</td>
+            <td>
+              <div class="status">
+                <a class="usuario mod" href="">Modificar</a>
+                <a class="usuario del" href="">Eliminar</a>
+              </div>
+            </td>
           </tr>
           <tr>
             <td>2</td>
-            <td class="txt-oflo">Irving</td>
-            <td class="txt-oflo">Arosemena</td>
-            <td class="txt-oflo">Roca@</td>
-            <td class="txt-oflo">Administrador</td>
+            <td>Irving</td>
+            <td>Arosemena</td>
+            <td>irving.arosemena@utp.ac.pa</td>
+            <td>Administrador</td>
+            <td>
+              <div class="status">
+                <a class="usuario mod" href="">Modificar</a>
+                <a class="usuario del" href="">Eliminar</a>
+              </div>
+            </td>
           </tr>
           <tr>
             <td>3</td>
-            <td class="txt-oflo">Marcos</td>
-            <td class="txt-oflo">Ñurinda</td>
-            <td class="txt-oflo">Roca@</td>
-            <td class="txt-oflo">Administrador</td>
+            <td>Marcos</td>
+            <td>Ñurinda</td>
+            <td>marcos.ñurinda@utp.ac.pa</td>
+            <td>Administrador</td>
+            <td>
+              <div class="status">
+                <a class="usuario mod" href="">Modificar</a>
+                <a class="usuario del" href="">Eliminar</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john.doe@utp.ac.pa</td>
+            <td>Usuario</td>
+            <td>
+              <div class="status">
+                <a class="usuario mod" href="">Modificar</a>
+                <a class="usuario del" href="">Eliminar</a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><input class="entrada" type="text" name="nombre" placeholder="Nombre.."></td>
+            <td><input class="entrada" type="text" name="apellido" placeholder="Apellido.."></td>
+            <td><input class="entrada" type="email" name="correo" placeholder="Email.."></td>
+            <td><input class="entrada" type="text" name="tipo" placeholder="Tipo.."></td>
+            <td>
+              <div class="status">
+                <a class="usuario add" href="">Añadir</a>
+              </div>
+            </td>
           </tr>
         </table>
         <br>
