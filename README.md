@@ -21,9 +21,6 @@ https://www.figma.com/file/HaIEaNw9p9C3brfYYJkW5P/DS4_Proyecto_Final_Estandares?
 Link del documento en word: <br>
 https://1drv.ms/w/s!AvFU3UIau3iex1nPqBD3RcbB9bVG?e=CV0uOG
 
-Link del documento en word(Enunciado proyecto final parte #1): <br>
-https://1drv.ms/w/s!AvFU3UIau3iexyZJDrtRiaGx3GHI?e=su727p
-
 </div>
 
 <hr>
