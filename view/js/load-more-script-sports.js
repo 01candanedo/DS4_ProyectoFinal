@@ -2,7 +2,7 @@ let loadMoreBtn = document.querySelector('#load-more-btn');
 let currentItem = 4;
 
 loadMoreBtn.onclick = () =>{
-   let boxes = [...document.querySelectorAll('.load-more-product-container .game-card')];
+   let boxes = [...document.querySelectorAll('.load-more-product-container .sports-card')];
    for (var i = currentItem; i < currentItem + 4; i++){
       boxes[i].style.display = 'inline-block';
    }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/navbar.css"/>
     <link rel="stylesheet" href="../css/deportes.css">
     <link rel="stylesheet" href="../css/standard.css"/>
+    <link rel="stylesheet" href="../css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -88,104 +89,121 @@
       </section>
     </div>
     <!---Olympic Sports--->
-    <section class="Olympic-sports" id="Olympic-sports">
-		<div class="load-more-section">
-			<div class="group-load-more-section-titlebar">
-				<div class="title">
-					<a class="group-load-more--title-link" href="">
-						<h2>Lista de Deportes Olimpicos</h2>
-					</a>
-				</div>
-				<div class="group-load-more-button">
-					<div class="load-more">
-						<a id="load-more-btn" class="btn">Ver m&aacute;s</a>
-					</div>
-				</div>
-			</div>
-			<div class="load-more-product-container">
-				<div class="game-card">
-					<div class="game-image">
-						<a href="https://olympics.com/es/deportes/halterofilia/" target="_blank">
-            <img src="../img/halterofilia.webp" class="game-thumb" alt="">
-          </a>
-					</div>
-					<div class="game-info">
-						<h2 class="sport-name">Halterofilia</h2>
-					</div>
-				</div>
-				<div class="game-card">
-					<div class="game-image">
-            <a href="https://olympics.com/es/deportes/biatlon/" target="_blank">
-              <img src="../img/biatlon.jpg" class="game-thumb" alt="">
+    <section class="olympic-sports" id="olympic-sports">
+      <div class="load-more-section">
+        <div class="group-load-more-section-titlebar">
+          <div class="title">
+            <a class="group-load-more--title-link" href="">
+              <h2>Deportes Olimpicos<span aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span></h2>
             </a>
-					</div>
-					<div class="game-info">
-						<h2 class="sport-name">Biatlon</h2>
-					</div>
-				</div>
-				<div class="game-card">
-					<div class="game-image">
-						<img src="../img/esgrima2.jpg" class="game-thumb" alt="">
-					</div>
-					<div class="game-info">
-						<h2 class="sport-name">Esgrima</h2>
-					</div>
-				</div>
-				<div class="game-card">
-					<div class="game-image">
-            <a href="https://olympics.com/es/deportes/taekwondo/">
-              <img src="../img/taekwondo.jpg" class="game-thumb" alt="">
-            </a>
-					</div>
-					<div class="game-info">
-						<h2 class="sport-name">Taekwondo</h2>
-					</div>
-				</div>
-				<div class="game-card">
-					<div class="game-image">
-            <a href="https://olympics.com/es/deportes/golf/">
-              <img src="../img/golf.jpg" class="game-thumb" alt="">
-            </a>
-					</div>
-					<div class="game-info">
-						<h2 class="sport-name">Golf</h2>
-					</div>
-				</div>
-				<div class="game-card">
-					<div class="game-image">
-            <a href="https://olympics.com/es/deportes/natacion/">
-              <img src="../img/natacion.jpg" class="game-thumb" alt="">
-            </a>
-					</div>
-					<div class="game-info">
-						<h2 class="sport-name">Natacion</h2>
-					</div>
-				</div>
-				<div class="game-card">
-					<div class="game-image">
-            <a href="https://olympics.com/es/deportes/balonmano/">
-              <img src="../img/balonmano.jpg" class="game-thumb" alt="">
-            </a>
-					</div>
-					<div class="game-info">
-						<h2 class="sport-name">Balonmano</h2>
-					</div>
-				</div>
-				<div class="game-card">
-					<div class="game-image">
-            <a href="https://olympics.com/es/deportes/rugby-7/">
-              <img src="../img/rugby.jpg" class="game-thumb" alt="">
-            </a>
-						
-					</div>
-					<div class="game-info">
-						<h2 class="sport-name">Rugby 7</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script src="../js/load-more-script-sports.js"></script>
-	</section>
+          </div>
+          <div class="group-load-more-button">
+            <div class="load-more">
+              <a id="load-more-btn" class="btn">Ver m&aacute;s</a>
+            </div>
+          </div>
+        </div>
+        <div class="load-more-product-container">
+          <div class="sports-card">
+            <div class="sports-image">
+              <img src="../img/halterofilia.webp" class="sports-thumb" alt="">
+              <a href="https://olympics.com/es/deportes/halterofilia/" target="_blank">
+                <button class="card-btn">ver mas</button>
+              </a>
+            </div>
+            <div class="sports-info">
+              <h2 class="sports-title">halterofilia</h2>
+              <p class="sports-description">Como representación para medir la fuerza y la fortaleza, la halterofilia fue practicada en las sociedades egipcias y griegas antiguas...</p>
+            </div>
+          </div>
+          <div class="sports-card">
+            <div class="sports-image">
+              <img src="../img/biatlon.jpg" class="sports-thumb" alt="">
+              <a href="https://olympics.com/es/deportes/biatlon/" target="_blank">
+                <button class="card-btn">ver mas</button>
+              </a>
+            </div>
+            <div class="sports-info">
+              <h2 class="sports-title">Biatlon</h2>
+              <p class="sports-description">El biatlón combina el poder y la agresividad del esquí de fondo con la precisión y la calma necesarias para tener puntería...</p>
+            </div>
+          </div>
+          <div class="sports-card">
+            <div class="sports-image">
+              <img src="../img/taekwondo.jpg" class="sports-thumb" alt="">
+              <a href="https://olympics.com/es/noticias/voleibol-femenino-equipos-torneo-clasificacion-olimpica-a-paris-2024" target="_blank">
+                <button class="card-btn">ver mas</button>
+              </a>
+            </div>
+            <div class="sports-info">
+              <h2 class="sports-title">Taekwondo</h2>
+              <p class="sports-description">El taekwondo es un arte marcial tradicional de Corea, que significa "el camino del puño y la patada"...</p>
+            </div>
+          </div>
+          <div class="sports-card">
+            <div class="sports-image">
+              <img src="../img/esgrima2.jpg" class="sports-thumb" alt="">
+              <a href="https://olympics.com/es/deportes/taekwondo/" target="_blank">
+                <button class="card-btn">ver mas</button>
+              </a>
+            </div>
+            <div class="sports-info">
+              <h2 class="sports-title">Esgrima</h2>
+              <p class="sports-description">Los duelos de espadas se han practicado desde hace miles de años, como demuestran los grabados de espadachines encontrados en un templo...</p>
+            </div>
+          </div>
+          <div class="sports-card">
+            <div class="sports-image">
+              <img src="../img/golf.jpg" class="sports-thumb" alt="">
+              <a href="https://olympics.com/es/deportes/golf/" target="_blank">
+                <button class="card-btn">ver mas</button>
+              </a>
+            </div>
+            <div class="sports-info">
+              <h2 class="sports-title">Golf</h2>
+              <p class="sports-description">Un deporte muy sencillo, el golf consiste en "jugar una bola con un palo desde el lugar de salida hasta el hoyo mediante un golpe...</p>
+            </div>
+          </div>
+          <div class="sports-card">
+            <div class="sports-image">
+              <img src="../img/natacion.jpg" class="sports-thumb" alt="">
+              <a href="https://olympics.com/es/deportes/natacion/" target="_blank">
+                <button class="card-btn">ver mas</button>
+              </a>
+            </div>
+            <div class="sports-info">
+              <h2 class="sports-title">Natacion</h2>
+              <p class="sports-description">El hombre prehistórico aprendió a nadar para cruzar ríos y lagos; lo sabemos porque en Egipto se han encontrado pinturas rupestres...</p>
+            </div>
+          </div>
+          <div class="sports-card">
+            <div class="sports-image">
+              <img src="../img/balonmano.jpg" class="sports-thumb" alt="">
+              <a href="https://olympics.com/es/deportes/balonmano/" target="_blank">
+                <button class="card-btn">ver mas</button>
+              </a>
+            </div>
+            <div class="sports-info">
+              <h2 class="sports-title">balonmano</h2>
+              <p class="sports-description">El trepidante juego de equipo moderno del balonmano se practicó por primera vez a finales del siglo XIX en Escandinavia y Alemania....</p>
+            </div>
+          </div>
+          <div class="sports-card">
+            <div class="sports-image">
+              <img src="../img/rugby.jpg" class="sports-thumb" alt="">
+              <a href="https://olympics.com/es/deportes/rugby-7/" target="_blank">
+                <button class="card-btn">ver mas</button>
+              </a>
+            </div>
+            <div class="sports-info">
+              <h2 class="sports-title">Rugby 7</h2>
+              <p class="sports-description">La leyenda del rugby cuenta que en 1823, durante un partido de fútbol, un alumno de la Rugby School...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="../js/load-more-script-sports.js"></script>
+    </section>
     
   </body>
 </html>
