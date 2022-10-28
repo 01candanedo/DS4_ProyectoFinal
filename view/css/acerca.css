@@ -12,6 +12,7 @@
 }
 
 .about{
+    background: var(--text-dark);
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -44,11 +45,91 @@ section div img{
     height: 150px;
     object-fit: cover;
     border-radius: 50%;
-    align-self: center;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.25);
 }
 
 section div p{
-    margin: 25px;
+    margin: 10px 25px 25px 25px;
     text-align: justify;
     letter-spacing: 0.5px;
+}
+
+.contact-icons i {
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    color: var(--grey500);
+    background: var(--text-light);
+    padding-left: 12px;
+    padding-top: 12px;
+    font-size: 18px;
+    margin: 20px 10px;
+    transition: all 0.4s ease;
+}
+
+.contact-icons i:hover {
+    color: var(--text-light);
+    background: var(--grey500);
+    transform: scale(1.01) translateY(-5px);
+}
+
+.btn-mas {
+    background: var(--text-light);
+    color: var(--text-dark);
+    width: 90%;
+    border-radius: 6px;
+    margin: 20px 0;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-mas:hover {
+    background: var(--text-dark);
+    color: var(--text-light);
+    width: 90%;
+    border-radius: 6px;
+    margin: 20px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.presentacion{
+    background: var(--grey100);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+}
+
+.pres1, .pres2, .pres3{
+    width: 30%;
+    background: rgba(255, 255, 255, 0.70);
+    border-radius: 10px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+
+.info-presentacion{
+    background: linear-gradient(45deg, #fbda61, #ff5acd);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 700px){
+    .about, .presentacion{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card1, .card2, .card3, .card1:hover, .card2:hover, .card3:hover, .pres1, .pres2, .pres3{
+        width: 90%;
+        margin: 5%;
+    }
+
 }
