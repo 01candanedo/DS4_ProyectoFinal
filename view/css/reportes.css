@@ -3,7 +3,6 @@ body{
 }
 
 .main-div {
-    flex-wrap: wrap;
     display: flex;
     width: 100%;
     margin-top: 40px;
@@ -36,16 +35,24 @@ body{
 
 .box3{
     background-color: var(--main-color);
+    overflow-x: auto;
     width: 90%;
     border-radius: 8px;
     margin: 0 5% 5% 5%;
 }
 
-table {
+section table {
     background-color: var(--main-color);
     text-align: left;
     border-collapse: collapse;
     width: 100%;
+    font-weight: 500;
+}
+
+section h2{
+    padding: 15px 0;
+    text-align: center;
+    font-size: 23px;
 }
 
 th,
@@ -53,8 +60,35 @@ td {
     padding: 20px;
 }
 
+tr:hover td {
+    background: var(--grey300);
+    color: var(--text-dark);
+}
+
+tr:nth-of-type(1){
+    background: var(--main-color);
+}
+
+tr:nth-child(even){
+    background: var(--main-color-d);
+}
+
 thead {
     background-color: var(--main-color);
     border-bottom: solid 5px var(--grey300);
     color: var(--text-dark);
+}
+
+@media only screen and (max-width: 1200px){
+    .main-div {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .box1, .box2, .box3{
+        width: 100%;
+        margin: 5%;
+    }
+
 }
