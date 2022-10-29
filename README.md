@@ -31,23 +31,23 @@ https://1drv.ms/w/s!AvFU3UIau3iex1nPqBD3RcbB9bVG?e=CV0uOG
       <li>Indice = <b>Arosemena</b></li>
       <li>Introducción = <b>Candanedo</b></li>
       <li>Contenido = <b>Todos</b>(Se debe anexar las imágenes o páginas del prototipo inicial con su respectivas explicaciones)</li>
-      <li>Recomendaciones = <b>Ñurinda o Arosemena</b></li>
+      <li>Recomendaciones = <b>Todos</b></li>
       <li>Conclusiones = <b>Todos</b></li>
-      <li>Bibliografía en APA = <b>Candanedo</b></li>
+      <li>Bibliografía en APA = <b>Todos</b></li>
 </ol>
 
 <hr>
 <h2>Funcionalidades a programar:</h2>
 <ol>
     <li>Página principal = <b>Ñurinda</b></li>
-    <li>Inicio de sesión o “login” = <b></b></li>
+    <li>Inicio de sesión o “login” = <b>Arosemena</b></li>
     <li>Registro de usuario = <b>Arosemena</b> </li>
     <li>Perfil y administración del mismo. = <b>Candanedo</b></li>
     <li>Página de acerca del proyecto   = <b>Candanedo</b></li>
     <li>Página de contacto = <b>Ñurinda</b></li>
     <li>Página de descripción de lo seleccionado. = <b>Todos</b></li>
-    <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b>Todos</b></li>
-    <li>Página de revisión del contenido cargado. = <b></b></li>
-    <li>Página para búsqueda o resultado de búsqueda = <b>Ñurinda</b></li>
+    <li>Página para cargar (Administración CRUD) contenido sobre el sitio = <b>Candanedo</b></li>
+    <li>Página de revisión del contenido cargado. = <b>Ñurinda</b></li>
+    <li>Página para búsqueda o resultado de búsqueda = <b>Arosemena</b></li>
     <li>Página de reportes en general. = <b>Candanedo</b></li>
 </ol>
