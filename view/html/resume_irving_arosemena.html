@@ -1,95 +1,669 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae</title>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+    <style>
+        /* Section - Universal Values*/
+
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        :root{
+            --bg-color: #5655da;
+            --bg-color-w: #fff;
+            --text-color-b: #1a1a1a;
+            --text-color-w: whitesmoke;
+            --main-color: #5655da;
+            --second-color: #f74470;
+            --other-color: #667;
+            --h1-font: 18px;
+            --h2-font: 16px;
+            --p-font: 14px;
+        }
+
+        body{
+            color: #1a1a1a;
+            background-color: var(--bg-color);
+            font-size: var(--p-font);
+            overflow-x: hidden;
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+        }
+
+        hr{
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(to right, #ccc, var(--bg-color), #ccc);
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        /* Section - Header*/
+
+        header {
+            width: 280px;
+            height: 100vh;
+            padding: 46px;
+            padding-top: 35px;
+            color: var(--text-color-w);
+            background: var(--main-color);
+            position:fixed;
+            float: left!important;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .avatar{
+            display: flex;
+            justify-content: center;
+        }
+
+        .avatar img{
+            width: 170px;
+            height: 170px;
+            vertical-align: middle;
+            border-radius: 100%;
+        }
+
+        .name{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 5px;
+        }
+
+        .name h1{
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+        }
+
+        .name p{
+            font-weight: 400;
+        }
+
+        .social-icons ul{
+            display: flex;
+            font-size: 16px;
+            justify-content: space-between;
+        }
+
+        a{
+            color: var(--text-color-w);
+        }
+
+        .main-nav .navigation>li{ 
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .others-cv{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item-cv{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .item-cv p{
+            margin-top: 5px;
+        }
+
+        .others-cv .avatar-ocv{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .others-cv .avatar-ocv img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        /* Section - Main Content*/
+
+        .main-content{ 
+            min-width: 500px;
+            margin-left: 280px;
+            background: var(--bg-color-w);
+        }
+
+        .main-content section{
+            padding: 60px 70px;
+            position: relative;
+            display: block;
+        }
+
+        .main-content .section-header{
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .main-content .section-header h2{
+            color: var(--second-color);
+            font-weight: 700;
+            font-size: var(--h2-font);
+            text-transform: uppercase;
+        }
+
+
+        /* Section - About*/
+
+        .about .intro p{
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 28px;
+            margin: 0;
+        }
+
+        .about .intro ul.info {
+            margin-top: 40px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .about .intro ul.info li:first-child {
+            padding-top: 0;
+        }
+
+        .about .intro ul.info li {
+            padding: 7px 0;
+            font-weight: 500;
+            font-size: var(--p-font);
+        }
+
+        .info-mail{
+            color: var(--text-color-b);
+        }
+
+        /* Section - Skills*/
+
+        .skills-group{
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .skills-group>div{
+            width: 100%;
+        }
+
+        .skills-grid{
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-row: auto auto;
+            grid-gap: 20px;
+        }
+
+        .skill-info{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .skill-title{
+            font-size: var(--p-font);
+            font-weight: 500;
+        }
+
+        .progress{
+            height: 4px;
+            margin-bottom: 20px;
+            background-color: #E0E0E0;
+            overflow: hidden;
+        }
+
+        .progress-bar{
+            height: 100%;
+            background-color: #f74470;
+        }
+
+        /* Skills Group */
+            /* Skills Sub-Group */
+                /* Skills Sub-Group 1 - Idiomas*/
+                    /* Skill 1*/
+                    .skills-subgroup_1 .skills-grid div:nth-child(1) .progress .progress-bar{
+                        width: 100%;
+                    }
+                    /* Skill 2*/
+                    .skills-subgroup_1 .skills-grid div:nth-child(2) .progress .progress-bar{
+                        width: 49%;
+                    }
+                /* Skills Sub-Group 2*/
+                    /* Skill 1*/
+                    .skills-subgroup_2 .skills-grid div:nth-child(1) .progress .progress-bar{
+                        width: 45%;
+                    }
+                    /* Skill 2*/
+                    .skills-subgroup_2 .skills-grid div:nth-child(2) .progress .progress-bar{
+                        width: 15%;
+                    }
+                /* Skills Sub-Group 3*/
+                    /* Skill 1*/
+                    .skills-subgroup_3 .skills-grid div:nth-child(1) .progress .progress-bar{
+                        width: 60%;
+                    }
+                    /* Skill 2*/
+                    .skills-subgroup_3 .skills-grid div:nth-child(2) .progress .progress-bar{
+                        width: 75%;
+                    }
+                    /* Skill 3*/
+                    .skills-subgroup_3 .skills-grid div:nth-child(3) .progress .progress-bar{
+                        width: 90%;
+                    }
+                /* Skills Sub-Group 4*/
+                    /* Skill 1*/
+                    .skills-subgroup_4 .skills-grid div:nth-child(1) .progress .progress-bar{
+                        width: 15%;
+                    }
+                    /* Skill 2*/
+                    .skills-subgroup_4 .skills-grid div:nth-child(2) .progress .progress-bar{
+                        width: 75%;
+                    }
+                    /* Skill 3*/
+                    .skills-subgroup_4 .skills-grid div:nth-child(3) .progress .progress-bar{
+                        width: 40%;
+                    }
+
+        /* Section - Experience, Education*/
+
+        .experience-flex, .education-flex{
+            display: flex;
+            flex-direction: column;
+            gap: 30px
+        }
+
+        .experience-item, .education-item{
+            width: 100%;
+            text-align: justify;
+        }
+
+        .experience-item-content h2, .education-item-content h2{
+            font-size: var(--h1-font);
+            font-weight: 700;
+            margin: 0 0 10px;
+        }
+
+        .experience-item-content span, .education-item-content span{
+            display: block;
+            font-size: var(--p-font);
+            color: var(--other-color);
+            font-weight: 500;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+        }
+
+        .contact-form-grid{
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-row: auto auto;
+            grid-gap: 20px;
+        }
+
+        /* Section - Contact*/
+        .contact-form-grid .form-group{
+            margin-bottom: 25px;
+        }
+
+        .form-control{
+            border: 0;
+            padding: 0;
+            width: 100%;
+            height: 50px;
+            color: var(--other-color);
+            font-weight: 400;
+            font-size: var(--p-font);
+            border-bottom: solid 1px var(--text-color-b);
+            resize: none;
+        }
+
+        .textarea .form-control{
+            margin-top: 20px;
+            height: 118px;
+        }
+
+        .btn{
+            border: 0;
+            margin-top: 20px;
+            padding: 8px 16px;
+            border-radius: 3px;
+            font-weight: 500;
+            font-size: var(--p-font);
+            cursor: pointer;
+            position: relative;
+            color: var(--text-color-w);
+            background-color: var(--bg-color);
+        }
+
+        .contendor_vermas{
+            width: 100px;
+            height: 150px;
+            overflow: hidden;
+        }
+
+    </style>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <Table>
-                <tbody>
-                <tr align="center">
-                    <td width="300px">
-                        <a href="../html/resume_marcos_candanedo.html">CV de Marcos
-                            C</a>
-                    </td>
-                    <td width="300px">
-                        <a href="../html/resume_irving_arosemena.html">CV de Irving A</a>
+    <div class="wrapper">
+        <!-- Header -->
+        <header class="header">
+            <div class="avatar">
+                <img src="../img/images_profile/profile-photo-ia.jpg" alt="avatar">
+            </div>
+            <div class="name">
+                <h1>Irving Arosemena</h1>
+                <p>Desarrollador de Software</p>
+            </div>
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <nav class="main-nav">
+                <ul class="navigation">
+                    <li><a href="#about">Sobre mi</a></li>
+                    <li><a href="#skills">Conocimientos</a></li>
+                    <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#education">Educacion</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="others-cv">
+                <div class="item-cv">
+                    <div class="avatar-ocv">
+                        <a href="../html/resume_marcos_candanedo.html"><img src="../img/images_profile/profile-photo-mc.jpg" alt="avatar"></a>
+                    </div>
+                    <p>Marcos C.</p>
+                </div>
+                <div class="item-cv">
+                    <div class="avatar-ocv">
+                        <a href="../html/resume_marcos_nurinda.html"><img src="../img/images_profile/profile-photo-mn.jpg" alt="avatar"></a>
+                    </div>
+                    <p>Marcos Ñ.</p>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <section class="main-content">
 
-                    </td>
-                    <td width="300px">
-                        <a href="../html/resume_marcos_nurinda.html">CV de Marcos Ñ</a>
+            <!-- About -->
+            <section id="about" class="about">
 
-                    </td>
-                    <td width="300px">
-                        <a href="../html/acerca.html">Regresar</a>
-                    </td>
-                </tr>
-                </tbody>
-            </Table>
-        </nav>
-        <hr>
-        <center>
-            <h1>Mi Curriculum</h1>
-        </center>
-        <center><img src="../img/profile-photo-ia.jpg" alt="foto_perfil" alt="solo yo" width="500px"></center>
-    </header>
-    <section>
-        <h2>Experiencia</h2>
-        <ul>
-            <li>Presidente de mesa - elecciones 2019.</li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Educacion</h2>
-        <ul>
-            <li>Academia Bilingue La medalla Milagrosa - <i>2005 hasta 2018.</i></li>
-            <li>Colegio AngloMexicano Bilingue - <i>2011 hasta 2012.</i></li>
-            <li>Universidad Interamericana de Panama - <i>2019 hasta 2020.</i></li>
-            <li>Universidad Tecnologica de Panama - <i>en curso.</i></li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Conocimientos</h2>
-        <ul>
-            <li>C++ basico.</li>
-            <li>Java intermedio.</li>
-            <li>HTML basico.</li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Datos Generales</h2>
-        <ul>
-            <li><b>Edad:</b> 21 años.</li>
-            <li><b>Nacionalidad:</b> panameña.</li>
-            <li><b>Cedula:</b> 8-967-101.</li>
-        </ul>
-    </section>
-    <hr>
-    <section>
-        <h2>Pasatiempos</h2>
-        <ul>
-            <li>tocar la guitarra.</li>
-            <li>escuchar musica.</li>
-            <li>asar.</li>
-        </ul>
-    </section>
-    <footer>
-        <ul>
-            <center>
-                <li type="none"><a href="resume_marcos_nurinda.html">Volver a resumen Marcos Ñurinda</a></li>
-                <li type="none"><a href="resume_marcos_candanedo.html">Volver a resumen Marcos Candanedo</a></li>
-            </center>
-        </ul>
-    </footer>
+                <div class="section-header">
+                    <h2>Sobre Mi</h2>
+                </div>
+    
+                <!-- Intro -->
+                <div class="intro">
+                    <p>Tengo 21 años, actualmente soy estudiante de desarrollo de software en la universidad tecnologica de panama, una vez graduado deseo tener una familia y ejercer mi profesion.</p>
+                    <ul class="info">
+                        <li><strong>Nacionalidad:</strong> Panameña</li>
+                        <li><strong>Fecha de Nacimiento:</strong> febrero 15, 2001</li>
+                        <li><strong>Residencia:</strong> Panam&aacute;, Condado del rey</li>
+                        <li><strong>Email:</strong><a class="info-mail" href="mailto:irving.arosemena@utp.ac.pa" target="_blank"> irving.arosemena@utp.ac.pa</a></li>
+                        <li><strong>Celular:</strong> +507 69472797</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- Skills -->
+            <section id="skills" class="skills">
+			
+                <div class="section-header">
+                    <h2>Conocimientos</h2>
+                </div>
+    
+                <div class="skills-group">
+                    <div class="skills-subgroup_1">
+                        <h2>idiomas</h2>
+                        <div class="skills-grid">
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">Español</h3>
+                                    <span class="skill-perc">100%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">Ingles</h3>
+                                    <span class="skill-perc">49%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-subgroup_2">
+                        <h2>Desarrollo Web</h2>
+                        <div class="skills-grid">
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">HTML5/CSS3</h3>
+                                    <span class="skill-perc">40%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">Javascript</h3>
+                                    <span class="skill-perc">15%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-subgroup_3">
+                        <h2>Desarrollo de Software</h2>
+                        <div class="skills-grid">
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">C/C++</h3>
+                                    <span class="skill-perc">60%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">Java</h3>
+                                    <span class="skill-perc">75%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                    
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">UML</h3>
+                                    <span class="skill-perc">90%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-subgroup_4">
+                        <h2>Otras Tecnologias</h2>
+                        <div class="skills-grid">
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">Git/Github</h3>
+                                    <span class="skill-perc">15%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">SQL</h3>
+                                    <span class="skill-perc">75%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-info">
+                                    <h3 class="skill-title">Docker</h3>
+                                    <span class="skill-perc">40%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+
+            <hr>
+
+            <!-- Experience -->
+            <section id="experience" class="resume">
+			
+                <div class="section-header">
+                    <h2>Experiencia</h2>
+                </div>
+    
+                <div class="experience-flex">
+                    <div class="experience-item">
+                        <div class="experience-item-content">
+                            <h2>Presidente de Mesa</h2>
+                            <span>Elecciones 2019</span>
+                        </div>
+                    </div>
+            </section>
+
+            <hr>
+
+            <!-- Education -->
+            <section id="education" class="resume">
+			
+                <div class="section-header">
+                    <h2>Educación</h2>
+                </div>
+    
+                <div class="education-flex">
+                    <div class="education-item">
+                        <div class="education-item-content">
+                            <h2>Universidad Tecnologica de Panamá</h2>
+                            <span>Licenciatura en Desarrollo de Software    |   2020 - PRESENTE</span>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-item-content">
+                            <h2>Universidad Interamericana de Panama</h2>
+                            <span>Licenciatura en Sistemas Computacionales con enfasis en desarrollo de sistemas avanzados de redes y software    |   2019 - 2020</span>
+                        </div>
+                    </div>
+                            
+                    <div class="education-item">
+                        <div class="education-item-content">
+                            <h2>Colegio AngloMexicano Bilingue</h2>
+                            <span>5to grado   |   2011 - 2012</span>
+                        </div>
+                    </div>
+    
+                    <div class="education-item">
+                        <div class="education-item-content">
+                            <h2>Academia Bilingue La Medalla Milagrosa</h2>
+                            <span>Educación Primaria    |   2005 - 2018</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr>
+            
+            <!-- Contact -->
+            <section id="contact" class="contact">
+			
+                <div class="section-header">
+                    <h2>Contactame</h2>
+                </div>
+    
+                <!-- Contact Form -->
+                <form action="#">
+        
+                    <!-- Contact form inputs -->
+                    <div class="contact-form-inputs">
+                        <!-- Contact form inputs Grid -->
+                        <div class="contact-form-grid">
+                            <!-- Name input -->
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="InputName" id="InputName" placeholder="Nombre" required=>
+                            </div>
+                            <!-- Email input -->
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Correo" required>
+                            </div>
+                            <!-- Phone input -->
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="InputPhone" id="InputPhone" placeholder="Telefono">
+                            </div>
+                            <!-- Subject input -->
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="InputSubject" name="InputSubject" placeholder="Asunto" required>
+                            </div>
+                        </div>
+
+                        <!-- Message textarea -->
+                        <div class="form-group textarea">
+                            <textarea name="InputMessage" id="InputMessage" class="form-control" rows="6" placeholder="Mensaje" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Send Button -->
+                    <input type="submit" name="submit" id="submit" value="Enviar mensaje" class="btn">
+    
+                </form>
+            </section>
+        </section>
+    </div> 
 </body>
-
 </html>
