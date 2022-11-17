@@ -1,4 +1,4 @@
-package com.example.backend_olimp.Config;
+package com.example.backendolimpicos.Config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,13 +9,11 @@ public class Conexion {
         LeerXML obj_leer = new LeerXML();
         try {
             obj_leer.datosXML();
-            String cadenaconn = "jdbc:sqlserver://localhost:" + obj_leer.getPort() +
-                    ";databaseName=" + obj_leer.getDbname() +
-                    ";user=" + obj_leer.getUser() +
-                    ";password=" + obj_leer.getPassword() +
-                    ";encrypt=true;trustServerCertificate=true;";
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            return DriverManager.getConnection(cadenaconn);
+            String url = "jdbc:mariadb://localhost:"+obj_leer.getPort()+"/"+obj_leer.getDbname()+"";
+            String usuario = obj_leer.getUser();
+            String contrasenia = "";
+            Class.forName("org.mariadb.jdbc.Driver");
+            return DriverManager.getConnection(url, usuario, contrasenia);
         } catch (SQLException e) {
             int x = 1;
         } catch (ClassNotFoundException cnfe) {

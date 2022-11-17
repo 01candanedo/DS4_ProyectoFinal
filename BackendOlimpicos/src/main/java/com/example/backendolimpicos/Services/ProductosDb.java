@@ -1,13 +1,13 @@
-package com.example.backend_olimp.Services;
+package com.example.backendolimpicos.Services;
+
+import com.example.backendolimpicos.Config.Conexion;
+import com.example.backendolimpicos.Models.Productos;
 
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.example.backend_olimp.Config.Conexion;
-import com.example.backend_olimp.Models.Productos;
 
 public class ProductosDb {
     Connection con;
@@ -19,7 +19,7 @@ public class ProductosDb {
     public List<Productos> ObtenerProductos() {
         try {
             Statement stmt = con.createStatement();
-            String query = "SELECT * FROM Productos";
+            String query = "SELECT * FROM productos";
             List<Productos> productos = new ArrayList<>();
             ResultSet result = stmt.executeQuery(query);
             while (result.next()) {

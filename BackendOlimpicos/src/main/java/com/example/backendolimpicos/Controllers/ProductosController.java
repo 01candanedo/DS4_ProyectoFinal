@@ -1,12 +1,11 @@
-package com.example.backend_olimp.Controllers;
+package com.example.backendolimpicos.Controllers;
 
-import java.util.List;
-
+import com.example.backendolimpicos.Models.Productos;
+import com.example.backendolimpicos.Services.ProductosDb;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.backend_olimp.Models.Productos;
-import com.example.backend_olimp.Services.ProductosDb;
+import java.util.List;
 
 @RestController
 public class ProductosController {
