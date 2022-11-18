@@ -9,11 +9,10 @@ public class Conexion {
         LeerXML obj_leer = new LeerXML();
         try {
             obj_leer.datosXML();
-            String url = "jdbc:mariadb://localhost:"+obj_leer.getPort()+"/"+obj_leer.getDbname()+"";
-            String usuario = obj_leer.getUser();
-            String contrasenia = "";
+            String url = "jdbc:mariadb://localhost:3306/chicheme";
+
             Class.forName("org.mariadb.jdbc.Driver");
-            return DriverManager.getConnection(url, usuario, contrasenia);
+            return DriverManager.getConnection(url, "root", "");
         } catch (SQLException e) {
             int x = 1;
         } catch (ClassNotFoundException cnfe) {

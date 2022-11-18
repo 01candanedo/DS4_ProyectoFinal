@@ -24,6 +24,7 @@ public class ProductosDb {
             ResultSet result = stmt.executeQuery(query);
             while (result.next()) {
                 Productos producto = new Productos(
+                        result.getInt("id"),
                         result.getString("nombre"),
                         result.getFloat("precio"));
                 productos.add(producto);
@@ -36,4 +37,44 @@ public class ProductosDb {
         }
         return null;
     }
+
+    public int GuardarProductos(Productos producto){
+        int resultado = 0;
+        try{
+            Statement stm = con.createStatement();
+            String query = "Call InsertarProducto('"+producto.getNombre()+"',"+producto.getPrecio()+")";
+                    resultado = stm.executeUpdate(query);
+            return resultado;
+        }catch(Exception e){
+            int x = 0;
+        }
+        return resultado;
+    }
+
+    public int ActualizarProducto(Productos producto){
+        int resultado = 0;
+        try{
+            Statement stm = con.createStatement();
+            String query = "Call ActualizarProducto(" + producto.getId() + ",'" + producto.getNombre() + "'," + producto.getPrecio() + ")";
+            return stm.executeUpdate(query);
+        }catch (Exception e){
+            int x = 1;
+        }
+        return resultado;
+    }
+
+    public int EliminarProducto(int pid){
+        int resultado = 0;
+        try{
+            Statement stm = con.createStatement();
+            String query = "Call EliminarProducto("+pid+")";
+            return stm.executeUpdate(query);
+        }catch (Exception e){
+            int x = 1;
+        }
+        return resultado;
+    }
+
+
+
 }

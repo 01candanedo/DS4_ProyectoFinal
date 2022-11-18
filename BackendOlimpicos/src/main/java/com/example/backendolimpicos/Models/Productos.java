@@ -1,12 +1,27 @@
 package com.example.backendolimpicos.Models;
 
 public class Productos {
+    private int Id;
     private String nombre;
     private float precio;
 
-    public Productos(String nombre, float precio) {
+
+    public Productos(){
+
+    }
+
+    public Productos(int id, String nombre, float precio) {
+        this.Id = id;
         this.nombre = nombre;
         this.precio = precio;
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public void setId(int id) {
+        Id = id;
     }
 
     public String getNombre() {
