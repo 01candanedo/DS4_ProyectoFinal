@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.habilitar{
+  display: none;
+}
+
 nav{
   z-index: 999;
   position: fixed;

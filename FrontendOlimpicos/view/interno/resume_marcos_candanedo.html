@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+  </head>
+  <body
+    style="
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-decoration: none;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      color: #1a1a1a;
+      background-color: var(--bg-color);
+      font-size: var(--p-font);
+      overflow-x: hidden;
+      line-height: 1.5;
+      display: flex;
+      justify-content: center;
+      --bg-color: #5655da;
+      --bg-color-w: #fff;
+      --text-color-b: #1a1a1a;
+      --text-color-w: whitesmoke;
+      --main-color: #5655da;
+      --second-color: #f74470;
+      --other-color: #667;
+      --h1-font: 18px;
+      --h2-font: 16px;
+      --p-font: 14px;
+    "
+  >
+    <div>
+      <!-- Header -->
+      <header
+        style="
+          width: 188px;
+          height: 100vh;
+          padding: 46px;
+          padding-top: 35px;
+          color: var(--text-color-w);
+          background: var(--main-color);
+          position: fixed;
+          float: left !important;
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+        "
+      >
+        <div style="display: flex; justify-content: center">
+          <img
+            src="../img/images_profile/profile-photo-mc.jpg"
+            alt="avatar"
+            style="
+              width: 170px;
+              height: 170px;
+              vertical-align: middle;
+              border-radius: 100%;
+            "
+          />
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 5px;
+          "
+        >
+          <h1
+            style="
+              font-weight: 700;
+              display: flex;
+              justify-content: center;
+              margin: 0;
+              padding: 0;
+            "
+          >
+            Marcos Candanedo
+          </h1>
+          <p style="font-weight: 400; margin: 0; padding: 0">
+            Desarrollador de Software
+          </p>
+        </div>
+        <div>
+          <ul
+            style="
+              display: flex;
+              font-size: 16px;
+              justify-content: space-between;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            "
+          >
+            <li>
+              <a href="#" style="color: var(--text-color-w)"
+                ><i class="fa-brands fa-facebook-f" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" style="color: var(--text-color-w)"
+                ><i class="fa-brands fa-twitter" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" style="color: var(--text-color-w)"
+                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" style="color: var(--text-color-w)"
+                ><i class="fa-brands fa-github" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <nav>
+          <ul
+            style="
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              padding-bottom: 10px;
+              text-transform: uppercase;
+            "
+          >
+            <li style="padding-bottom: 10px; text-transform: uppercase">
+              <a
+                href="#about"
+                style="text-decoration: none; color: var(--text-color-w)"
+                >Sobre mi</a
+              >
+            </li>
+            <li style="padding-bottom: 10px; text-transform: uppercase">
+              <a
+                href="#skills"
+                style="text-decoration: none; color: var(--text-color-w)"
+                >Conocimientos</a
+              >
+            </li>
+            <li style="padding-bottom: 10px; text-transform: uppercase">
+              <a
+                href="#experience"
+                style="text-decoration: none; color: var(--text-color-w)"
+                >Experiencia</a
+              >
+            </li>
+            <li style="padding-bottom: 10px; text-transform: uppercase">
+              <a
+                href="#education"
+                style="text-decoration: none; color: var(--text-color-w)"
+                >Educacion</a
+              >
+            </li>
+            <li style="padding-bottom: 10px; text-transform: uppercase">
+              <a
+                href="#contact"
+                style="text-decoration: none; color: var(--text-color-w)"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div style="display: flex; justify-content: space-between">
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <a href="resume_irving_arosemena.html"
+                ><img
+                  src="../img/images_profile/profile-photo-ia.jpg"
+                  alt="avatar"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    max-width: 100%;
+                    vertical-align: middle;
+                  "
+              /></a>
+            </div>
+            <p style="margin-top: 5px">Irving A.</p>
+          </div>
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <div
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+              "
+            >
+              <a href="resume_marcos_nurinda.html"
+                ><img
+                  src="../img/images_profile/profile-photo-mn.jpg"
+                  alt="avatar"
+                  style="
+                    width: 100%;
+                    height: auto;
+                    max-width: 100%;
+                    vertical-align: middle;
+                  "
+              /></a>
+            </div>
+            <p style="margin-top: 5px">Marcos Ñ.</p>
+          </div>
+        </div>
+      </header>
+      <!-- Main Content -->
+      <section
+        style="
+          min-width: 500px;
+          margin-left: 280px;
+          background: var(--bg-color-w);
+        "
+      >
+        <!-- About -->
+        <section
+          id="about"
+          style="padding: 60px 70px; position: relative; display: block"
+        >
+          <div style="margin-bottom: 40px; position: relative">
+            <h2
+              style="
+                color: var(--second-color);
+                font-weight: 700;
+                font-size: var(--h2-font);
+                text-transform: uppercase;
+              "
+            >
+              Sobre Mi
+            </h2>
+          </div>
+
+          <!-- Intro -->
+          <div>
+            <p
+              style="
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 28px;
+                margin: 0;
+              "
+            >
+              Puedo describirme con una capacidad de liderizar y organizar
+              grupos de desarrollo, con una clara y paciente comunicación entre
+              los participantes, a su ritmo personal, con tolerancia y
+              resultados de producción con calidad. Capacidad de adaptación a
+              nuevas tecnológicas en diversas áreas de la programación,
+              complementariedad hacia dudas técnicas que ocurran en nuestro
+              equipo para potenciar las habilidades en un ambiente profesional
+              sano, y seguir una mejoramiento continuo como persona hacia los
+              demas.
+            </p>
+            <ul style="margin-top: 40px; padding: 0; list-style: none">
+              <li
+                style="padding: 0; font-weight: 500; font-size: var(--p-font)"
+              >
+                <strong>Nacionalidad:</strong> Panameña
+              </li>
+              <li
+                style="
+                  padding: 7px 0;
+                  font-weight: 500;
+                  font-size: var(--p-font);
+                "
+              >
+                <strong>Fecha de Nacimiento:</strong> Septiembre 13, 2000
+              </li>
+              <li
+                style="
+                  padding: 7px 0;
+                  font-weight: 500;
+                  font-size: var(--p-font);
+                "
+              >
+                <strong>Residencia:</strong> Panam&aacute;, Pma Oeste, Vista
+                Alegre
+              </li>
+              <li
+                style="
+                  padding: 7px 0;
+                  font-weight: 500;
+                  font-size: var(--p-font);
+                "
+              >
+                <strong>Email:</strong
+                ><a
+                  href="mailto:marcos.candanedo1@utp.ac.pa"
+                  target="_blank"
+                  style="color: var(--text-color-b); text-decoration: none"
+                >
+                  marcos.candanedo1@utp.ac.pa</a
+                >
+              </li>
+              <li
+                style="
+                  padding: 7px 0;
+                  font-weight: 500;
+                  font-size: var(--p-font);
+                "
+              >
+                <strong>Celular:</strong> +507 67609708
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <hr
+          style="
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(
+              to right,
+              #ccc,
+              var(--bg-color),
+              #ccc
+            );
+          "
+        />
+
+        <!-- Skills -->
+        <section
+          id="skills"
+          style="padding: 60px 70px; position: relative; display: block"
+        >
+          <div style="margin-bottom: 40px; position: relative">
+            <h2
+              style="
+                color: var(--second-color);
+                font-weight: 700;
+                font-size: var(--h2-font);
+                text-transform: uppercase;
+              "
+            >
+              Conocimientos
+            </h2>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 35px">
+            <div style="width: 100%">
+              <h2>idiomas</h2>
+              <div
+                style="
+                  grid-gap: 20px;
+                  grid-row: auto auto;
+                  grid-template-columns: auto auto;
+                  display: grid;
+                  margin-top: 30px;
+                "
+              >
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      Español
+                    </h3>
+                    <span>100%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div style="height: 100%; background-color: #f74470"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      Ingles
+                    </h3>
+                    <span>60%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 60%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 100%">
+              <h2>Desarrollo Web</h2>
+              <div
+                style="
+                  grid-gap: 20px;
+                  grid-row: auto auto;
+                  grid-template-columns: auto auto;
+                  display: grid;
+                  margin-top: 30px;
+                "
+                style="
+                  grid-gap: 20px;
+                  grid-row: auto auto;
+                  grid-template-columns: auto auto;
+                  display: grid;
+                  margin-top: 30px;
+                  width: 100%;
+                "
+              >
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      HTML5/CSS3
+                    </h3>
+                    <span>60%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 60%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      Javascript
+                    </h3>
+                    <span>50%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 50%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      PHP
+                    </h3>
+                    <span>10%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 10%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 100%">
+              <h2>Desarrollo de Software</h2>
+              <div
+                style="
+                  grid-gap: 20px;
+                  grid-row: auto auto;
+                  grid-template-columns: auto auto;
+                  display: grid;
+                  margin-top: 30px;
+                "
+              >
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      C/C++
+                    </h3>
+                    <span>85%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 85%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      Java
+                    </h3>
+                    <span>85%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 85%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      Python
+                    </h3>
+                    <span>45%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 45%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      UML
+                    </h3>
+                    <span>85%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 85%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 100%">
+              <h2>Otras Tecnologias</h2>
+              <div
+                style="
+                  grid-gap: 20px;
+                  grid-row: auto auto;
+                  grid-template-columns: auto auto;
+                  display: grid;
+                  margin-top: 30px;
+                "
+              >
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      Git/Github
+                    </h3>
+                    <span>67%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 67%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      SQL
+                    </h3>
+                    <span>88%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 88%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      Docker
+                    </h3>
+                    <span>30%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 30%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div style="display: flex; justify-content: space-between">
+                    <h3
+                      style="
+                        font-size: var(--p-font);
+                        font-weight: 500;
+                        margin: 0;
+                      "
+                    >
+                      Unix/Linux
+                    </h3>
+                    <span>50%</span>
+                  </div>
+                  <div
+                    style="
+                      height: 4px;
+                      margin-bottom: 20px;
+                      background-color: #e0e0e0;
+                      overflow: hidden;
+                    "
+                  >
+                    <div
+                      style="
+                        width: 50%;
+                        height: 100%;
+                        background-color: #f74470;
+                      "
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr
+          style="
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(
+              to right,
+              #ccc,
+              var(--bg-color),
+              #ccc
+            );
+          "
+        />
+
+        <!-- Experience -->
+        <section
+          id="experience"
+          style="padding: 60px 70px; position: relative; display: block"
+        >
+          <div style="margin-bottom: 40px; position: relative">
+            <h2
+              style="
+                color: var(--second-color);
+                font-weight: 700;
+                font-size: var(--h2-font);
+                text-transform: uppercase;
+              "
+            >
+              Experiencia
+            </h2>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 30px">
+            <div style="width: 100%; text-align: justify">
+              <div>
+                <h2
+                  style="
+                    font-size: var(--h1-font);
+                    font-weight: 700;
+                    margin: 0 0 10px;
+                  "
+                >
+                  Voluntariado
+                </h2>
+                <span
+                  style="
+                    display: block;
+                    font-size: var(--p-font);
+                    color: var(--other-color);
+                    font-weight: 500;
+                    margin: 0 0 10px;
+                    text-transform: uppercase;
+                  "
+                  >Centro de Acopio de Reciclables en la Ciudad del Saber, 2021.
+                  <br />
+                  Estadio Romel Fernandez, Teleton 20-30, 2022.</span
+                >
+              </div>
+            </div>
+
+            <div style="width: 100%; text-align: justify">
+              <div>
+                <h2
+                  style="
+                    font-size: var(--h1-font);
+                    font-weight: 700;
+                    margin: 0 0 10px;
+                  "
+                >
+                  Laborales
+                </h2>
+                <span
+                  style="
+                    display: block;
+                    font-size: var(--p-font);
+                    color: var(--other-color);
+                    font-weight: 500;
+                    margin: 0 0 10px;
+                    text-transform: uppercase;
+                  "
+                  >Asistente TI Universidad Interamericana de Panama.</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr
+          style="
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(
+              to right,
+              #ccc,
+              var(--bg-color),
+              #ccc
+            );
+          "
+        />
+        <!-- Education -->
+        <section
+          id="education"
+          style="padding: 60px 70px; position: relative; display: block"
+        >
+          <div style="margin-bottom: 40px; position: relative">
+            <h2
+              style="
+                color: var(--second-color);
+                font-weight: 700;
+                font-size: var(--h2-font);
+                text-transform: uppercase;
+              "
+            >
+              Educacion
+            </h2>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 30px">
+            <div style="width: 100%; text-align: justify">
+              <div>
+                <h2
+                  style="
+                    font-size: var(--h1-font);
+                    font-weight: 700;
+                    margin: 0 0 10px;
+                  "
+                >
+                  Universidad
+                </h2>
+                <span
+                  style="
+                    display: block;
+                    font-size: var(--p-font);
+                    color: var(--other-color);
+                    font-weight: 500;
+                    margin: 0 0 10px;
+                    text-transform: uppercase;
+                  "
+                  >Universidad Tecnologica de Panama, en Curso.</span
+                >
+              </div>
+            </div>
+
+            <div style="width: 100%; text-align: justify">
+              <div>
+                <h2
+                  style="
+                    font-size: var(--h1-font);
+                    font-weight: 700;
+                    margin: 0 0 10px;
+                  "
+                >
+                  Bachiller
+                </h2>
+                <span
+                  style="
+                    display: block;
+                    font-size: var(--p-font);
+                    color: var(--other-color);
+                    font-weight: 500;
+                    margin: 0 0 10px;
+                    text-transform: uppercase;
+                  "
+                  >Centro Educativo Basico General, Stella Sierra.</span
+                >
+              </div>
+            </div>
+
+            <div style="width: 100%; text-align: justify">
+              <div>
+                <h2
+                  style="
+                    font-size: var(--h1-font);
+                    font-weight: 700;
+                    margin: 0 0 10px;
+                  "
+                >
+                  Primaria y Secundaria
+                </h2>
+                <span
+                  style="
+                    display: block;
+                    font-size: var(--p-font);
+                    color: var(--other-color);
+                    font-weight: 500;
+                    margin: 0 0 10px;
+                    text-transform: uppercase;
+                  "
+                  >Centro Educativo Bilingue, El Tecal.</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr
+          style="
+            border: 0;
+            height: 1px;
+            background: #333;
+            background-image: linear-gradient(
+              to right,
+              #ccc,
+              var(--bg-color),
+              #ccc
+            );
+          "
+        />
+
+        <!-- Contact -->
+        <section
+          id="contact"
+          style="padding: 60px 70px; position: relative; display: block"
+        >
+          <div style="margin-bottom: 40px; position: relative">
+            <h2
+              style="
+                color: var(--second-color);
+                font-weight: 700;
+                font-size: var(--h2-font);
+                text-transform: uppercase;
+              "
+            >
+              Contactame
+            </h2>
+          </div>
+
+          <!-- Contact Form -->
+          <form action="#">
+            <!-- Contact form inputs -->
+            <div>
+              <!-- Contact form inputs Grid -->
+              <div
+                style="
+                  margin-top: 40px;
+                  display: grid;
+                  grid-template-columns: auto auto;
+                  grid-row: auto auto;
+                  grid-gap: 20px;
+                "
+              >
+                <!-- Name input -->
+                <div style="margin-bottom: 25px">
+                  <input
+                    type="text"
+                    style="
+                      border: 0;
+                      padding: 0;
+                      width: 100%;
+                      height: 50px;
+                      color: var(--other-color);
+                      font-weight: 400;
+                      font-size: var(--p-font);
+                      border-bottom: solid 1px var(--text-color-b);
+                      resize: none;
+                    "
+                    name="InputName"
+                    id="InputName"
+                    placeholder="Nombre"
+                    required=""
+                  />
+                </div>
+                <!-- Email input -->
+                <div style="margin-bottom: 25px">
+                  <input
+                    type="email"
+                    style="
+                      border: 0;
+                      padding: 0;
+                      width: 100%;
+                      height: 50px;
+                      color: var(--other-color);
+                      font-weight: 400;
+                      font-size: var(--p-font);
+                      border-bottom: solid 1px var(--text-color-b);
+                      resize: none;
+                    "
+                    id="InputEmail"
+                    name="InputEmail"
+                    placeholder="Correo"
+                    required=""
+                  />
+                </div>
+                <!-- Phone input -->
+                <div style="margin-bottom: 25px">
+                  <input
+                    type="text"
+                    style="
+                      border: 0;
+                      padding: 0;
+                      width: 100%;
+                      height: 50px;
+                      color: var(--other-color);
+                      font-weight: 400;
+                      font-size: var(--p-font);
+                      border-bottom: solid 1px var(--text-color-b);
+                      resize: none;
+                    "
+                    name="InputPhone"
+                    id="InputPhone"
+                    placeholder="Telefono"
+                  />
+                </div>
+                <!-- Subject input -->
+                <div style="margin-bottom: 25px">
+                  <input
+                    type="text"
+                    style="
+                      border: 0;
+                      padding: 0;
+                      width: 100%;
+                      height: 50px;
+                      color: var(--other-color);
+                      font-weight: 400;
+                      font-size: var(--p-font);
+                      border-bottom: solid 1px var(--text-color-b);
+                      resize: none;
+                    "
+                    id="InputSubject"
+                    name="InputSubject"
+                    placeholder="Asunto"
+                    required=""
+                  />
+                </div>
+              </div>
+
+              <!-- Message textarea -->
+              <div>
+                <textarea
+                  name="InputMessage"
+                  id="InputMessage"
+                  style="
+                    margin-top: 20px;
+                    height: 118px;
+                    border: 0;
+                    padding: 0;
+                    width: 100%;
+                    color: var(--other-color);
+                    font-weight: 400;
+                    font-size: var(--p-font);
+                    border-bottom: solid 1px var(--text-color-b);
+                    resize: none;
+                  "
+                  rows="6"
+                  placeholder="Mensaje"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Send Button -->
+            <input
+              type="submit"
+              name="submit"
+              id="submit"
+              value="Enviar mensaje"
+              class="btn"
+              style="
+                border: 0;
+                margin-top: 20px;
+                padding: 8px 16px;
+                border-radius: 3px;
+                font-weight: 500;
+                font-size: var(--p-font);
+                cursor: pointer;
+                position: relative;
+                color: var(--text-color-w);
+                background-color: var(--bg-color);
+              "
+            />
+          </form>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>

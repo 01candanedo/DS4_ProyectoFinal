@@ -12,22 +12,22 @@ import java.util.List;
 public class NoticiasControllers{
 
     @GetMapping("/noticias/all")
-    public List<Noticias> ObtenerTodosProductos() {
-        return new NoticiasDb().ObtenerProductos();
+    public List<Noticias> ObtenerNoticias() {
+        return new NoticiasDb().ObtenerNoticias();
     }
 
     @PostMapping("/noticias")
-    public int InsertarNoticia(@RequestBody Noticias noticias){
+    public int InsertarNoticias(@RequestBody Noticias noticias){
         return new NoticiasDb().GuardarNoticias(noticias);
     }
     @PutMapping("/noticias")
-    public int ActualizarNoticia(@RequestBody Noticias noticia){
+    public int ActualizarNoticias(@RequestBody Noticias noticia){
         return new NoticiasDb().ActualizarNoticia(noticia);
     }
 
     @DeleteMapping("/noticias/{noticiasId}")
-    public int EliminarNoticia(@PathVariable("noticiasId") int nid){
-        return new NoticiasDb().EliminarNoticia(nid);
+    public int EliminarNoticias(@PathVariable("noticiasId") int nid){
+        return new NoticiasDb().EliminarNoticias(nid);
     }
 
 

@@ -80,6 +80,9 @@ body {
   padding: 32px 0;
 }
 
+.loguearse{
+  color: aqua;
+}
 .formulario input {
   width: 70%;
   display: block;
