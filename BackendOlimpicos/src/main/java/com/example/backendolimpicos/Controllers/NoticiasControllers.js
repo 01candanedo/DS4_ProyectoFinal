@@ -9,15 +9,15 @@ function ObtenerNoticias(){
         });
     });
 }
+
 function ImprimirNoticias(){
     let contenedor = document.getElementById("news-section");
+    contenedor.innerHTML="";
 
     noticias.forEach(noticia=>{
         contenedor.innerHTML+="";
     });
-
 }
-
 function MapearNoticia(noticia){
     return '<div class="news-card">\n' +
         '            <div class="news-image">\n' +
@@ -34,6 +34,10 @@ function MapearNoticia(noticia){
 }
 
 function EliminarNoticia(nid){
-    fetch().then(res=>console.);
+    fetch(baseUrl+'/noticias/'+nid,{method:"Delete"}).then(res=>{
+        console.log(res);
+        ObtenerNoticias;
+    });
+
 }
 
