@@ -28,7 +28,7 @@ public class NoticiasDb {
                         result.getString("Titulo"),
                         result.getString("Descripcion"),
                         result.getString("imagen"),
-                        result.getString("verMas"));
+                        result.getString("Enlace"));
                 noticias.add(noticia);
             }
             stmt.close();
@@ -49,7 +49,7 @@ public class NoticiasDb {
                     +noticias.getTitulo()+","
                     +noticias.getDescripcion()+",'"
                     +noticias.getImagen()+"','"
-                    +noticias.getVerMas()+"')";
+                    +noticias.getEnlace()+"')";
             resultado = stm.executeUpdate(query);
             return resultado;
         }catch(Exception e){
@@ -79,7 +79,7 @@ public class NoticiasDb {
                     +noticia.getTitulo()+","
                     +noticia.getDescripcion()+",'"
                     +noticia.getImagen()+"','"
-                    +noticia.getVerMas()+"')";
+                    +noticia.getEnlace()+"')";
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;

@@ -1,10 +1,10 @@
 package com.example.backendolimpicos.Controllers;
 
 import com.example.backendolimpicos.Models.Noticias;
-import com.example.backendolimpicos.Models.Productos;
 import com.example.backendolimpicos.Services.NoticiasDb;
-import com.example.backendolimpicos.Services.ProductosDb;
 import org.springframework.web.bind.annotation.*;
+import com.example.backendolimpicos.Models.Productos;
+import com.example.backendolimpicos.Services.ProductosDb;
 
 import java.util.List;
 
@@ -20,6 +20,7 @@ public class NoticiasControllers{
     public int InsertarNoticias(@RequestBody Noticias noticias){
         return new NoticiasDb().GuardarNoticias(noticias);
     }
+
     @PutMapping("/noticias")
     public int ActualizarNoticias(@RequestBody Noticias noticia){
         return new NoticiasDb().ActualizarNoticia(noticia);

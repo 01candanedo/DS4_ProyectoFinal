@@ -5,13 +5,14 @@ public class Noticias {
     private String titulo;
     private String descripcion;
     private String imagen;
-    private String verMas;
+    private String enlace;
 
-    public Noticias(int id, String titulo, String descripcion, String imagen, String verMas) {
+    public Noticias(int id, String titulo, String descripcion, String imagen, String enlace) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.imagen = imagen;
+        this.enlace = enlace;
     }
 
     public Noticias() {}
@@ -48,11 +49,11 @@ public class Noticias {
         this.imagen = imagen;
     }
 
-    public void setVerMas(String verMas) {
-        this.verMas = verMas;
+    public String getEnlace() {
+        return enlace;
     }
 
-    public String getVerMas() {
-        return verMas;
+    public void setEnlace(String enlace) {
+        this.enlace = enlace;
     }
 }
