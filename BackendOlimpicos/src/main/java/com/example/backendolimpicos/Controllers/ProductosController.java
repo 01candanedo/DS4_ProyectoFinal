@@ -1,3 +1,4 @@
+
 package com.example.backendolimpicos.Controllers;
 
 import com.example.backendolimpicos.Models.Productos;
@@ -29,3 +30,4 @@ public class ProductosController {
         return new ProductosDb().EliminarProducto(pid);
     }
 }
+
