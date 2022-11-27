@@ -15,7 +15,6 @@ public class ProductosDb {
     public ProductosDb() {
         con = new Conexion().openDb();
     }
-
     public List<Productos> ObtenerProductos() {
         try {
             Statement stmt = con.createStatement();

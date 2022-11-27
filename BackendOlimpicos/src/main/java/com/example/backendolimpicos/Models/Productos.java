@@ -5,7 +5,6 @@ public class Productos {
     private String nombre;
     private float precio;
 
-
     public Productos(){
 
     }
