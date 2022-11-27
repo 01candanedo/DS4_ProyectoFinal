@@ -58,14 +58,15 @@
                             <i class="fa-brands fa-twitter"></i>
                         </div>
                     </div>
-                    <p class="cuenta-gratis">crear cuenta gratis</p>
-                    <input type="text" placeholder="Nombre">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Contraseña">
-                    <input type="button" value="Registrarse">
+                    <p class="cuenta-gratis">Crear Cuenta Gratis</p>
+                    <input type="text" placeholder="Nombre de Usuario" id="nombre_usuario" required>
+                    <input type="email" placeholder="Email" id="email" required>
+                    <input type="password" placeholder="Contraseña" id="contrasenia" required>
+                    <input type="button" value="Registrarse" onclick="GuardarUsuario()">
                 </form>
             </div>
         </form>
     </div>
+        <script src="../../../BackendOlimpicos/src/main/java/com/example/backendolimpicos/Controllers/UsuariosControllers.js"></script>
 </body>
 </html>

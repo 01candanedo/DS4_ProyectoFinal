@@ -6,11 +6,10 @@ import java.sql.SQLException;
 
 public class Conexion {
     public Connection openDb() {
-        LeerXML obj_leer = new LeerXML();
+        //LeerXML obj_leer = new LeerXML();
         try {
-            obj_leer.datosXML();
-            String url = "jdbc:mariadb://localhost:3306/chicheme";
-
+            //obj_leer.datosXML();
+            String url = "jdbc:mariadb://localhost:3306/olimpicosdb";
             Class.forName("org.mariadb.jdbc.Driver");
             return DriverManager.getConnection(url, "root", "");
         } catch (SQLException e) {
