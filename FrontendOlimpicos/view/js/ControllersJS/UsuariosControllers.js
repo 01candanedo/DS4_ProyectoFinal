@@ -13,13 +13,21 @@ function VerificarEmail(){
     ObtenerUsuarios()
     let flag=false;
     let email;
+    for (usr of usuarios) {
+        if(usr.usuario == document.getElementById("email").value){
+            flag=true;
+            email = usr.usuario;
+            alert(usr.usuario+" "+usr.contrasenia)
+        }
+    }
+    /*
     usuarios.forEach(usr => {
         if(usr.usuario == document.getElementById("email").value){
             flag=true;
             email = usr.usuario;
             alert(usr.usuario+" "+usr.contrasenia)
         }
-    });
+    });*/
 
     if(flag){
         if(email==document.getElementById("email").value){
@@ -32,8 +40,7 @@ function VerificarEmail(){
 }
 
 function CerrarSesion(){
-    alert("cerrando sesion")
-    sessionStorage.clear("user");
+    sessionStorage.clear();
 }
 
 function GuardarUsuario() {
