@@ -36,7 +36,10 @@ function MapearPlantilla(datos){
         </div>
     `
 }
-
-function EliminarNoticia(){
+function EliminarNoticia(nid) {
+    fetch(baseUrl + '/noticias/' + nid, {method: "Delete"}).then(res => {
+        console.log(res);
+        ObtenerNoticias;
+    });
 
 }

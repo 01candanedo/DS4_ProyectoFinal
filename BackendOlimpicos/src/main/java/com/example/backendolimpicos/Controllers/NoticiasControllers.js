@@ -30,14 +30,11 @@ function MapearNoticia(noticia){
         '              <h2 class="news-title">${noticia.titulo}</h2>\n' +
         '              <p class="news-description">${noticia.descripcion}</p>\n' +
         '            </div>'
-
 }
-
 function EliminarNoticia(nid){
     fetch(baseUrl+'/noticias/'+nid,{method:"Delete"}).then(res=>{
         console.log(res);
         ObtenerNoticias;
     });
-
 }
 
