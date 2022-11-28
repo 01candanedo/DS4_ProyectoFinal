@@ -26,10 +26,11 @@ public class NoticiasControllers{
         return new NoticiasDb().ActualizarNoticia(noticia);
     }
 
-    @DeleteMapping("/noticias/{noticiasId}")
-    public int EliminarNoticias(@PathVariable("noticiasId") int nid){
-        return new NoticiasDb().EliminarNoticias(nid);
-    }
 
+    //@RequestMapping(value = "/{noticiasId}",method=RequestMethod.DELETE)
+    @DeleteMapping(value="/noticias/{id}")
+    public int EliminarNoticias(@PathVariable int id){
+        return new NoticiasDb().EliminarNoticias(id);
+    }
 
 }

@@ -22,8 +22,8 @@ function ImprimirNoticiasTabla(){
             <td><input id="id-noticias" type="hidden" disabled="true"></td>
             <td><input id="titulo" class="entrada" type="text" name="nombre" placeholder="Nombre.."></td>
             <td><input id="descripcion" class="entrada" type="text" name="apellido" placeholder="Apellido.."></td>
-            <td><input id="enlace" class="entrada" type="email" name="correo" placeholder="Email.."></td>
             <td><input id="imagen" class="entrada" type="text" name="tipo" placeholder="Tipo.."></td>
+            <td><input id="enlace" class="entrada" type="email" name="correo" placeholder="Email.."></td>
             <td>
               <div class="status">
                 <button class="usuario add2">añadir</button>
@@ -45,7 +45,7 @@ function MapearNoticiaTabla(noticia){
                   <td> 
                     <div class="status"> 
                       <button class="usuario mod noticiabd" onclick="CargarUnicoReporte(${noticia.id})">Modificar</button> 
-                      <button class="usuario del"  onclick="EliminarNoticia">Eliminar</button> 
+                      <button class="usuario del"  onclick="EliminarNoticiaTabla(${noticia.id})">Eliminar</button> 
                     </div> 
                   </td> 
                 </tr>
@@ -98,7 +98,18 @@ function CargarUnicoReporte(nid){
             id.value = noticia.id; 
         }
     })
+}
 
+function GuardarNoticiaTabla(){
+    let data={
+        id:,
+        titulo: document.getElementById("titulo").value,
+        descripcion: document.getElementById("descripcion").value,
+        imagen: document.getElementById("imagen").value,
+        enlace:document.getElementById("enlace").value
+    };
+
+    fetch(baseUrl+"/noticias")
 }
 
 document.addEventListener('DOMContentLoaded', e => {

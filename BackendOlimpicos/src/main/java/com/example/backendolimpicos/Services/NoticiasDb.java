@@ -23,7 +23,6 @@ public class NoticiasDb {
             List<Noticias> noticias = new ArrayList<>();
             ResultSet result = stmt.executeQuery(query);
             while (result.next()) {
-                System.out.println(result.getString("Titulo"));
                 Noticias noticia = new Noticias(
                         result.getInt("ID"),
                         result.getString("Titulo"),
@@ -63,7 +62,7 @@ public class NoticiasDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "delete from noticia where id =("+nid+")";
+            String query = "delete from noticia where id ="+nid+"";
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;
@@ -72,13 +71,14 @@ public class NoticiasDb {
     }
 
     public int ActualizarNoticia(Noticias noticia){
+      /*  System.out.println(noticia.getId());*/
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "update from noticia set='"
-                    +noticia.getTitulo()+"','"
-                    +noticia.getDescripcion()+"','"
-                    +noticia.getImagen()+"','"
+            String query = "update noticia set titulo='"
+                    +noticia.getTitulo()+"', descripcion='"
+                    +noticia.getDescripcion()+"',imagen='"
+                    +noticia.getImagen()+"',enlace='"
                     +noticia.getEnlace()+"'"+"where id="+noticia.getId();
             return stm.executeUpdate(query);
         }catch (Exception e){

@@ -25,8 +25,8 @@ public class UsuariosControllers {
         return new UsuariosDb().RegistrarUsuarios(usuario);
     }
 
-    //@PutMapping("/usuario")
-    //public int ActualizarDatosUsuario(@RequestBody Usuarios usuario){
-        //return new UsuariosDb().ActualizarUsuario(usuario);
-    //}
+    @PutMapping("/usuario")
+    public int ActualizarDatosUsuario(@RequestBody Usuarios usuario){
+        return new UsuariosDb().ActualizarUsuario(usuario);
+    }
 }

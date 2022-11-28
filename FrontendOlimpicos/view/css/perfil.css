@@ -25,14 +25,14 @@ body {
   flex-direction: row;
 }
 
-#nombrecomp {
+#nombrecompleto {
   margin-top: 25px;
   margin-bottom: 25px;
   text-align: center;
   font-weight: bold;
 }
 
-#usuario {
+#usuario_perfil_titulo {
   margin-top: 25px;
   margin-bottom: 25px;
   text-align: center;
