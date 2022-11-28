@@ -40,8 +40,6 @@ public class NoticiasDb {
         return null;
     }
 
-
-
     public int GuardarNoticias(Noticias noticias){
         int resultado = 0;
         try{
@@ -71,7 +69,6 @@ public class NoticiasDb {
         }
         return resultado;
     }
-
 
     public int ActualizarNoticia(Noticias noticia){
         int resultado = 0;
