@@ -15,6 +15,13 @@ public class Perfil {
         this.instagram = instagram;
     }
 
+    public Perfil(String usuario, String nombre, String apellido, String email){
+        this.usuario = usuario;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+    }
+
     public String getEmail() {
         return email;
     }

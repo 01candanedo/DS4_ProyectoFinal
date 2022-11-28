@@ -19,7 +19,7 @@
     />
     <title>Perfil</title>
   </head>
-  <body>
+  <body onload="ObtenerUsuariosPerfil()">
     <header class="Header-section">
       <nav class="navbar">
         <div class="menu-icon">
@@ -65,8 +65,8 @@
         <div class="cajon">
           <div class="left-div">
             <div>
-              <p id="nombrecomp">James Adam</p>
-              <p id="usuario">@Jam12</p>
+              <p id="nombrecompleto"></p>
+              <p id="usuario_perfil_titulo"></p>
               <center>
                 <img
                   class="foto-usuario"
@@ -78,7 +78,6 @@
             </div>
             <div>
               <div class="info-photo">Su imagen sera subida y reajustada</div>
-              <p id="union">Se unió el 02 de Octubre del 2022</p>
             </div>
           </div>
 
@@ -96,6 +95,7 @@
                   <div class="box">
                     <label>Nombre</label><br />
                     <input
+                            id="nombre_perfil"
                       class="input-form"
                       type="text"
                       name="nombre"
@@ -106,6 +106,7 @@
                   <div class="box">
                     <label>Apellido</label><br />
                     <input
+                            id="apellido_perfil"
                       class="input-form"
                       type="text"
                       name="apellido"
@@ -116,16 +117,18 @@
                   <div class="box">
                     <label>Usuario</label><br />
                     <input
+                            id="usuario_perfil"
                       class="input-form"
                       type="text"
                       name="usuario"
                       placeholder="Ingrese nombre de usuario.."
-                      required
+                      disabled
                     />
                   </div>
                   <div class="box">
                     <label>Correo Electronico</label><br />
                     <input
+                            id="email_perfil"
                             class="input-form"
                             type="email"
                             name="correo"
@@ -158,6 +161,7 @@
                     <label><b>Redes Sociales</b></label
                     ><br />
                     <input
+                            id="facebook_perfil"
                       class="input-form"
                       type="text"
                       placeholder="Usuario facebook"
@@ -167,6 +171,7 @@
                   <div class="box">
                     <br />
                     <input
+                            id="instagram_perfil"
                       class="input-form"
                       type="text"
                       name="instagram"
@@ -174,7 +179,7 @@
                     />
                   </div>
                   <div class="box">
-                    <button class="btn-actualizar" type="submit">
+                    <button class="btn-actualizar" type="submit" onclick="ActualizarUsuario()">
                       Actualizar
                     </button>
                   </div>
@@ -186,5 +191,6 @@
       </div>
     </main>
     <footer></footer>
+    <script src="../js/ControllersJS/PerfilController.js"></script>
   </body>
 </html>
