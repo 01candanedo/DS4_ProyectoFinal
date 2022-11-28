@@ -11,12 +11,13 @@ function ObtenerNoticias(){
 }
 
 function ObtenerNoticiasTabla(){
-    fecth(baseUrl+'/noticias/all').then(res=>{
+    /*fecth(baseUrl+'/noticias/all').then(res=>{
         res.json().then(json=>{
             noticias = json;
             ImprimirNoticiasTabla;
         })
-    })
+    })*/
+    alert("hola mundo");
 }
 
 function ImprimirNoticias(){

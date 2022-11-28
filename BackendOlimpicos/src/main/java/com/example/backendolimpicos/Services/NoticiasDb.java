@@ -16,13 +16,14 @@ public class NoticiasDb {
         con = new Conexion().openDb();
     }
 
-    public List<Noticias> ObtenerNoticias() {
+    public List<Noticias> ObtenerNoticias(){
         try {
             Statement stmt = con.createStatement();
             String query = "SELECT * FROM noticia";
             List<Noticias> noticias = new ArrayList<>();
             ResultSet result = stmt.executeQuery(query);
             while (result.next()) {
+                System.out.println(result.getString("Titulo"));
                 Noticias noticia = new Noticias(
                         result.getInt("ID"),
                         result.getString("Titulo"),

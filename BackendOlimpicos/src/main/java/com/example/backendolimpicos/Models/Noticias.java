@@ -1,6 +1,6 @@
 package com.example.backendolimpicos.Models;
 
-public class Noticias {
+public class Noticias{
     private int id; 
     private String titulo;
     private String descripcion;
