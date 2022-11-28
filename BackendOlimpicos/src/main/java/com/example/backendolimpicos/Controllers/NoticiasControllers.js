@@ -65,10 +65,17 @@ return ' <tr>\n' +
     '          </tr>'
 
 }
-function EliminarNoticia(nid){
-    fetch(baseUrl+'/noticias/'+nid,{method:"Delete"}).then(res=>{
+function EliminarNoticia(nid) {
+    fetch(baseUrl + '/noticias/' + nid, {method: "Delete"}).then(res => {
         console.log(res);
         ObtenerNoticias;
+    });
+}
+
+    function EliminarNoticiaTabla(nid){
+        fetch(baseUrl+'/noticias/'+nid,{method:"Delete"}).then(res=>{
+            console.log(res);
+            ObtenerNoticiasTabla;
     });
 
 }

@@ -62,7 +62,7 @@ public class NoticiasDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call EliminarProducto("+nid+")";
+            String query = "delete from noticia where id =("+nid+")";
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;
@@ -74,7 +74,7 @@ public class NoticiasDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call actualizarNoticia('"
+            String query = "update from noticia set=('"
                     +noticia.getId()+"',"
                     +noticia.getTitulo()+","
                     +noticia.getDescripcion()+",'"
