@@ -98,6 +98,9 @@ table {
 .add{
     background: var(--green100);
 }
+.add2{
+    background: var(--grey300);
+}
 
 th,
 td {

@@ -75,12 +75,11 @@ public class NoticiasDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "update from noticia set=('"
-                    +noticia.getId()+"',"
-                    +noticia.getTitulo()+","
-                    +noticia.getDescripcion()+",'"
+            String query = "update from noticia set='"
+                    +noticia.getTitulo()+"','"
+                    +noticia.getDescripcion()+"','"
                     +noticia.getImagen()+"','"
-                    +noticia.getEnlace()+"')";
+                    +noticia.getEnlace()+"'"+"where id="+noticia.getId();
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;

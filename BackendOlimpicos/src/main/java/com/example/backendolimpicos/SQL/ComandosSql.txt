@@ -1,0 +1,16 @@
+CREATE TABLE usuario(
+    usuario VARCHAR(20) NOT NULL PRIMARY KEY,
+    nombre VARCHAR(15) NOT NULL,
+    apellido VARCHAR(20) NOT NULL,
+    email VARCHAR(25) NOT NULL,
+    pass VARCHAR(40) NOT NULL,
+    foto VARCHAR(80)
+);
+
+CREATE PROCEDURE actualizarPerfil(IN studentId INT)
+BEGIN
+    UPDATE productos SET
+                         productos.nombre = nom,
+                         productos.precio = pre
+    WHERE productos.id = pid;
+END
