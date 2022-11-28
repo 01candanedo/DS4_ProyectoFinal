@@ -23,11 +23,17 @@ function VerificarEmail(){
 
     if(flag){
         if(email==document.getElementById("email").value){
+            sessionStorage.setItem("user", email);
             window.location.replace("../../../index.html");
         }
     }else{
         alert("Valores incorrectos.. verifique el correo o contraseña "+email)
     }
+}
+
+function CerrarSesion(){
+    alert("cerrando sesion")
+    sessionStorage.clear("user");
 }
 
 function GuardarUsuario() {
