@@ -2,16 +2,12 @@ package com.example.backendolimpicos.Services;
 
 import com.example.backendolimpicos.Config.Conexion;
 import com.example.backendolimpicos.Models.Deportes;
-import com.example.backendolimpicos.Models.Noticias;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
-
-import java.sql.Connection;
 
 public class DeportesDb {
 
@@ -21,7 +17,7 @@ public class DeportesDb {
         con = new Conexion().openDb();
     }
 
-    public List<Deportes> ObtenerProductos() {
+    public List<Deportes> ObtenerDeportes() {
         try {
             Statement stmt = con.createStatement();
             String query = "SELECT * FROM deporte";
@@ -63,7 +59,7 @@ public class DeportesDb {
         return resultado;
     }
 
-    public int EliminarDeporte(int nid){
+    public int EliminarDeportes(int nid){
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
@@ -75,16 +71,16 @@ public class DeportesDb {
         return resultado;
     }
 
-    public int ActualizarNoticia(Noticias noticia){
+    public int ActualizarDeporte(Deportes deporte){
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call actualizarNoticia('"
-                    +noticia.getId()+"',"
-                    +noticia.getTitulo()+","
-                    +noticia.getDescripcion()+",'"
-                    +noticia.getImagen()+"','"
-                    +noticia.getEnlace()+"')";
+            String query = "Call actualizarDeporte('"
+                    +deporte.getId()+"',"
+                    +deporte.getTitulo()+","
+                    +deporte.getDescripcion()+",'"
+                    +deporte.getImagen()+"','"
+                    +deporte.getEnlace()+"')";
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;
