@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/90ecc93fa3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
-<body>
+<body onload="ObtenerUsuarios">
     <div class="container-form sign-up">
         <nav class="navbar">
             <div class="menu-icon">
@@ -57,14 +57,15 @@
                 </div>
             </div>
             <p class="cuenta-gratis">Bienvenido otra vez</p>
-            <input type="email" placeholder="Email">
+            <input id="email" type="email" placeholder="Email">
             <input type="password" placeholder="Contraseña">
-            <input type="button" value="Iniciar sesion">
+            <input type="button" value="Iniciar sesion" onclick="VerificarEmail()">
             <br>
             <p>¿No tienes una cuenta? <a href="registro.html"><span class="registrate">Registrate</span> </a></p>
         </form>
 
     </div>
     </div>
+    <script src="../js/ControllersJS/UsuariosControllers.js"></script>
 </body>
 </html>
