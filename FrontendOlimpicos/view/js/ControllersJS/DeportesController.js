@@ -1,4 +1,5 @@
 let datos = [];
+let datos_2 = [];
 
 function ObtenerDeportes(){
 
@@ -10,6 +11,18 @@ function ObtenerDeportes(){
             MapearDatos();
         })
     });
+
+    fetch("http://localhost:8080/deportistas/all").
+    then(resultado_2 => {
+        resultado_2.json().then(json => {
+            datos_2 = json;
+            console.log(datos_2);
+            MapearDatos();
+        })
+    });
+
+    
+    
 }
 
 function MapearDatos(){
@@ -18,6 +31,14 @@ function MapearDatos(){
     for(let i=0; i<datos.length; i++){
         contenedor.innerHTML += MapearPlantilla(datos[i]);
     }
+
+    let contenedor_2 = document.getElementById('home');
+    for(let i=0; i<datos_2.length; i++){
+        contenedor_2.innerHTML += MapearPlantilla_2(datos_2[i]);
+    }
+
+    const img_slider = document.querySelectorAll(".img-slide");
+    img_slider[0].classList.add("active");
 }
 
 function MapearPlantilla(datos){
@@ -35,5 +56,10 @@ function MapearPlantilla(datos){
             </div>
         </div>
     `
+}
 
+function MapearPlantilla_2(datos){
+    return `
+        <img class="img-slide" src="${datos.imagen}"></img>
+    `
 }
