@@ -65,7 +65,6 @@ function GuardarProducto() {
 
 function PopularDatosCampos(pid) {
     let producto = productos.filter(p => { return p.id == pid })[0];
-
     document.getElementById('nombre').value = producto.nombre;
     document.getElementById('precio').value = producto.precio;
     document.getElementById('categoriaId').value = producto.categoriaId;
@@ -73,7 +72,6 @@ function PopularDatosCampos(pid) {
     document.getElementById('fechaProduccion').value = producto.fechaProduccion;
     document.getElementById('fechaCaducidad').value = producto.fechaCaducidad;
     document.getElementById('productoId').value = producto.id;
-
 }
 
 function ActualizarProducto() {
