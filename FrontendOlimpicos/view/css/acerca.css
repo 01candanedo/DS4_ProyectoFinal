@@ -108,7 +108,7 @@ section div p{
     justify-content: space-between;
 }
 
-.pres1, .pres2, .pres3{
+.pres{
     width: 30%;
     height: auto;
     background: rgba(255, 255, 255, 0.70);
