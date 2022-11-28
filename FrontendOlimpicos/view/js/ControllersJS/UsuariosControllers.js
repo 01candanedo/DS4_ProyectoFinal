@@ -1,28 +1,14 @@
 let baseUrl = "http://localhost:8080";
 
-/*
-function GuardarUsuario() {
-    let data = {
-        usuario: document.getElementById("nombre_usuario").value,
-        email: document.getElementById("email").value,
-        contrasenia: document.getElementById("contrasenia").value,
-    };
-
-    if(email){
-        fetch(baseUrl + "/usuario", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-type": 'application/json; charset=UTF-8'
-            }
+function ObtenerUsuarios() {
+    fetch(baseUrl + '/productos/all').then(res => {
+        res.json().then(json => {
+            productos = json;
+            ImprimirProductos();
         });
-        alert("Usuario Registrado Exitosamente");
-    }else{
-        alert("El correo electrónico no es válido o ya está en uso");
-        document.getElementById("nombre_usuario").innerHTML;
-    }
+    });
 }
- */
+
 
 function GuardarUsuario() {
     let data = {
