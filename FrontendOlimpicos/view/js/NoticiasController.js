@@ -35,5 +35,8 @@ function MapearPlantilla(datos){
             </div>
         </div>
     `
+}
+
+function EliminarNoticia(){
 
 }
