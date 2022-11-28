@@ -1,23 +1,26 @@
 package com.example.backendolimpicos.Models;
 
 public class Perfil {
-    private String usuario;
-    private String nombre;
-    private String apellido;
-    private String foto;
-    private String facebook;
-    private String instagram;
+    private String usuario, nombre, apellido, email, foto, facebook, instagram;
 
-    public Perfil(){
+    public Perfil(){}
 
-    }
-    public Perfil(String usuario, String nombre, String apellido, String foto, String facebook, String instagram){
+    public Perfil(String usuario, String nombre, String apellido, String email, String foto, String facebook, String instagram){
         this.usuario = usuario;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.email = email;
         this.foto = foto;
         this.facebook = facebook;
         this.instagram = instagram;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setUsuario(String usuario) {

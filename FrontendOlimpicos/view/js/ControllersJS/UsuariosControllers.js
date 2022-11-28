@@ -46,8 +46,10 @@ function CerrarSesion(){
 function GuardarUsuario() {
     let data = {
         usuario: document.getElementById("nombre_usuario").value,
+        nombre: document.getElementById("nombre").value,
+        apellido: document.getElementById("apellido").value,
         email: document.getElementById("email").value,
-        contrasenia: document.getElementById("contrasenia").value,
+        pass: document.getElementById("contrasenia").value,
     };
 
     fetch(baseUrl + "/usuario", {
@@ -59,6 +61,8 @@ function GuardarUsuario() {
     }).then(
         response => {
             document.getElementById("nombre_usuario").value = "";
+            document.getElementById("nombre").value = "";
+            document.getElementById("apellido").value = "";
             document.getElementById("email").value = "";
             document.getElementById("contrasenia").value = "";
             alert("Registro Exitoso")
