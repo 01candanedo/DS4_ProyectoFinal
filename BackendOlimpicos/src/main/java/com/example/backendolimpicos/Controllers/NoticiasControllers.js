@@ -10,13 +10,30 @@ function ObtenerNoticias(){
     });
 }
 
+function ObtenerNoticiasTabla(){
+    fecth(baseUrl+'/noticias/all').then(res=>{
+        res.json().then(json=>{
+            noticias = json;
+            ImprimirNoticiasTabla;
+        })
+    })
+}
+
 function ImprimirNoticias(){
     let contenedor = document.getElementById("news-section");
     contenedor.innerHTML="";
 
     noticias.forEach(noticia=>{
-        contenedor.innerHTML+="";
+        contenedor.innerHTML+=MapearNoticia(noticia);
     });
+}
+function ImprimirNoticiasTabla(){
+    let contenedor = document.getElementById("crud");
+    contenedor.innerHTML="";
+
+    noticias.forEach(noticia=>{
+        contenedor.innerHTML+=MapearNoticiaTabla(noticia);
+    })
 }
 function MapearNoticia(noticia){
     return '<div class="news-card">\n' +
@@ -31,10 +48,30 @@ function MapearNoticia(noticia){
         '              <p class="news-description">${noticia.descripcion}</p>\n' +
         '            </div>'
 }
+
+function MapearNoticiaTabla(noticia){
+return ' <tr>\n' +
+    '            <td>${noticia.id}</td>\n' +
+    '            <td>${noticia.titulo}</td>\n' +
+    '            <td>${noticia.descripcion}</td>\n' +
+    '            <td>${noticia.imagen}</td>\n' +
+    '            <td>${noticia.enlace}</td>\n' +
+    '            <td>\n' +
+    '              <div class="status">\n' +
+    '                <a class="usuario mod" href="">Modificar</a>\n' +
+    '                <a class="usuario del" href="" onclick="EliminarNoticia">Eliminar</a>\n' +
+    '              </div>\n' +
+    '            </td>\n' +
+    '          </tr>'
+
+}
 function EliminarNoticia(nid){
     fetch(baseUrl+'/noticias/'+nid,{method:"Delete"}).then(res=>{
         console.log(res);
         ObtenerNoticias;
     });
+
 }
+
+
 

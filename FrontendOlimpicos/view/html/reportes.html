@@ -61,7 +61,7 @@
   </nav>
 </header>
 
-<main>
+<main onload="ObtenerNoticiasTabla()">
   <div class="main-div">
     <div class="box0">
       <p>Reportes Generados</p>
@@ -79,10 +79,10 @@
     <div class="box0">
       <p>Administracion de Usuarios (CRUD)</p>
     </div>
-    <div class="box3">
+    <div class="box3"> <!---->
       <section>
         <h2 class="titulo-repo">Registros de Usuarios</h2>
-        <table>
+        <table id ="crud">
           <tr>
             <th>N°</th>
             <th>Nombre</th>
