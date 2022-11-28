@@ -1,14 +1,34 @@
 let baseUrl = "http://localhost:8080";
+let usuarios = [];
 
 function ObtenerUsuarios() {
-    fetch(baseUrl + '/productos/all').then(res => {
+    fetch(baseUrl + '/usuarios/all').then(res => {
         res.json().then(json => {
-            productos = json;
-            ImprimirProductos();
+            usuarios = json;
         });
     });
 }
 
+function VerificarEmail(){
+    ObtenerUsuarios()
+    let flag=false;
+    let email;
+    usuarios.forEach(usr => {
+        if(usr.usuario == document.getElementById("email").value){
+            flag=true;
+            email = usr.usuario;
+            alert(usr.usuario+" "+usr.contrasenia)
+        }
+    });
+
+    if(flag){
+        if(email==document.getElementById("email").value){
+            window.location.replace("../../../index.html");
+        }
+    }else{
+        alert("Valores incorrectos.. verifique el correo o contraseña "+email)
+    }
+}
 
 function GuardarUsuario() {
     let data = {
