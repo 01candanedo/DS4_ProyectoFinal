@@ -72,4 +72,39 @@ public class DesarrolladoresDb {
         return resultado;
     }
 
+    public int EliminarDesarrolladores(int nid){
+        int resultado = 0;
+        try{
+            Statement stm = con.createStatement();
+            String query = "Call EliminarDesarrollador("+nid+")";
+            return stm.executeUpdate(query);
+        }catch (Exception e){
+            int x = 1;
+        }
+        return resultado;
+    }
+
+    public int ActualizarDesarrollador(Desarrolladores desarrolladores){
+        int resultado = 0;
+        try{
+            Statement stm = con.createStatement();
+            String query = "Call actualizarDesarrollador('"
+                    +desarrolladores.getId()+"',"
+                    +desarrolladores.getNombre()+","
+                    +desarrolladores.getApellido()+",'"
+                    +desarrolladores.getCarrera()+"','"
+                    +desarrolladores.getDescripcion()+"','"
+                    +desarrolladores.getEnlacecv()+"','"
+                    +desarrolladores.getFoto()+"','"
+                    +desarrolladores.getGithub()+"','"
+                    +desarrolladores.getFacebook()+"','"
+                    +desarrolladores.getInstagram()+"','"
+                    +desarrolladores.getTwitter()+"')";
+            return stm.executeUpdate(query);
+        }catch (Exception e){
+            int x = 1;
+        }
+        return resultado;
+    }
+
 }
