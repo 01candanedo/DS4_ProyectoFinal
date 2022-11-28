@@ -1,7 +1,6 @@
 package com.example.backendolimpicos.Services;
 
 import com.example.backendolimpicos.Config.Conexion;
-import com.example.backendolimpicos.Models.Productos;
 import com.example.backendolimpicos.Models.Usuarios;
 
 import java.sql.Connection;
@@ -27,8 +26,10 @@ public class UsuariosDb {
             while (result.next()) {
                 Usuarios usuario = new Usuarios(
                         result.getString("usuario"),
+                        result.getString("nombre"),
+                        result.getString("apellido"),
                         result.getString("email"),
-                        result.getString("contrasenia"));
+                        result.getString("pass"));
                 usuarios.add(usuario);
             }
             stmt.close();
@@ -44,7 +45,7 @@ public class UsuariosDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "INSERT INTO usuario (usuario, email, contrasenia) VALUES ('"+usr.getUsuario()+"','"+usr.getEmail()+"','"+usr.getContrasenia()+"')";
+            String query = "INSERT INTO usuario (usuario, nombre, apellido, email, pass) VALUES ('"+usr.getUsuario()+"','"+usr.getNombre()+"','"+usr.getApellido()+"','"+usr.getEmail()+"','"+usr.getPass()+"')";
             resultado = stm.executeUpdate(query);
             return resultado;
         }catch(Exception e){
