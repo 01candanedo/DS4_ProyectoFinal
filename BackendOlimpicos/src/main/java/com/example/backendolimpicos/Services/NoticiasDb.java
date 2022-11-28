@@ -16,7 +16,7 @@ public class NoticiasDb {
         con = new Conexion().openDb();
     }
 
-    public List<Noticias> ObtenerProductos() {
+    public List<Noticias> ObtenerNoticias() {
         try {
             Statement stmt = con.createStatement();
             String query = "SELECT * FROM noticia";
@@ -58,7 +58,7 @@ public class NoticiasDb {
         return resultado;
     }
 
-    public int EliminarNoticia(int nid){
+    public int EliminarNoticias(int nid){
         int resultado = 0;
         try{
             Statement stm = con.createStatement();

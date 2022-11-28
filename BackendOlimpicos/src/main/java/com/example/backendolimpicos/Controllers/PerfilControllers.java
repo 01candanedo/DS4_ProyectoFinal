@@ -18,10 +18,5 @@ public class PerfilControllers {
         return new NoticiasDb().GuardarNoticias(noticias);
     }
 
-
-
-
-
-
 }
 

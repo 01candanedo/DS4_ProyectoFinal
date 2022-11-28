@@ -1,6 +1,7 @@
 package com.example.backendolimpicos.Services;
 
 import com.example.backendolimpicos.Config.Conexion;
+import com.example.backendolimpicos.Models.Productos;
 import com.example.backendolimpicos.Models.Usuarios;
 
 import java.sql.Connection;
@@ -51,4 +52,22 @@ public class UsuariosDb {
         }
         return resultado;
     }
+
+/*
+    public int ActualizarUsuario(Usuarios usuario){
+        int resultado = 0;
+        try{
+            Statement stm = con.createStatement();
+            String query = "UPDATE usuario SET usuario.nombre = "+usuario.getUsuario()+" productos.precio = " +usuario
+                    "    WHERE productos.id = pid;"
+            String query = "Call ActualizarProducto(" + producto.getId() + ",'" + producto.getNombre() + "'," + producto.getPrecio() + ")";
+            return stm.executeUpdate(query);
+        }catch (Exception e){
+            int x = 1;
+        }
+        return resultado;
+    }
+ */
 }
+
+
