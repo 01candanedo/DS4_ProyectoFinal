@@ -107,6 +107,10 @@ td {
     padding: 20px;
 }
 
+th{
+    text-align: center;
+}
+
 tr:hover td {
     background: var(--grey300);
     color: var(--text-dark);
