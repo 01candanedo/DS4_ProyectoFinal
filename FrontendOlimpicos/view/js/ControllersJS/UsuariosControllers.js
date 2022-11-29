@@ -24,33 +24,45 @@ function VerificarEmail(){
     });
     if(flag){
         if(email === checkemail && pass === checkpass){
-            CrearSesion();
+            CrearSesion(email);
             window.location.replace("../../../index.html");
         }
     }else{
         alert("Datos incorrectos.., Intentelo nuevamente")
     }
+
 }
 
 function VerificarDatos(){
-    let usuario = document.getElementById("nombre_usuario").value;
-    let email = document.getElementById("email").value;
+    let flag=false;
+    let usuario = document.getElementById("usuario_registro").value;
+    let nombre = document.getElementById("nombre_registro").value;
+    let apellido = document.getElementById("apellido_registro").value;
+    let email = document.getElementById("email_registro").value;
+    let pass = document.getElementById("contrasenia_registro").value;
     usuarios.forEach(usr=>{
-        if(usr.Usuario === usuario || usr.Email === email){
-            alert("Algunos datos ya existen")
-        }else{
-
+        if(usr.usuario === usuario || usr.email === email){
+            flag=true;
         }
     });
+    if(flag){
+        alert("Algunos datos ya existen, intentelo nuevamente")
+    }else {
+        if(usuario === ""|| nombre === "" || apellido === "" || email === "" || pass === ""){
+            alert("Llene todos los campos")
+        }else{
+            GuardarUsuario();
+        }
+    }
 }
 
 function GuardarUsuario() {
     let usr = {
-        usuario: document.getElementById("usuario").value,
-        nombre: document.getElementById("nombre").value,
-        apellido: document.getElementById("apellido").value,
-        email: document.getElementById("email").value,
-        pass: document.getElementById("contrasenia").value,
+        usuario: document.getElementById("usuario_registro").value,
+        nombre: document.getElementById("nombre_registro").value,
+        apellido: document.getElementById("apellido_registro").value,
+        email: document.getElementById("email_registro").value,
+        pass: document.getElementById("contrasenia_registro").value,
         foto: "Default",
         fecha_Creacion: new Date().toLocaleDateString()
     };
@@ -63,11 +75,11 @@ function GuardarUsuario() {
         }
     }).then(
         response => {
-            document.getElementById("usuario").value = "";
-            document.getElementById("nombre").value = "";
-            document.getElementById("apellido").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("contrasenia").value = "";
+            document.getElementById("usuario_registro").value = "";
+            document.getElementById("nombre_registro").value = "";
+            document.getElementById("apellido_registro").value = "";
+            document.getElementById("email_registro").value = "";
+            document.getElementById("contrasenia_registro").value = "";
             alert("Registro Exitoso")
         }
     ).catch(

@@ -1,5 +1,5 @@
-function CrearSesion(){
-    sessionStorage.setItem("user", email);
+function CrearSesion(email){
+    sessionStorage.setItem("session_variable", email);
 }
 
 function CerrarSesion(){

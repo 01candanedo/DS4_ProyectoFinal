@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <title>Registro de Usuario</title>
 </head>
-    <body>
+    <body onload="ObtenerUsuarios()">
         <!--navbar-->
         <div class="container-form sign-up">
             <nav class="navbar">
@@ -58,12 +58,12 @@
                         </div>
                     </div>
                     <p class="cuenta-gratis">Crear Cuenta Gratis</p>
-                    <input type="text" placeholder="Usuario" id="usuario" required>
-                    <input type="text" placeholder="Nombre" id="nombre" required>
-                    <input type="text" placeholder="Apellido" id="apellido" required>
-                    <input type="email" placeholder="Email" id="email" required>
-                    <input type="password" placeholder="Contraseña" id="contrasenia" required>
-                    <input type="button" value="Registrarse" onclick="GuardarUsuario()">
+                    <input type="text" placeholder="Usuario" id="usuario_registro" required>
+                    <input type="text" placeholder="Nombre" id="nombre_registro" required>
+                    <input type="text" placeholder="Apellido" id="apellido_registro" required>
+                    <input type="email" placeholder="Email" id="email_registro" required>
+                    <input type="password" placeholder="Contraseña" id="contrasenia_registro" required>
+                    <input type="button" value="Registrarse" onclick="VerificarDatos()">
                     <br><p>Ya tiene cuenta? <a href="login.html"><span class="loguearse">Iniciar Sesion</span> </a></p>
                 </form>
             </div>
