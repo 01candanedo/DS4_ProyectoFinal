@@ -3,8 +3,6 @@ package com.example.backendolimpicos.Controllers;
 import com.example.backendolimpicos.Models.Noticias;
 import com.example.backendolimpicos.Services.NoticiasDb;
 import org.springframework.web.bind.annotation.*;
-import com.example.backendolimpicos.Models.Productos;
-import com.example.backendolimpicos.Services.ProductosDb;
 
 import java.util.List;
 
@@ -26,10 +24,16 @@ public class NoticiasControllers{
         return new NoticiasDb().ActualizarNoticia(noticia);
     }
 
-
     //@RequestMapping(value = "/{noticiasId}",method=RequestMethod.DELETE)
-    @DeleteMapping(value="/noticias/{id}")
+
+   /* @RequestMapping(value = "/noticias/{id}", method = RequestMethod.GET)
     public int EliminarNoticias(@PathVariable int id){
+        return new NoticiasDb().EliminarNoticias(id);
+    }*/
+
+    //@RequestMapping(value = "/noticias/{id}", method = RequestMethod.GET)
+    @DeleteMapping("/noticias/delete/{id}")
+    public int getBrand(@PathVariable Integer id) {
         return new NoticiasDb().EliminarNoticias(id);
     }
 

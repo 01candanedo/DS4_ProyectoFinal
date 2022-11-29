@@ -44,10 +44,10 @@ public class NoticiasDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call ingresarNoticia('"
-                    +noticias.getId()+"',"
-                    +noticias.getTitulo()+","
-                    +noticias.getDescripcion()+",'"
+
+            String query = "insert into noticia values(NULL,'"
+                    +noticias.getTitulo()+"','"
+                    +noticias.getDescripcion()+"','"
                     +noticias.getImagen()+"','"
                     +noticias.getEnlace()+"')";
             resultado = stm.executeUpdate(query);
