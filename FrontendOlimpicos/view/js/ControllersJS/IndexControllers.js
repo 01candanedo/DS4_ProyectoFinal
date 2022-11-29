@@ -1,8 +1,6 @@
 let datos = [];
-let datos_2 = [];
 
-function ObtenerNoticias(){
-
+function ObtenerSlider(){
     fetch("http://localhost:8080/noticias/all").
     then(resultado => {
         resultado.json().then(json => {
@@ -14,16 +12,9 @@ function ObtenerNoticias(){
 }
 
 function MapearDatos(){
-
-    //Mapeo de Cards Noticias
-    let contenedor = document.getElementById('news-container');
-    for(let i=0; i<datos.length; i++){
-        contenedor.innerHTML += MapearPlantilla(datos[i]);
-    }
-
-    //Mapeo de Slider Banner Noticias
+    //Mapeo de Slider Banner Noticias en Index
     //Generador de numeros aleatorios entre 1 y n cantidad de noticias para banner slider de noticias aleatorio
-    var cantidadNumeros = 5;
+    var cantidadNumeros = 4;
     var myArray = []
     while(myArray.length < cantidadNumeros){
         var numeroAleatorio = Math.floor(Math.random()*datos.length);
@@ -39,18 +30,10 @@ function MapearDatos(){
         }
     }
     console.log(myArray);
-    //Proceso real de Mapeo de Slider Banner Noticias
+    //Proceso real de Mapeo de Slider Banner Index / Noticias
     let contenedor_2 = document.getElementById('home');
     for(let i=0; i<myArray.length; i++){
         contenedor_2.innerHTML += MapearSliderBanner(datos[myArray[i]]);
-
-        if(i==0){
-            const img_slider = document.querySelectorAll(".img-slide");
-            img_slider[0].classList.add("active");
-
-            const content_slider = document.querySelectorAll(".content");
-            content_slider[0].classList.add("active");
-        }
         
         if(i == myArray.length-1){
             contenedor_2.innerHTML+=`<div class="slider-navigation">
@@ -92,40 +75,49 @@ function MapearDatos(){
             sliderNav(i);
         });
     });
-}
 
-function MapearPlantilla(datos){
-    return `
-        <div class="news-card">
-            <div class="news-image">
-                <img src="${datos.imagen}" class="news-thumb" alt="">
-                <a href="${datos.enlace}" target="_blank">
-                    <button class="card-btn">ver noticia completa</button>
-                </a>
-            </div>
-            <div class="news-info">
-                <h2 class="news-title">${datos.titulo}</h2>
-                <p class="news-description">"${datos.descripcion}"</p>
-            </div>
-        </div>
-    `
+    //Counter
+    let days = document.querySelector('.days .number'),
+        hours = document.querySelector('.hours .number'),
+        minutes = document.querySelector('.minutes .number'),
+        seconds = document.querySelector('.seconds .number'),
+        //Count Down End Date
+        //1000 milliseconds = 1 second
+        countDownDate = new Date("Jul 26, 2024 12:59:59").getTime();
+
+    let counter = setInterval(() => {
+        //Get Date Now
+        let dateNow = new Date().getTime();
+        //Find The Date Difference Between Now and End Date
+        let dateDiff = countDownDate - dateNow;
+
+        //Get Time Unit
+        let day = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+        let hour = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minute = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
+        let second = Math.floor((dateDiff % (1000 * 60)) / 1000);
+
+        days.innerHTML = day < 10 ? `0${day}` : day;
+        hours.innerHTML = hour < 10 ? `0${hour}` : hour;
+        minutes.innerHTML = minute < 10 ? `0${minute}` : minute;
+        seconds.innerHTML = second < 10 ? `0${second}` : second;
+
+        if (dateDiff == 0) {
+            clearInterval(counter);
+        }
+    }, 1000);
 }
 
 function MapearSliderBanner(datos){
+    var cadena = datos.imagen;
+    var cadenamod = cadena.substr(2);
+    console.log(cadenamod);
     return `
-        <img class="img-slide" src="${datos.imagen}"></img>
+        <img class="img-slide" src="FrontendOlimpicos/view/${cadenamod}"></img>
         <div class="content">
-            <h1 class="news-title-banner">${datos.titulo}<br></h1>
+            <h1 class="title-banner">${datos.titulo}<br></h1>
             <p>${datos.descripcion}</p>
             <a href="${datos.enlace}" target="_blank">ver m&aacute;s</a>
         </div>
     `
-}
-
-function EliminarNoticia(nid) {
-    fetch(baseUrl + '/noticias/' + nid, {method: "Delete"}).then(res => {
-        console.log(res);
-        ObtenerNoticias;
-    });
-
 }

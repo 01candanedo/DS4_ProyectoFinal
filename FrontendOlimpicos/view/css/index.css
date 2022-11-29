@@ -57,6 +57,10 @@ section{
   font-style: bold;
 }
 
+.home .content .title-banner{
+  font-size: 3em;
+}
+
 .home .content h1 span{
   font-size: 1em;
   font-weight: 600;

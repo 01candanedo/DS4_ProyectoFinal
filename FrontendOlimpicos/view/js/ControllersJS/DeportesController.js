@@ -17,7 +17,7 @@ function ObtenerDeportes(){
         resultado_2.json().then(json => {
             datos_2 = json;
             console.log(datos_2);
-            MapearDatos();
+            MapearDatos_2();
         })
     });
 }
@@ -28,8 +28,9 @@ function MapearDatos(){
     for(let i=0; i<datos.length; i++){
         contenedor.innerHTML += MapearPlantilla(datos[i]);
     }
+}
 
-    
+function MapearDatos_2(){
     let contenedor_2 = document.getElementById('home');
     for(let i=0; i<datos_2.length; i++){
         contenedor_2.innerHTML += MapearPlantilla_2(datos_2[i]);
@@ -82,6 +83,8 @@ function MapearDatos(){
         });
     });
 }
+
+
 
 function MapearPlantilla(datos){
     return `
