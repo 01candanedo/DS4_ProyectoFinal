@@ -64,7 +64,7 @@ public class UsuariosDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "UPDATE usuario SET nombre = '"+usuario.getNombre()+
+            String query = "UPDATE usuarios SET nombre = '"+usuario.getNombre()+
                     "', apellido = '"+usuario.getApellido()+
                     "', email = '"+usuario.getEmail()+
                     "' WHERE usuario = '"+usuario.getUsuario()+"'";
@@ -79,7 +79,7 @@ public class UsuariosDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "DELETE FROM usuario WHERE usuario = '"+usr+"';";
+            String query = "DELETE FROM usuarios WHERE usuario = '"+usr+"';";
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;

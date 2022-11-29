@@ -40,7 +40,8 @@ body{
 
 .box3{
     background-color: var(--main-color);
-    overflow-x: auto;
+    overflow: auto;
+    height: 400px;
     width: 90%;
     border-radius: 8px;
     margin: 1% 5% 5% 5%;

@@ -1,11 +1,20 @@
 let baseUrl = "http://localhost:8080";
 let usuarios = [];
-let perfil = [];
+let perfiles = [];
 
 function ObtenerUsuarios() {
     fetch(baseUrl + '/usuarios/all').then(res => {
         res.json().then(json => {
             usuarios = json;
+        });
+    });
+}
+
+function ObtenerUsuariosPerfil() {
+    fetch(baseUrl + '/usuarios/all').then(res => {
+        res.json().then(json => {
+            perfiles = json;
+            PerfilCampos(sessionStorage.getItem("session_variable"))
         });
     });
 }
@@ -86,5 +95,34 @@ function GuardarUsuario() {
         error => {
             alert("Ocurrio un error")
         });
+}
+
+
+function PerfilCampos(email) {
+    let perfil = perfiles.filter(p => { return p.email == email })[0];
+    document.getElementById("nombrecompleto").innerHTML = perfil.nombre+" "+perfil.apellido;
+    document.getElementById("fecha_creacion").innerHTML = perfil.fecha_Creacion;
+    document.getElementById("usuario_perfil_titulo").innerHTML = perfil.usuario;
+    document.getElementById('nombre_perfil').value = perfil.nombre;
+    document.getElementById('apellido_perfil').value = perfil.apellido;
+    document.getElementById('usuario_perfil').value = perfil.usuario;
+    document.getElementById('email_perfil').value = perfil.email;
+}
+
+function ActualizarUsuario() {
+    let usr = {
+        usuario: document.getElementById("usuario_perfil").value,
+        nombre: document.getElementById("nombre_perfil").value,
+        apellido: document.getElementById("apellido_perfil").value,
+        email: document.getElementById("email_perfil").value,
+    };
+
+    fetch(baseUrl + "/usuario", {
+        method: "PUT",
+        body: JSON.stringify(usr),
+        headers: {
+            "Content-type": 'application/json; charset=UTF-8'
+        }
+    });
 }
 

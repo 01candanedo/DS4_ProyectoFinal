@@ -29,7 +29,7 @@ public class UsuariosControllers {
     }
 
     @DeleteMapping("/usuario/{usuarioUsr}")
-    public int EliminarPerfil(@PathVariable("usuarioUsr") String usr){
+    public int EliminarUsuarios(@PathVariable("usuarioUsr") String usr){
         return new UsuariosDb().EliminarUsuario(usr);
     }
 }

@@ -268,21 +268,10 @@ document.addEventListener('DOMContentLoaded', e => {
     ObtenerUsuariosTabla();
 })
 
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////
-
-
 //USUARIOS CRUD
 let usuarios = [];
 function ObtenerUsuariosTabla(){
-    fetch(baseUrl+'/perfiles/all').then(res=>{
+    fetch(baseUrl+'/usuarios/all').then(res=>{
         res.json().then(json=>{
            usuarios = json;
             ImprimirUsuariosTabla();
@@ -301,13 +290,12 @@ function ImprimirUsuariosTabla(){
 }
 function MapearUsuarios(usr){
     return ` <tr>
-          <td>1</td>
+          <td>${usr.id}</td>
           <td>${usr.usuario}</td>
           <td>${usr.nombre}</td>
           <td>${usr.apellido}</td>
           <td>${usr.email}</td>
-          <td>${usr.facebook}</td>
-          <td>${usr.instagram}</td>
+          <td>${usr.foto}</td>
           <td>
             <div class="status">
               <a class="usuario mod" href="">Modificar</a>
@@ -323,21 +311,18 @@ function MapearHeadersUsuarios(){
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Email</th>
-          <th>Facebook</th>
-          <th>Instagram</th>
+          <th>Foto</th>
           <th>Accion</th>
         </tr>`
 }
 function MapearEdicionesUsuarios(){
-    //<td><input className="entrada" type="text" name="usuario" placeholder="Usuario.."></td>
     return ` <tr>
           <td>></td>
           <td><input class="entrada" type="hidden" name="usuario""></td>
           <td><input class="entrada" type="text" name="nombre" placeholder="Nombre.."></td>
           <td><input class="entrada" type="text" name="apellido" placeholder="Apellido.."></td>
           <td><input class="entrada" type="email" name="correo" placeholder="Email.."></td>
-          <td><input class="entrada" type="text" name="tipo" placeholder="Facebook.."></td>
-          <td><input class="entrada" type="text" name="tipo" placeholder="Instagram.."></td>
+          <td><input class="entrada" type="text" name="tipo" placeholder="Foto.."></td>
           <td>
             <div class="status">
               <a class="usuario add" href="">Añadir</a>
@@ -347,7 +332,7 @@ function MapearEdicionesUsuarios(){
 }
 
 function EliminarUsuario(nusuario){
-    fetch(baseUrl+'/perfil/'+nusuario,{ method:"Delete"}).then(res=>{
+    fetch(baseUrl+'/usuario/'+nusuario,{ method:"Delete"}).then(res=>{
         console.log(res);
         ObtenerUsuariosTabla();
     })
