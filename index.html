@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">    
     <title>Olimpiadas Paris 2024</title>
   </head>
-  <body>
+  <body onload="ObtenerSlider()">
     <div class="Header-section">  
       <nav class="navbar">
         <div class="menu-icon">
@@ -31,7 +31,8 @@
            <li><a href="FrontendOlimpicos/view/html/reportes.html">Reportes</a></li>
            <li><a href="FrontendOlimpicos/view/html/perfil.html" >Perfil</a></li>
         </div>
-        <div class="search-icon">           <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        <div class="search-icon">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
         </div>
         <div class="cancel-icon">
            <span><i class="fa-solid fa-xmark"></i></span>
@@ -44,12 +45,13 @@
         <a class="btn-profile" href="externo.html">Cerrar Sesion</a>
         <script src="FrontendOlimpicos/view/js/navbar.js"></script>
       </nav>
-      <section class="home">
+      <section id="home" class="home">
+        <div class="media-icons">
+          <a href="https://www.facebook.com/Paris2024" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/paris2024/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/Paris2024" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
         <img class="img-slide active" src="FrontendOlimpicos/view/img/Champs-Elysées_to_Concorde.jpg"></img>
-        <img class="img-slide" src="FrontendOlimpicos/view/img/opening-ceremony_paris-2024-3.jpg"></img>
-        <img class="img-slide" src="FrontendOlimpicos/view/img/paris_2024-rio_sena.jpg"></img>
-        <img class="img-slide" src="FrontendOlimpicos/view/img/voluntarios-olimpiadas-paris2024.webp"></img>
-        <img class="img-slide" src="FrontendOlimpicos/view/img/hospitalidad-paris-2024.jpg"></img>
         <div class="content active">
           <h1>Par&iacute;s 2024<br><span>Cuenta regresiva</span></h1>
           <div class="counter">
@@ -69,34 +71,37 @@
                 <div class="number"></div>
                 <div class="title">Segundos</div>
             </div>
+            <!--
             <script src="FrontendOlimpicos/view/js/counter-script.js"></script>
+            -->
           </div>
           <a href="https://www.paris2024.org/en" target="_blank">ver m&aacute;s</a>
         </div>
+        
+        <!--
+        <img class="img-slide" src="FrontendOlimpicos/view/img/opening-ceremony_paris-2024-3.jpg"></img>
         <div class="content">
           <h1>P&aacute;gina Oficial<br><span>Visitanos</span></h1>
           <p><b>Visita </b>la página oficial para estar al tanto en todo momento sobre los juegos de Par&iacute;s 2024, en la cual podras ver noticias relevantes, el calendario oficial de competición, compra de tickets, c&oacute;omo ser voluntario o formar parte del club Par&iacute;s 2024 y mucho m&aacute;s.</p>
           <a href="https://www.paris2024.org/en/" target="_blank">ver m&aacute;s</a>
         </div>
+        <img class="img-slide" src="FrontendOlimpicos/view/img/paris_2024-rio_sena.jpg"></img>
         <div class="content">
           <h1>Par&iacute;s 2024 Club<br></h1>
           <p><b>ÚNETE AL CLUB PARÍS 2024</b> Los Juegos son dentro de 2 años pero en el Club puedes vivir experiencias increíbles desdeahora mismo!</p>
           <a href="https://club.paris2024.org/en/home" target="_blank">ver m&aacute;s</a>
         </div>
+        <img class="img-slide" src="FrontendOlimpicos/view/img/voluntarios-olimpiadas-paris2024.webp"></img>
         <div class="content">
           <h1>Conviertete en Voluntario<br></h1>
           <p>45.000 voluntarios se involucrarán para hacer de los Juegos Olímpicos de París 2024 un evento inolvidable. Ayudarán a crear una atmósfera única que reunirá a todo el mundo para compartir esta experiencia. Juntos, organizaremos Juegos espectaculares. Entonces, ¡prepárate para postularte, a partir de marzo de 2023!</p>
           <a href="https://www.paris2024.org/en/volunteers/" target="_blank">ver m&aacute;s</a>
         </div>
+        <img class="img-slide" src="FrontendOlimpicos/view/img/hospitalidad-paris-2024.jpg"></img>
         <div class="content">
           <h1>Hospitalidad Oficial<br><span>Par&iacute;s 2024</span></h1>
           <p>Elija sus experiencias de hospitalidad y lleve su viaje a París 2024 al siguiente nivel.</p>
           <a href="https://olympics.onlocationexp.com/paris2024/" target="_blank">ver m&aacute;s</a>
-        </div>
-        <div class="media-icons">
-          <a href="https://www.facebook.com/Paris2024" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/paris2024/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/Paris2024" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="slider-navigation">
           <div class="nav-btn active"></div>
@@ -105,8 +110,14 @@
           <div class="nav-btn"></div>
           <div class="nav-btn"></div>
         </div>
+        -->
+        
+        
         <script src="FrontendOlimpicos/view/js/index-header-slider.js"></script>
       </section>
     </div>
+
+    <!-- Script Banner Slider -->
+    <script type="text/javascript" src="FrontendOlimpicos/view/js/ControllersJS/IndexControllers.js"></script>
   </body>
 </html>
