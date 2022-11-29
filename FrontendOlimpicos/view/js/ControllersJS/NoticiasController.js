@@ -24,7 +24,7 @@ function MapearPlantilla(datos){
     return `
         <div class="news-card">
             <div class="news-image">
-                <img src="${datos.imagen}" alt="">
+                <img src="${datos.imagen}" class="news-thumb" alt="">
                 <a href="${datos.enlace}" target="_blank">
                     <button class="card-btn">ver noticia completa</button>
                 </a>
