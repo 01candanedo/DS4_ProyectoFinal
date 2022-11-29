@@ -20,9 +20,6 @@ function ObtenerDeportes(){
             MapearDatos();
         })
     });
-
-    
-    
 }
 
 function MapearDatos(){
@@ -32,13 +29,58 @@ function MapearDatos(){
         contenedor.innerHTML += MapearPlantilla(datos[i]);
     }
 
+    
     let contenedor_2 = document.getElementById('home');
     for(let i=0; i<datos_2.length; i++){
         contenedor_2.innerHTML += MapearPlantilla_2(datos_2[i]);
+
+        if(i==0){
+            const img_slider = document.querySelectorAll(".img-slide");
+            img_slider[0].classList.add("active");
+
+            const content_slider = document.querySelectorAll(".content");
+            content_slider[0].classList.add("active");
+        }
+        
+        if(i == datos_2.length-1){
+            contenedor_2.innerHTML+=`<div class="slider-navigation">
+                                        <div class="nav-btn active"></div>
+                                        <div class="nav-btn"></div>
+                                        <div class="nav-btn"></div>
+                                        <div class="nav-btn"></div>
+                                        <div class="nav-btn"></div>
+                                    </div>
+                                    `
+        }
     }
 
-    const img_slider = document.querySelectorAll(".img-slide");
-    img_slider[0].classList.add("active");
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".img-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+            content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            sliderNav(i);
+        });
+    });
 }
 
 function MapearPlantilla(datos){
@@ -61,5 +103,11 @@ function MapearPlantilla(datos){
 function MapearPlantilla_2(datos){
     return `
         <img class="img-slide" src="${datos.imagen}"></img>
+        <div class="content">
+            <h1>${datos.nombre} ${datos.apellido}</h1>
+            <div class="counter">
+                <p>${datos.descripcion}</p>
+            </div>
+        </div>
     `
 }
