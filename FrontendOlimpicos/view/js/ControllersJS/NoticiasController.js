@@ -24,7 +24,7 @@ function MapearPlantilla(datos){
     return `
         <div class="news-card">
             <div class="news-image">
-                <img src="${datos.imagen}" class="news-thumb" alt="">
+                <img src="${datos.imagen}" alt="">
                 <a href="${datos.enlace}" target="_blank">
                     <button class="card-btn">ver noticia completa</button>
                 </a>
@@ -35,5 +35,11 @@ function MapearPlantilla(datos){
             </div>
         </div>
     `
+}
+function EliminarNoticia(nid) {
+    fetch(baseUrl + '/noticias/' + nid, {method: "Delete"}).then(res => {
+        console.log(res);
+        ObtenerNoticias;
+    });
 
 }

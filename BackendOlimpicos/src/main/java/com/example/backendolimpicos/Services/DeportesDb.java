@@ -1,7 +1,7 @@
 package com.example.backendolimpicos.Services;
 
-import com.example.backendolimpicos.Config.Conexion;
-import com.example.backendolimpicos.Models.Deportes;
+import com.example.backendolimpicos.Config.*;
+import com.example.backendolimpicos.Models.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -45,10 +45,9 @@ public class DeportesDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call ingresarDeporte('"
-                    +deportes.getId()+"',"
-                    +deportes.getTitulo()+","
-                    +deportes.getDescripcion()+",'"
+            String query = "insert into deporte values(NULL,'"
+                    +deportes.getTitulo()+"','"
+                    +deportes.getDescripcion()+"','"
                     +deportes.getImagen()+"','"
                     +deportes.getEnlace()+"')";
             resultado = stm.executeUpdate(query);
@@ -63,7 +62,7 @@ public class DeportesDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call EliminarDeporte("+nid+")";
+            String query = "delete from deporte where id="+nid+"";
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;
@@ -75,12 +74,11 @@ public class DeportesDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call actualizarDeporte('"
-                    +deporte.getId()+"',"
-                    +deporte.getTitulo()+","
-                    +deporte.getDescripcion()+",'"
-                    +deporte.getImagen()+"','"
-                    +deporte.getEnlace()+"')";
+            String query = "update deporte set titulo='"
+                    +deporte.getTitulo()+"',descripcion='"
+                    +deporte.getDescripcion()+"',imagen='"
+                    +deporte.getImagen()+"',enlace='"
+                    +deporte.getEnlace()+"' where id="+deporte.getId();
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;

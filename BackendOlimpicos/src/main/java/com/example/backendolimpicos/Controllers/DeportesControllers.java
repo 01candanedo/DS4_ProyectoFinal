@@ -24,7 +24,7 @@ public class DeportesControllers {
         return new DeportesDb().ActualizarDeporte(deportes);
     }
 
-    @DeleteMapping("/noticias/{deportesId}")
+    @DeleteMapping("/deportes/delete/{deportesId}")
     public int EliminarDeportes(@PathVariable("deportesId") int nid){
         return new DeportesDb().EliminarDeportes(nid);
     }

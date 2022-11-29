@@ -16,7 +16,7 @@ public class NoticiasDb {
         con = new Conexion().openDb();
     }
 
-    public List<Noticias> ObtenerNoticias() {
+    public List<Noticias> ObtenerNoticias(){
         try {
             Statement stmt = con.createStatement();
             String query = "SELECT * FROM noticia";
@@ -44,10 +44,10 @@ public class NoticiasDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call ingresarNoticia('"
-                    +noticias.getId()+"',"
-                    +noticias.getTitulo()+","
-                    +noticias.getDescripcion()+",'"
+
+            String query = "insert into noticia values(NULL,'"
+                    +noticias.getTitulo()+"','"
+                    +noticias.getDescripcion()+"','"
                     +noticias.getImagen()+"','"
                     +noticias.getEnlace()+"')";
             resultado = stm.executeUpdate(query);
@@ -62,7 +62,7 @@ public class NoticiasDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call EliminarProducto("+nid+")";
+            String query = "delete from noticia where id ="+nid+"";
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;
@@ -71,15 +71,15 @@ public class NoticiasDb {
     }
 
     public int ActualizarNoticia(Noticias noticia){
+      /*  System.out.println(noticia.getId());*/
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "Call actualizarNoticia('"
-                    +noticia.getId()+"',"
-                    +noticia.getTitulo()+","
-                    +noticia.getDescripcion()+",'"
-                    +noticia.getImagen()+"','"
-                    +noticia.getEnlace()+"')";
+            String query = "update noticia set titulo='"
+                    +noticia.getTitulo()+"', descripcion='"
+                    +noticia.getDescripcion()+"',imagen='"
+                    +noticia.getImagen()+"',enlace='"
+                    +noticia.getEnlace()+"'"+"where id="+noticia.getId();
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;

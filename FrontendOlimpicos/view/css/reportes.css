@@ -98,10 +98,17 @@ table {
 .add{
     background: var(--green100);
 }
+.add2{
+    background: var(--blue100);
+}
 
 th,
 td {
     padding: 20px;
+}
+
+th{
+    text-align: center;
 }
 
 tr:hover td {
