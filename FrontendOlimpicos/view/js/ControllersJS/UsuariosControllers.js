@@ -11,35 +11,48 @@ function ObtenerUsuarios() {
 }
 
 function VerificarEmail(){
-    ObtenerUsuarios()
-    //let flag=false;
-    let variab = document.getElementById("email").value;
-    let email;
+    let flag=false;
+    let checkemail = document.getElementById("email_login").value;
+    let checkpass = document.getElementById("contrasenia_login").value;
+    let email, pass;
     usuarios.forEach(usr => {
-        if(usr.usuario === variab){
-            //flag=true;
-            email = usr.usuario;
+        if(usr.email === checkemail && usr.pass === checkpass){
+            flag=true;
+            email = usr.email;
+            pass = usr.pass;
         }
     });
-    //if(flag){
-        if(email === variab){
-            sessionStorage.setItem("user", email);
+    if(flag){
+        if(email === checkemail && pass === checkpass){
+            CrearSesion();
             window.location.replace("../../../index.html");
         }
-    //}
+    }else{
+        alert("Datos incorrectos.., Intentelo nuevamente")
+    }
 }
 
-function CerrarSesion(){
-    sessionStorage.clear();
+function VerificarDatos(){
+    let usuario = document.getElementById("nombre_usuario").value;
+    let email = document.getElementById("email").value;
+    usuarios.forEach(usr=>{
+        if(usr.Usuario === usuario || usr.Email === email){
+            alert("Algunos datos ya existen")
+        }else{
+
+        }
+    });
 }
 
 function GuardarUsuario() {
     let usr = {
-        usuario: document.getElementById("nombre_usuario").value,
+        usuario: document.getElementById("usuario").value,
         nombre: document.getElementById("nombre").value,
         apellido: document.getElementById("apellido").value,
         email: document.getElementById("email").value,
         pass: document.getElementById("contrasenia").value,
+        foto: "Default",
+        fecha_Creacion: new Date().toLocaleDateString()
     };
 
     fetch(baseUrl + "/usuario", {
@@ -48,24 +61,9 @@ function GuardarUsuario() {
         headers: {
             "Content-type": 'application/json; charset=UTF-8'
         }
-    });
-
-    let prf = {
-        usuario: document.getElementById("nombre_usuario").value,
-        nombre: document.getElementById("nombre").value,
-        apellido: document.getElementById("apellido").value,
-        email: document.getElementById("email").value,
-    };
-
-    fetch(baseUrl + "/perfil", {
-        method: "POST",
-        body: JSON.stringify(prf),
-        headers: {
-            "Content-type": 'application/json; charset=UTF-8'
-        }
     }).then(
         response => {
-            document.getElementById("nombre_usuario").value = "";
+            document.getElementById("usuario").value = "";
             document.getElementById("nombre").value = "";
             document.getElementById("apellido").value = "";
             document.getElementById("email").value = "";
@@ -77,3 +75,4 @@ function GuardarUsuario() {
             alert("Ocurrio un error")
         });
 }
+

@@ -21,156 +21,109 @@
   <title>Reportes</title>
 </head>
 <body>
-<header class="Header-section">
-  <nav class="navbar">
-    <div class="menu-icon">
-      <span><i class="fa-solid fa-bars"></i></span>
-    </div>
-    <div class="logo">
-      <a href="../../../index.html"
-      ><img src="../img/Olympics_logo.svg" alt="Olimpiadas_logo"
-      /></a>
-    </div>
-    <div class="nav-items">
-      <li><a href="../../../index.html">Inicio</a></li>
-      <li><a href="deportes.html">Deportes</a></li>
-      <li><a href="noticias.html">Noticias</a></li>
-      <li><a href="acerca.html">Acerca de</a></li>
-      <li><a href="contact.html">Contacto</a></li>
-      <li><a href="../html/reportes.html">Reportes</a></li>
-      <li><a href="perfil.html">Perfil</a></li>
-    </div>
-    <div class="search-icon">
-      <span><i class="fa-solid fa-magnifying-glass"></i></span>
-    </div>
-    <div class="cancel-icon">
-      <span><i class="fa-solid fa-xmark"></i></span>
-    </div>
-    <form action="busqueda.html">
-      <input
-              type="search"
-              class="search-data"
-              placeholder="Buscar"
-              required
-      />
-      <button type="submit" class="fas fa-search"></button>
-    </form>
-    <input type="button" value="">
-    <a class="btn-profile" href="../../../externo.html" onclick="CerrarSesion()">Cerrar Sesion</a>
-    <script src="./../js/navbar.js"></script>
-  </nav>
-</header>
-<!--Administracion de Noticias-->
-<main onload="ObtenerNoticiasTabla()">
-  <div class="main-div">
-    <div class="box0">
-      <p>Reportes Generados</p>
-    </div>
-    <div class="box1">
-      <div class="graficaLin">
-        <canvas id="graficaLineas"></canvas>
+  <header class="Header-section">
+    <nav class="navbar">
+      <div class="menu-icon">
+        <span><i class="fa-solid fa-bars"></i></span>
+      </div>
+      <div class="logo">
+        <a href="../../../index.html"
+        ><img src="../img/Olympics_logo.svg" alt="Olimpiadas_logo"
+        /></a>
+      </div>
+      <div class="nav-items">
+        <li><a href="../../../index.html">Inicio</a></li>
+        <li><a href="deportes.html">Deportes</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="acerca.html">Acerca de</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+        <li><a href="../html/reportes.html">Reportes</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </div>
+      <div class="search-icon">
+        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+      </div>
+      <div class="cancel-icon">
+        <span><i class="fa-solid fa-xmark"></i></span>
+      </div>
+      <form action="busqueda.html">
+        <input
+                type="search"
+                class="search-data"
+                placeholder="Buscar"
+                required
+        />
+        <button type="submit" class="fas fa-search"></button>
+      </form>
+      <input type="button" value="">
+      <a class="btn-profile" href="../../../externo.html" onclick="CerrarSesion()">Cerrar Sesion</a>
+      <script src="./../js/navbar.js"></script>
+    </nav>
+  </header>
+  <!--Administracion de Noticias-->
+  <main onload="ObtenerNoticiasTabla()">
+    <div class="main-div">
+      <div class="box0">
+        <p>Reportes Generados</p>
+      </div>
+      <div class="box1">
+        <div class="graficaLin">
+          <canvas id="graficaLineas"></canvas>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="graficaBar">
+          <canvas id="graficaBarra"></canvas>
+        </div>
+      </div>
+      <div class="box0">
+        <p>Administracion de Noticias (CRUD)</p>
+      </div>
+      <div class="box3">
+        <section>
+          <h2 class="titulo-repo">Administrar Noticias</h2>
+          <table id ="crud">
+          </table>
+          <br>
+        </section>
       </div>
     </div>
-    <div class="box2">
-      <div class="graficaBar">
-        <canvas id="graficaBarra"></canvas>
+  </main>
+  <!--Administracion de Deportes-->
+  <main onload="ObtenerDeportesTabla()">
+    <div class="main-div">
+      <div class="box0">
+        <p>Administracion de Deportes (CRUD)</p>
+      </div>
+      <div class="box3">
+        <section>
+          <h2 class="titulo-repo">Administrar Deportes</h2>
+          <table id ="crud-deportes">
+          </table>
+          <br>
+        </section>
       </div>
     </div>
-    <div class="box0">
-      <p>Administracion de Noticias (CRUD)</p>
+  </main>
+  <!--Administracion de Usuarios-->
+  <main onload="ObtenerUsuariosTabla()">
+    <div class="main-div">
+      <div class="box0">
+        <p>Administracion de Usuarios (CRUD)</p>
+      </div>
+      <div class="box3">
+        <section>
+          <h2 class="titulo-repo">Registros de Usuarios</h2>
+          <table id="crud-usuarios">
+          </table>
+          <br>
+        </section>
+      </div>
     </div>
-    <div class="box3"> 
-      <section>
-<<<<<<< HEAD
-        <h2 class="titulo-repo">Administrar Noticias</h2>
-        <table id ="crud">
-          
-        </table>
-        <br>
-      </section>
-    </div>
-  </div>
-</main>
-<!--Administracion de Deportes-->
-<main onload="ObtenerDeportesTabla()">
-  <div class="main-div">
-    <div class="box0">
-      <p>Administracion de Deportes (CRUD)</p>
-    </div>
-    <div class="box3"> 
-      <section>
-        <h2 class="titulo-repo">Administrar Deportes</h2>
-        <table id ="crud-deportes">
-          
-=======
-        <h2 class="titulo-repo">Registros de Usuarios</h2>
-        <table>
-          <tr>
-            <th>N°</th>
-            <th>Usuario</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-            <th>Facebook</th>
-            <th>Instagram</th>
-            <th>Accion</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Domkalee</td>
-            <td>Marcos</td>
-            <td>Candanedo</td>
-            <td>marcos.candanedo1@utp.ac.pa</td>
-            <td>Domkalee</td>
-            <td>DomDom</td>
-            <td>
-              <div class="status">
-                <a class="usuario mod" href="">Modificar</a>
-                <a class="usuario del" href="">Eliminar</a>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>JavierA</td>
-            <td>Irving</td>
-            <td>Arosemena</td>
-            <td>irving.arosemena@utp.ac.pa</td>
-            <td>I.Javier</td>
-            <td>I.Javier</td>
-            <td>
-              <div class="status">
-                <a class="usuario mod" href="">Modificar</a>
-                <a class="usuario del" href="">Eliminar</a>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><input class="entrada" type="text" name="usuario" placeholder="Usuario.."></td>
-            <td><input class="entrada" type="text" name="nombre" placeholder="Nombre.."></td>
-            <td><input class="entrada" type="text" name="apellido" placeholder="Apellido.."></td>
-            <td><input class="entrada" type="email" name="correo" placeholder="Email.."></td>
-            <td><input class="entrada" type="text" name="tipo" placeholder="Facebook.."></td>
-            <td><input class="entrada" type="text" name="tipo" placeholder="Instagram.."></td>
-            <td>
-              <div class="status">
-                <a class="usuario add" href="">Añadir</a>
-              </div>
-            </td>
-          </tr>
->>>>>>> 509bff23976d20fea95279a5b439f60beab61e76
-        </table>
-        <br>
-      </section>
-    </div>
-  </div>
-</main>
-
-
-
-<script src="../js/ControllersJS/ReporteControllers.js"></script>
+  </main>
+  <script src="../js/ControllersJS/ReporteControllers.js"></script>
+  <script src="../js/ControllersJS/ControlSession.js"></script>
+  <script src="../../../FrontendOlimpicos/view/js/bar.js"></script>
+  <script src="../../../FrontendOlimpicos/view/js/wave.js"></script>
 </body>
-<script src="../../../FrontendOlimpicos/view/js/bar.js"></script>
-<script src="../../../FrontendOlimpicos/view/js/wave.js"></script>
 </html>

@@ -1,11 +1,17 @@
-CREATE TABLE usuario(
-    usuario VARCHAR(20) NOT NULL PRIMARY KEY,
-    nombre VARCHAR(15) NOT NULL,
-    apellido VARCHAR(20) NOT NULL,
-    email VARCHAR(25) NOT NULL,
-    pass VARCHAR(40) NOT NULL,
-    foto VARCHAR(80)
+CREATE TABLE usuarios(
+    ID int(11) NOT NULL AUTO_INCREMENT,
+    Usuario VARCHAR(20) NOT NULL,
+    Nombre VARCHAR(15) NOT NULL,
+    Apellido VARCHAR(20) NOT NULL,
+    Email VARCHAR(25) NOT NULL,
+    Pass VARCHAR(40) NOT NULL,
+    Foto VARCHAR(80) NOT NULL,
+    Fecha_Creacion VARCHAR(80) NOT NULL,
+    CONSTRAINT PK_ID PRIMARY KEY (ID),
+    CONSTRAINT UC_Usuario UNIQUE (Usuario),
+    CONSTRAINT UC_Email UNIQUE (Email)
 );
+
 
 CREATE PROCEDURE actualizarPerfil(IN studentId INT)
 BEGIN

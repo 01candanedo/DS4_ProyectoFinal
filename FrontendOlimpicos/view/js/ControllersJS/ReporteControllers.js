@@ -1,5 +1,7 @@
 let baseUrl ='http://localhost:8080'
-let noticias = []; 
+let noticias = [];
+
+//NOTICIAS CRUD
 function ObtenerNoticiasTabla(){
     fetch(baseUrl+'/noticias/all').then(res=>{
         res.json().then(json=>{
@@ -129,7 +131,7 @@ function GuardarNoticiaTabla(){
 }
 
 
-//deportes crud 
+//DEPORTES CRUD
 let deportes = []; 
 function ObtenerDeportesTabla(){
     fetch(baseUrl+'/deportes/all').then(res=>{
@@ -198,6 +200,7 @@ function EliminarDeportesTabla(nid){
             ObtenerDeportesTabla();
     });
 }
+
 function ActualizarDeportes(){
     let data ={
     titulo: document.getElementById("titulo-deportes").value,
@@ -261,8 +264,91 @@ function GuardarDeportesTabla(){
 
 document.addEventListener('DOMContentLoaded', e => {
     ObtenerNoticiasTabla(); 
-    ObtenerDeportesTabla(); 
+    ObtenerDeportesTabla();
+    ObtenerUsuariosTabla();
 })
 
 
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+//USUARIOS CRUD
+let usuarios = [];
+function ObtenerUsuariosTabla(){
+    fetch(baseUrl+'/perfiles/all').then(res=>{
+        res.json().then(json=>{
+           usuarios = json;
+            ImprimirUsuariosTabla();
+        })
+    })
+}
+function ImprimirUsuariosTabla(){
+    let contenedor = document.getElementById("crud-usuarios");
+    contenedor.innerHTML = "";
+
+    contenedor.innerHTML += MapearHeadersUsuarios()
+    usuarios.forEach(usuario=>{
+        contenedor.innerHTML += MapearUsuarios(usuario);
+    });
+    contenedor.innerHTML += MapearEdicionesUsuarios()
+}
+function MapearUsuarios(usr){
+    return ` <tr>
+          <td>1</td>
+          <td>${usr.usuario}</td>
+          <td>${usr.nombre}</td>
+          <td>${usr.apellido}</td>
+          <td>${usr.email}</td>
+          <td>${usr.facebook}</td>
+          <td>${usr.instagram}</td>
+          <td>
+            <div class="status">
+              <a class="usuario mod" href="">Modificar</a>
+              <a class="usuario del" onclick="EliminarUsuario(${usr.usuario})">Eliminar</a>
+            </div>
+          </td>
+        </tr>`
+}
+function MapearHeadersUsuarios(){
+    return `<tr>
+          <th>N°</th>
+          <th>Usuario</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Facebook</th>
+          <th>Instagram</th>
+          <th>Accion</th>
+        </tr>`
+}
+function MapearEdicionesUsuarios(){
+    //<td><input className="entrada" type="text" name="usuario" placeholder="Usuario.."></td>
+    return ` <tr>
+          <td>></td>
+          <td><input class="entrada" type="hidden" name="usuario""></td>
+          <td><input class="entrada" type="text" name="nombre" placeholder="Nombre.."></td>
+          <td><input class="entrada" type="text" name="apellido" placeholder="Apellido.."></td>
+          <td><input class="entrada" type="email" name="correo" placeholder="Email.."></td>
+          <td><input class="entrada" type="text" name="tipo" placeholder="Facebook.."></td>
+          <td><input class="entrada" type="text" name="tipo" placeholder="Instagram.."></td>
+          <td>
+            <div class="status">
+              <a class="usuario add" href="">Añadir</a>
+            </div>
+          </td>
+        </tr>`
+}
+
+function EliminarUsuario(nusuario){
+    fetch(baseUrl+'/perfil/'+nusuario,{ method:"Delete"}).then(res=>{
+        console.log(res);
+        ObtenerUsuariosTabla();
+    })
+}

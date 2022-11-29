@@ -1,8 +1,6 @@
 package com.example.backendolimpicos.Controllers;
 
-import com.example.backendolimpicos.Models.Productos;
 import com.example.backendolimpicos.Models.Usuarios;
-import com.example.backendolimpicos.Services.ProductosDb;
 import com.example.backendolimpicos.Services.UsuariosDb;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,5 +26,10 @@ public class UsuariosControllers {
     @PutMapping("/usuario")
     public int ActualizarDatosUsuario(@RequestBody Usuarios usuario){
         return new UsuariosDb().ActualizarUsuario(usuario);
+    }
+
+    @DeleteMapping("/usuario/{usuarioUsr}")
+    public int EliminarPerfil(@PathVariable("usuarioUsr") String usr){
+        return new UsuariosDb().EliminarUsuario(usr);
     }
 }
