@@ -75,11 +75,30 @@ public class UsuariosDb {
         return resultado;
     }
 
-    public int EliminarUsuario(String usr){
+    public int ActualizarUsuarioReporte(Usuarios usuario){
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "DELETE FROM usuarios WHERE usuario = '"+usr+"';";
+            String query = "UPDATE usuarios SET usuario = '"+usuario.getUsuario()+
+                    "', nombre = '"+usuario.getNombre()+
+                    "', apellido = '"+usuario.getApellido()+
+                    "', email = '"+usuario.getEmail()+
+                    "', pass = '"+usuario.getPass()+
+                    "' WHERE ID = "+usuario.getID()+"";
+            return stm.executeUpdate(query);
+        }catch (Exception e){
+            int x = 1;
+        }
+        return resultado;
+    }
+
+
+
+    public int EliminarUsuario(int usr){
+        int resultado = 0;
+        try{
+            Statement stm = con.createStatement();
+            String query = "DELETE FROM usuarios WHERE ID = "+usr+";";
             return stm.executeUpdate(query);
         }catch (Exception e){
             int x = 1;

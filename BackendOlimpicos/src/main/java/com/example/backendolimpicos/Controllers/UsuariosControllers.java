@@ -28,8 +28,13 @@ public class UsuariosControllers {
         return new UsuariosDb().ActualizarUsuario(usuario);
     }
 
-    @DeleteMapping("/usuario/{usuarioUsr}")
-    public int EliminarUsuarios(@PathVariable("usuarioUsr") String usr){
+    @PutMapping("/usuario/reporte")
+    public int ActualizarDatosReporte(@RequestBody Usuarios usuario){
+        return new UsuariosDb().ActualizarUsuarioReporte(usuario);
+    }
+
+    @DeleteMapping("/usuario/del/{usuarioUsr}")
+    public int EliminarUsuarios(@PathVariable("usuarioUsr") int usr){
         return new UsuariosDb().EliminarUsuario(usr);
     }
 }
