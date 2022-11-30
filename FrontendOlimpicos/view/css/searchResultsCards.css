@@ -1,0 +1,195 @@
+@import url(standard.css);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Paris 2024', sans-serif;
+}
+
+/* -- Search Bar --*/
+#searchBar {
+    width: 100%;
+    height: 42px;
+    border-radius: 8px;
+    border: 2px solid var(--grey100);
+    padding: 5px 10px;
+    font-size: var(--h2-font);
+}
+
+#searchWrapper {
+    position: relative;
+}
+
+.result-title {
+    font-size: var(--h2-font);
+}
+
+/* -- News Card Results --*/
+.newsCards {
+    display: flex;
+    gap: 16px;
+    margin: 12px;
+    padding: 12px;
+    height: 200px;
+    border-radius: var(--radius200);
+    background: var(--grey50);
+}
+
+.newsCards:hover{
+    background: var(--grey100);
+}
+ 
+.news-thumb {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.newsCardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* -- Sports Card Results --*/
+.sportsCards {
+    display: flex;
+    gap: 16px;
+    margin: 12px;
+    padding: 12px;
+    height: 200px;
+    border-radius: var(--radius200);
+    background: var(--grey50);
+}
+
+.sportsCards:hover{
+    background: var(--grey100);
+}
+ 
+.sports-thumb {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.sportCardContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/**/
+.card-btn {
+    padding: 12px;
+    bottom: 10px;
+    width: fit-content;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: var(--blue-ring);
+    font-weight: 500;
+}
+  
+.card-btn:hover {
+    background: var(--main-color);
+    color: var(--text-color-w);
+    color: var(--text-dark);
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 699px) {
+    .newsCards, .sportsCards {
+        display: flex;
+        gap: 16px;
+        margin: 12px;
+        padding: 12px;
+        height: 100%;
+        border-radius: var(--radius200);
+        background: var(--grey50);
+    }
+    
+    .newsCards:hover, .sportsCards:hover{
+        background: var(--grey100);
+    }
+     
+    .news-thumb, .sports-thumb {
+        width: 225px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    .newsCardContent, .newsCardContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .card-btn {
+        padding: 12px;
+        bottom: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        transition: 0.5s;
+        cursor: pointer;
+        text-transform: capitalize;
+        color: var(--blue-ring);
+        font-weight: 500;
+    }
+}
+  
+
+@media only screen and (max-width: 546px) {
+    .newsCards, .sportsCards {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 12px;
+        padding: 12px;
+        height: 100%;
+        border-radius: var(--radius200);
+        background: var(--grey50);
+    }
+    
+    .newsCards:hover, .sportsCards:hover{
+        background: var(--grey100);
+    }
+     
+    .news-thumb, .sports-thumb {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    
+    .newsCardContent, .newsCardContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .card-btn {
+        padding: 12px;
+        bottom: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        transition: 0.5s;
+        cursor: pointer;
+        text-transform: capitalize;
+        color: var(--blue-ring);
+        font-weight: 500;
+    }
+}
+
