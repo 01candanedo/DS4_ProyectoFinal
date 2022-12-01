@@ -64,21 +64,6 @@ public class UsuariosDb {
         int resultado = 0;
         try{
             Statement stm = con.createStatement();
-            String query = "UPDATE usuarios SET nombre = '"+usuario.getNombre()+
-                    "', apellido = '"+usuario.getApellido()+
-                    "', email = '"+usuario.getEmail()+
-                    "' WHERE usuario = '"+usuario.getUsuario()+"'";
-            return stm.executeUpdate(query);
-        }catch (Exception e){
-            int x = 1;
-        }
-        return resultado;
-    }
-
-    public int ActualizarUsuarioReporte(Usuarios usuario){
-        int resultado = 0;
-        try{
-            Statement stm = con.createStatement();
             String query = "UPDATE usuarios SET usuario = '"+usuario.getUsuario()+
                     "', nombre = '"+usuario.getNombre()+
                     "', apellido = '"+usuario.getApellido()+
@@ -91,8 +76,6 @@ public class UsuariosDb {
         }
         return resultado;
     }
-
-
 
     public int EliminarUsuario(int usr){
         int resultado = 0;
