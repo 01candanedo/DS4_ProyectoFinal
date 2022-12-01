@@ -9,7 +9,6 @@ searchBar.setAttribute("value", localStorage.getItem('textsearchvalue'));
 
 
 searchBar.addEventListener('keyup', (e) => {
-    console.log("Event Keyup entrada");
     const searchString = e.target.value.toLowerCase();
 
     const filteredNews = newsResults.filter((news) => {

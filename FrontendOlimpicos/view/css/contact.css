@@ -50,14 +50,14 @@ body{
 }
   
 .contact-list li a {
-    color: var(--second-color);
+    color: var(--grey400);
     font-size: var(--p-font);
     font-weight: 600;
     transition: all 0.4s ease;
 }
   
 .contact-list li a:hover {
-    color: var(--main-color);
+    color: var(--text-dark);
 }
   
 .contact-icons i {
