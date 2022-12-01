@@ -66,6 +66,20 @@ function VerificarDatos(){
     }
 }
 
+function VerificarDatosPerfil(){
+    let usuario = document.getElementById("usuario_perfil").value;
+    let nombre = document.getElementById("nombre_perfil").value;
+    let apellido = document.getElementById("apellido_perfil").value;
+    let email = document.getElementById("email_perfil").value;
+    let pass = document.getElementById("contrasenia_perfil").value;
+    if(usuario === ""|| nombre === "" || apellido === "" || email === "" || pass === ""){
+        alert("Llene todos los campos")
+    }else{
+        ActualizarUsuario()
+    }
+
+}
+
 function CalcularFecha(){
     let date = new Date()
     let day = date.getDate()
@@ -142,15 +156,7 @@ function ActualizarUsuario() {
         headers: {
             "Content-type": 'application/json; charset=UTF-8'
         }
-    }).then(
-        response => {
-            document.getElementById("usuario_perfil").value = "";
-            document.getElementById("nombre_perfil").value = "";
-            document.getElementById("apellido_perfil").value = "";
-            document.getElementById("email_perfil").value = "";
-            document.getElementById("contrasenia_perfil").value = "";
-        }
-    );
+    })
 }
 
 /* LocalStorage Search Text */
