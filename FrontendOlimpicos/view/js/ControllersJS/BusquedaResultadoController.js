@@ -113,6 +113,8 @@ const getValueInput = () => {
     const searchString = inputValue;
     console.log(searchString);
 
+    console.log(newsResults.length);
+
     const filteredNews = newsResults.filter((news) => {
         return (
             news.titulo.toLowerCase().includes(searchString) ||
