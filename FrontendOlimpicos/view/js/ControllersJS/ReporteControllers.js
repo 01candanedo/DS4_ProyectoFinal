@@ -384,7 +384,7 @@ function ActualizarUsuarioReporte(){
         pass: document.getElementById("pass_reporte").value
     };
 
-    fetch(baseUrl + "/usuario/reporte", {
+    fetch(baseUrl + "/usuario/", {
         method: "PUT",
         body: JSON.stringify(datarep),
         headers: {

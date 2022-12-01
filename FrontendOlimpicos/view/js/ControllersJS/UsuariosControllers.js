@@ -23,17 +23,18 @@ function VerificarEmail(){
     let flag=false;
     let checkemail = document.getElementById("email_login").value;
     let checkpass = document.getElementById("contrasenia_login").value;
-    let email, pass;
+    let email, pass, id;
     usuarios.forEach(usr => {
         if(usr.email === checkemail && usr.pass === checkpass){
             flag=true;
             email = usr.email;
             pass = usr.pass;
+            id = usr.id;
         }
     });
     if(flag){
         if(email === checkemail && pass === checkpass){
-            CrearSesion(email);
+            CrearSesion(id);
             window.location.replace("../../../index.html");
         }
     }else{
@@ -65,6 +66,20 @@ function VerificarDatos(){
     }
 }
 
+function CalcularFecha(){
+    let date = new Date()
+    let day = date.getDate()
+    let month = date.getMonth() + 1
+    let year = date.getFullYear()
+    let resultado
+    if(month < 10){
+        resultado = `${day}-0${month}-${year}`;
+    }else{
+        resultado = `${day}-${month}-${year}`;
+    }
+    return resultado;
+}
+
 function GuardarUsuario() {
     let usr = {
         usuario: document.getElementById("usuario_registro").value,
@@ -73,7 +88,7 @@ function GuardarUsuario() {
         email: document.getElementById("email_registro").value,
         pass: document.getElementById("contrasenia_registro").value,
         foto: "Default",
-        fecha_Creacion: new Date().toLocaleDateString()
+        fecha_Creacion: CalcularFecha()
     };
 
     fetch(baseUrl + "/usuario", {
@@ -98,23 +113,27 @@ function GuardarUsuario() {
 }
 
 
-function PerfilCampos(email) {
-    let perfil = perfiles.filter(p => { return p.email == email })[0];
-    document.getElementById("nombrecompleto").innerHTML = perfil.nombre+" "+perfil.apellido;
-    document.getElementById("fecha_creacion").innerHTML = perfil.fecha_Creacion;
-    document.getElementById("usuario_perfil_titulo").innerHTML = perfil.usuario;
+function PerfilCampos(id) {
+    let perfil = perfiles.filter(p => { return p.id == id })[0];
+    document.getElementById('id_perfil').value = perfil.id;
+    document.getElementById('nombrecompleto').innerHTML = perfil.nombre+" "+perfil.apellido;
+    document.getElementById('fecha_creacion').innerHTML = perfil.fecha_Creacion;
+    document.getElementById('usuario_perfil_titulo').innerHTML = perfil.usuario;
     document.getElementById('nombre_perfil').value = perfil.nombre;
     document.getElementById('apellido_perfil').value = perfil.apellido;
     document.getElementById('usuario_perfil').value = perfil.usuario;
     document.getElementById('email_perfil').value = perfil.email;
+    document.getElementById('contrasenia_perfil').value = perfil.pass;
 }
 
 function ActualizarUsuario() {
     let usr = {
+        id: document.getElementById("id_perfil").value,
         usuario: document.getElementById("usuario_perfil").value,
         nombre: document.getElementById("nombre_perfil").value,
         apellido: document.getElementById("apellido_perfil").value,
         email: document.getElementById("email_perfil").value,
+        pass: document.getElementById("contrasenia_perfil").value,
     };
 
     fetch(baseUrl + "/usuario", {
@@ -123,6 +142,14 @@ function ActualizarUsuario() {
         headers: {
             "Content-type": 'application/json; charset=UTF-8'
         }
-    });
+    }).then(
+        response => {
+            document.getElementById("usuario_perfil").value = "";
+            document.getElementById("nombre_perfil").value = "";
+            document.getElementById("apellido_perfil").value = "";
+            document.getElementById("email_perfil").value = "";
+            document.getElementById("contrasenia_perfil").value = "";
+        }
+    );
 }
 

@@ -40,7 +40,7 @@ function barras(){
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["usuarios", "deportes", "noticias", "deportistas"],
+        labels: ["Usuarios", "Deportes", "Noticias", "Deportistas"],
         datasets: [{
             label: 'Cantidad de Datos Almacenados',
             data: [usersResults.length, newsResults.length, sportsResults.length, deportistResults.length],
@@ -60,7 +60,8 @@ function barras(){
                 'rgba(153, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
-            borderWidth: 1
+            borderWidth: 3,
+            barPercentage: 0.5,
         }]
     },
      options: {
@@ -72,8 +73,8 @@ function barras(){
                 }
             },
             y: {
-                min: 1,
-                max: 10,
+                min: 0,
+                max: (Math.max(usersResults.length, newsResults.length, sportsResults.length, deportistResults.length)+2),
                 ticks: {
                     // forces step size to be 50 units
                     stepSize: 1
@@ -83,8 +84,6 @@ function barras(){
     }
 });
 }
-
-
 loadNews();
 loadSports();
 

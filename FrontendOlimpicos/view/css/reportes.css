@@ -20,22 +20,12 @@ body{
     margin-bottom: 1%;
 }
 
-.box1{
-    width: 53%;
-    background: #e2e2e2;
-    color: #e2e2e2;
-    border-radius: 8px;
-    margin: 5%;
-    margin-right: 2%;
-}
-
 .box2{
-    width: 33%;
+    width: 80%;
     background: #e2e2e2;
     color: #e2e2e2;
     border-radius: 8px;
     margin: 5%;
-    margin-left: 2%;
 }
 
 .box3{
@@ -47,16 +37,10 @@ body{
     margin: 1% 5% 5% 5%;
 }
 
-.graficaLin{
-    position: relative;
-    height: auto;
-    width: 50vw;
-}
-
 .graficaBar{
     position: relative;
     height: auto;
-    width: 32vw;
+    width: 80vw;
 }
 
 table {
