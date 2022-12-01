@@ -1,5 +1,7 @@
+let usersResults = [];
 let newsResults = [];
 let sportsResults = [];
+let contactResults = [];
 
 const loadNews = async () => {
     try {
@@ -23,6 +25,10 @@ const loadNews = async () => {
         deportistResults = await res3.json();
         console.log(deportistResults.length);
 
+        //contactos
+        const res5 = await fetch('http://localhost:8080/contacto/all');
+        contactResults = await res5.json();
+        console.log(contactResults.length);
         barras();
 
     } catch (err) {
@@ -40,10 +46,10 @@ function barras(){
     var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Usuarios", "Deportes", "Noticias", "Deportistas"],
+        labels: ["Usuarios", "Deportes", "Noticias", "Deportistas", "Contactos"],
         datasets: [{
             label: 'Cantidad de Datos Almacenados',
-            data: [usersResults.length, newsResults.length, sportsResults.length, deportistResults.length],
+            data: [usersResults.length, newsResults.length, sportsResults.length, deportistResults.length, contactResults.length],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
                 'rgba(54, 162, 235, 0.5)',
@@ -74,7 +80,7 @@ function barras(){
             },
             y: {
                 min: 0,
-                max: (Math.max(usersResults.length, newsResults.length, sportsResults.length, deportistResults.length)+2),
+                max: (Math.max(usersResults.length, newsResults.length, sportsResults.length, deportistResults.length, contactResults.length)+2),
                 ticks: {
                     // forces step size to be 50 units
                     stepSize: 1
