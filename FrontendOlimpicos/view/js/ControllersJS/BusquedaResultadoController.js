@@ -5,7 +5,11 @@ let newsResults = [];
 let sportsResults = [];
 
 
+searchBar.setAttribute("value", localStorage.getItem('textsearchvalue'));
+
+
 searchBar.addEventListener('keyup', (e) => {
+    console.log("Event Keyup entrada");
     const searchString = e.target.value.toLowerCase();
 
     const filteredNews = newsResults.filter((news) => {
@@ -23,6 +27,8 @@ searchBar.addEventListener('keyup', (e) => {
         );
     });
     displaySports(filteredSports);
+
+    console.log("Event Keyup realizado");
 });
 
 
@@ -30,7 +36,7 @@ const loadNews = async () => {
     try {
         const res = await fetch('http://localhost:8080/noticias/all');
         newsResults = await res.json();
-        displayNews(newsResults);
+        //displayNews(newsResults);
     } catch (err) {
         console.error(err);
     }
@@ -40,7 +46,7 @@ const loadSports = async () => {
     try {
         const res = await fetch('http://localhost:8080/deportes/all');
         sportsResults = await res.json();
-        displaySports(sportsResults);
+        //displaySports(sportsResults);
     } catch (err) {
         console.error(err);
     }
@@ -98,3 +104,31 @@ const displaySports = (sportsRC) => {
 
 loadNews();
 loadSports();
+
+
+
+const getValueInput = () => {
+    console.log("getValueInput entrada");
+    const inputValue = document.getElementById('searchBar').value.toLowerCase();
+
+    const searchString = inputValue;
+    console.log(searchString);
+
+    const filteredNews = newsResults.filter((news) => {
+        return (
+            news.titulo.toLowerCase().includes(searchString) ||
+            news.descripcion.toLowerCase().includes(searchString)
+        );
+    });
+    displayNews(filteredNews);
+
+    const filteredSports = sportsResults.filter((sports) => {
+        return (
+            sports.titulo.toLowerCase().includes(searchString) ||
+            sports.descripcion.toLowerCase().includes(searchString)
+        );
+    });
+    displaySports(filteredSports);
+
+    console.log("getValueInput realizado");
+}
