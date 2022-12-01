@@ -16,7 +16,7 @@
         <title>Acerca De</title>
     </head>
 </head>
-<body>
+<body onload="ObtenerDesarrolladores()">
     <header class="Header-section">
     <nav class="navbar">
         <div class="menu-icon">
@@ -37,10 +37,10 @@
         <div class="cancel-icon">
             <span><i class="fa-solid fa-xmark"></i></span>
         </div>
-        <form action="busqueda.html">
-            <input type="search" class="search-data" placeholder="Buscar" required>
-            <button type="submit" class="fas fa-search"></button>
-        </form>
+        <form action="ResultadoBusqueda.html">
+            <input id="txtsearch" type="search" class="search-data" placeholder="Buscar" required>
+            <button type="submit" class="fas fa-search" onclick="passvalues()"></button>
+          </form>
         <input type="button" value="">
         <a class="btn-profile" href="..">Acceder</a>
         <script src="./../js/navbar.js"></script>
@@ -55,12 +55,8 @@
         </section>
         <section class="about">
             <div class="card1">
-                <h1>
-                    Propósito
-                </h1>
-                <center>
-                    <img src="../img/proposito-img.webp" alt="proposito">
-                </center>
+                <h1>Propósito</h1>
+                <center><img src="../img/proposito-img.webp" alt="proposito"></center>
                 <p>
                     El desarrollo de este proyecto busca asentar las bases técnicas en el desarrollo de software,
                     sobre el tema de juegos olímpicos, para que cada integrante pueda ampliar sus habilidades técnicas
@@ -68,12 +64,8 @@
                 </p>
             </div>
             <div class="card2">
-                <h1>
-                    Misión
-                </h1>
-                <center>
-                    <img src="../img/mision-img.jpg" alt="mision">
-                </center>
+                <h1>Misión</h1>
+                <center><img src="../img/mision-img.jpg" alt="mision"></center>
                 <p>
                     En nuestro equipo buscamos el desarrollo a buen detalle y de forma organizada, en donde alcancemos
                     brindar las mejores soluciones de productos tecnológicos, como presentamos en la practica
@@ -81,73 +73,20 @@
                 </p>
             </div>
             <div class="card3">
-                <h1>
-                    Visión
-                </h1>
-                <center>
-                    <img src="../img/vision-img.webp" alt="vision">
-                </center>
+                <h1>Visión</h1>
+                <center><img src="../img/vision-img.webp" alt="vision"></center>
                 <p>
                     Proyectarnos en un par de años, desarrolladores a la vanguardaria de las últimas tecnologías,
                     para brindar soluciones y herramientas que beneficien positivamente a las personas.
                 </p>
             </div>
         </section>
-        <section class="presentacion">
-            <div class="pres1">
-                <center>
-                    <img src="../img/profile-photo-mc.jpg" alt="mision">
-                </center>
-                <div class="info-presentacion">
-                    <p class="nombres"><b>Marcos <br> Candanedo</b></p>
-                    <p>Desarrollador software</p>
-                    <p>Estudiante actual de la universidad tecnologica de Panamá</p>
-                    <div class="contact-icons">
-                        <a href="#"><i class="fa-brands fa-github "></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook "></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram "></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter "></i></a>
-                    </div>
-                    <a class="btn-mas" href="resume_marcos_candanedo.html">Ver más</a>
-                </div>
-            </div>
-            <div class="pres2">
-                <center>
-                    <img src="../img/profile-photo-ia.jpg" alt="mision">
-                </center>
-                <div class="info-presentacion">
-                    <p class="nombres"><b>Irving <br> Arosemena</b></p>
-                    <p>Desarrollador software</p>
-                    <p>Estudiante actual de la universidad tecnologica de Panamá</p>
-                    <div class="contact-icons">
-                        <a href="#"><i class="fa-brands fa-github "></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook "></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram "></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter "></i></a>
-                    </div>
-                    <a class="btn-mas" href="resume_irving_arosemena.html">Ver más</a>
-                </div>
-            </div>
-
-            <div class="pres3">
-                <center>
-                    <img src="../img/profile-photo-mn.jpg" alt="mision">
-                </center>
-                <div class="info-presentacion">
-                    <p class="nombres"><b>Marcos <br> Ñurinda</b></p>
-                    <p>Desarrollador software</p>
-                    <p>Estudiante actual de la universidad tecnologica de Panamá</p>
-                    <div class="contact-icons">
-                        <a href="#"><i class="fa-brands fa-github "></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook "></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram "></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter "></i></a>
-                    </div>
-                    <a class="btn-mas" href="resume_marcos_nurinda.html">Ver más</a>
-                </div>
-            </div>
+        <section id="developer-container" class="presentacion">
+            <!--Dinamic content-->
         </section>
     </main>
 
+    <!-- Script Desarrolladores -->
+    <script type="text/javascript" src="../js/ControllersJS/DesarrolladoresController.js"></script>
 </body>
 </html>
