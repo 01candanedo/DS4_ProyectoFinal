@@ -64,16 +64,17 @@
                 </div>
                 <div class="contact-form">
                     <form action="">
-                        <input type="" placeholder="Ingresa tu nombre" required>
-                        <input type="email" placeholder="Ingresa tu correo" required>
-                        <input type="" placeholder="Coloca el asunto" required>
-                        <textarea name="" id="" cols="40" rows="10" placeholder="Ingresa tu mensaje" required></textarea>
-                        <input type="submit" value="Enviar" class="send">
+                        <input id="nombre_contacto" type="text" placeholder="Ingresa tu nombre" required>
+                        <input id="email_contacto" type="email" placeholder="Ingresa tu correo" required>
+                        <input id="asunto_contacto" type="text" placeholder="Coloca el asunto" required>
+                        <textarea name="mensaje_contacto" id="mensaje_contacto" cols="40" rows="10" placeholder="Ingresa tu mensaje" required></textarea>
+                        <input type="submit" value="Enviar" class="send" onclick="GuardarUsuarioContactos()">
                     </form>
                 </div>
             </div>
         </section>
         <script type="text/javascript" src="../js/ControllersJS/DesarrolladoresController.js"></script>
+        <script type="text/javascript" src="../js/ControllersJS/ReporteControllers.js"></script>
         <script src="../js/ControllersJS/ControlSession.js"></script>
   </body>
 </html>

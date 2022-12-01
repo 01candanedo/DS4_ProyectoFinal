@@ -266,6 +266,7 @@ document.addEventListener('DOMContentLoaded', e => {
     ObtenerNoticiasTabla(); 
     ObtenerDeportesTabla();
     ObtenerUsuariosTabla();
+    ObtenerContactosTabla()
 })
 
 //USUARIOS CRUD
@@ -394,6 +395,131 @@ function ActualizarUsuarioReporte(){
         response => {
             ObtenerUsuariosTabla();
             alert("Registro actualizado exitosamente")
+        }
+    )
+}
+
+
+
+
+//CONTACTOS CRUD
+let contactos = [];
+function ObtenerContactosTabla(){
+    fetch(baseUrl+'/contacto/all').then(res=>{
+        res.json().then(json=>{
+            contactos = json;
+            ImprimirContactosTabla();
+        })
+    })
+}
+
+function ImprimirContactosTabla(){
+    let contenedor = document.getElementById("crud-contactos");
+    contenedor.innerHTML = MapearHeadersContactos()
+    contactos.forEach(contacto=>{
+        contenedor.innerHTML += MapearContactos(contacto);
+    });
+    contenedor.innerHTML += MapearEdicionesContactos()
+}
+function MapearContactos(cont){
+    return ` <tr>
+          <td>${cont.id}</td>
+          <td>${cont.nombre}</td>
+          <td>${cont.email}</td>
+          <td>${cont.asunto}</td>
+          <td>${cont.mensaje}</td>
+          <td>
+            <div class="status">
+              <button class="usuario mod" onclick="LlenarDatosContactos(${cont.id})">Modificar</button>
+              <button class="usuario del" onclick="EliminarContactos(${cont.id})">Eliminar</button>
+            </div>
+          </td>
+        </tr>`
+}
+function MapearHeadersContactos(){
+    return `<tr>
+          <th>N-ID°</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Asunto</th>
+          <th>Mensaje</th>
+        </tr>`
+}
+function MapearEdicionesContactos(){
+    return ` <tr>
+          <td><input id="id_contacto" class="entrada" type="hidden" name="id"></td>
+          <td><input id="nombre_contacto" class="entrada" type="text" name="nombre" placeholder="Nombre.."></td>
+          <td><input id="email_contacto" class="entrada" type="email" name="correo" placeholder="Email.."></td>
+          <td><input id="asunto_contacto" class="entrada" type="text" name="asunto" placeholder="Asunto.."></td>
+          <td><input id="mensaje_contacto" class="entrada" type="text" name="mensaje" placeholder="Mensaje.."></td>
+          <td>
+            <div class="status">
+              <button class="usuario add2" onclick="GuardarUsuarioContactos()">Añadir</button>
+              <button class="usuario add" onclick="ActualizarContactosReporte()">Actualizar</button>
+            </div>
+          </td>
+        </tr>`
+}
+function EliminarContactos(ncontact){
+    fetch(baseUrl+'/contacto/del/'+ncontact,{method:"Delete"}).then(res=>{
+        console.log(res);
+        ObtenerContactosTabla();
+    })
+}
+
+function LlenarDatosContactos(contactid){
+    contactos.forEach(contacto=>{
+        if(contacto.id==contactid){
+            document.getElementById("id_contacto").value = contacto.id;
+            document.getElementById("nombre_contacto").value = contacto.nombre;
+            document.getElementById("email_contacto").value = contacto.email;
+            document.getElementById("asunto_contacto").value = contacto.asunto;
+            document.getElementById("mensaje_contacto").value = contacto.mensaje;
+        }
+    })
+}
+
+function GuardarUsuarioContactos() {
+    let contact = {
+        nombre: document.getElementById("nombre_contacto").value,
+        email: document.getElementById("email_contacto").value,
+        asunto: document.getElementById("asunto_contacto").value,
+        mensaje: document.getElementById("mensaje_contacto").value,
+    };
+
+    fetch(baseUrl + "/contacto", {
+        method: "POST",
+        body: JSON.stringify(contact),
+        headers: {
+            "Content-type": 'application/json; charset=UTF-8'
+        }
+    }).then(
+        response => {
+            ObtenerContactosTabla();
+            alert("Contactos guardado exitosamente")
+        }
+    )
+}
+
+function ActualizarContactosReporte(){
+    let datacontact = {
+        id: document.getElementById("id_contacto").value,
+        nombre: document.getElementById("nombre_contacto").value,
+        email: document.getElementById("email_contacto").value,
+        asunto: document.getElementById("asunto_contacto").value,
+        mensaje: document.getElementById("mensaje_contacto").value
+    };
+
+    fetch(baseUrl + "/contacto", {
+        method: "PUT",
+        body: JSON.stringify(datacontact),
+        headers: {
+            "Content-type": 'application/json; charset=UTF-8'
+        }
+    }).then(
+        response => {
+            ObtenerContactosTabla();
+            alert("Contactos actualizado exitosamente")
         }
     )
 }

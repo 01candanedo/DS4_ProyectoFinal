@@ -32,4 +32,5 @@ public class UsuariosControllers {
     public int EliminarUsuarios(@PathVariable("usuarioUsr") int usr){
         return new UsuariosDb().EliminarUsuario(usr);
     }
+
 }
