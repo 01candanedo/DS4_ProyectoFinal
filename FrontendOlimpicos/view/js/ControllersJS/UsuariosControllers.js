@@ -126,3 +126,10 @@ function ActualizarUsuario() {
     });
 }
 
+/* LocalStorage Search Text */
+function passvalues(){
+    var text = document.getElementById("txtsearch").value;
+    localStorage.setItem("textsearchvalue", text);
+    return false;
+}
+

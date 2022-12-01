@@ -36,10 +36,10 @@
                 <div class="cancel-icon">
                     <span><i class="fa-solid fa-xmark"></i></span>
                 </div>
-                <form action="busqueda.html">
-                    <input type="search" class="search-data" placeholder="Buscar" required>
-                    <button type="submit" class="fas fa-search"></button>
-                </form>
+                <form action="ResultadoBusqueda.html">
+                    <input id="txtsearch" type="search" class="search-data" placeholder="Buscar" required>
+                    <button type="submit" class="fas fa-search" onclick="passvalues()"></button>
+                 </form>
                 <input type="button" value="">
                 <a class="btn-profile" href="../../../externo.html" onclick="CerrarSesion()">Cerrar Sesion</a>
                 <script src="./../js/navbar.js"></script>
@@ -73,6 +73,7 @@
                 </div>
             </div>
         </section>
+        <script type="text/javascript" src="../js/ControllersJS/DesarrolladoresController.js"></script>
         <script src="../js/ControllersJS/ControlSession.js"></script>
   </body>
 </html>
