@@ -280,9 +280,7 @@ function ObtenerUsuariosTabla(){
 }
 function ImprimirUsuariosTabla(){
     let contenedor = document.getElementById("crud-usuarios");
-    contenedor.innerHTML = "";
-
-    contenedor.innerHTML += MapearHeadersUsuarios()
+    contenedor.innerHTML = MapearHeadersUsuarios()
     usuarios.forEach(usuario=>{
         contenedor.innerHTML += MapearUsuarios(usuario);
     });
@@ -295,45 +293,107 @@ function MapearUsuarios(usr){
           <td>${usr.nombre}</td>
           <td>${usr.apellido}</td>
           <td>${usr.email}</td>
-          <td>${usr.foto}</td>
+          <td>${usr.pass}</td>
           <td>
             <div class="status">
-              <a class="usuario mod" href="">Modificar</a>
-              <a class="usuario del" onclick="EliminarUsuario(${usr.usuario})">Eliminar</a>
+              <button class="usuario mod" onclick="LlenarDatos(${usr.id})">Modificar</button>
+              <button class="usuario del" onclick="EliminarUsuario(${usr.id})">Eliminar</button>
             </div>
           </td>
         </tr>`
 }
 function MapearHeadersUsuarios(){
     return `<tr>
-          <th>N°</th>
+          <th>N-ID°</th>
           <th>Usuario</th>
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Email</th>
-          <th>Foto</th>
+          <th>Contraseña</th>
           <th>Accion</th>
         </tr>`
 }
 function MapearEdicionesUsuarios(){
     return ` <tr>
-          <td>></td>
-          <td><input class="entrada" type="hidden" name="usuario""></td>
-          <td><input class="entrada" type="text" name="nombre" placeholder="Nombre.."></td>
-          <td><input class="entrada" type="text" name="apellido" placeholder="Apellido.."></td>
-          <td><input class="entrada" type="email" name="correo" placeholder="Email.."></td>
-          <td><input class="entrada" type="text" name="tipo" placeholder="Foto.."></td>
+          <td><input id="id_reporte" class="entrada" type="hidden" name="id"></td>
+          <td><input id="usuario_reporte" class="entrada" type="text" name="usuario" placeholder="Usuario.."></td>
+          <td><input id="nombre_reporte" class="entrada" type="text" name="nombre" placeholder="Nombre.."></td>
+          <td><input id="apellido_reporte" class="entrada" type="text" name="apellido" placeholder="Apellido.."></td>
+          <td><input id="email_reporte" class="entrada" type="email" name="correo" placeholder="Email.."></td>
+          <td><input id="pass_reporte" class="entrada" type="password" name="pass" placeholder="Contraseña.."></td>
           <td>
             <div class="status">
-              <a class="usuario add" href="">Añadir</a>
+              <button class="usuario add2" onclick="GuardarUsuarioReporte()">Añadir</button>
+              <button class="usuario add" onclick="ActualizarUsuarioReporte()">Actualizar</button>
             </div>
           </td>
         </tr>`
 }
-
-function EliminarUsuario(nusuario){
-    fetch(baseUrl+'/usuario/'+nusuario,{ method:"Delete"}).then(res=>{
+function EliminarUsuario(ndata){
+    fetch(baseUrl+'/usuario/del/'+ndata,{method:"Delete"}).then(res=>{
         console.log(res);
         ObtenerUsuariosTabla();
     })
+}
+
+function LlenarDatos(usrid){
+    usuarios.forEach(usuario=>{
+        if(usuario.id==usrid){
+            document.getElementById("id_reporte").value = usuario.id;
+            document.getElementById("usuario_reporte").value = usuario.usuario;
+            document.getElementById("nombre_reporte").value = usuario.nombre;
+            document.getElementById("apellido_reporte").value = usuario.apellido;
+            document.getElementById("email_reporte").value = usuario.email;
+            document.getElementById("pass_reporte").value = usuario.pass;
+        }
+    })
+}
+
+function GuardarUsuarioReporte() {
+    let usrep = {
+        usuario: document.getElementById("usuario_reporte").value,
+        nombre: document.getElementById("nombre_reporte").value,
+        apellido: document.getElementById("apellido_reporte").value,
+        email: document.getElementById("email_reporte").value,
+        pass: document.getElementById("pass_reporte").value,
+        foto: "Default",
+        fecha_Creacion: new Date().toLocaleDateString()
+    };
+
+    fetch(baseUrl + "/usuario", {
+        method: "POST",
+        body: JSON.stringify(usrep),
+        headers: {
+            "Content-type": 'application/json; charset=UTF-8'
+        }
+    }).then(
+        response => {
+            ObtenerUsuariosTabla();
+            alert("Registro guardado exitosamente")
+        }
+    )
+}
+
+function ActualizarUsuarioReporte(){
+    let datarep = {
+        id: document.getElementById("id_reporte").value,
+        usuario: document.getElementById("usuario_reporte").value,
+        nombre: document.getElementById("nombre_reporte").value,
+        apellido: document.getElementById("apellido_reporte").value,
+        email: document.getElementById("email_reporte").value,
+        pass: document.getElementById("pass_reporte").value
+    };
+
+    fetch(baseUrl + "/usuario/reporte", {
+        method: "PUT",
+        body: JSON.stringify(datarep),
+        headers: {
+            "Content-type": 'application/json; charset=UTF-8'
+        }
+    }).then(
+        response => {
+            ObtenerUsuariosTabla();
+            alert("Registro actualizado exitosamente")
+        }
+    )
 }
