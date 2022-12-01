@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">    
     <title>Olimpiadas Paris 2024</title>
   </head>
-  <body>
+  <body onload="ObtenerNoticias()">
     <!---Header Section--->
     <div class="Header-section">  
       <nav class="navbar">
@@ -36,58 +36,21 @@
         <div class="cancel-icon">
            <span><i class="fa-solid fa-xmark"></i></span>
         </div>
-        <form action="busqueda.html">
-           <input type="search" class="search-data" placeholder="Buscar" required>
-           <button type="submit" class="fas fa-search"></button>
+        <form action="ResultadoBusqueda.html">
+          <input id="txtsearch" type="search" class="search-data" placeholder="Buscar" required>
+          <button type="submit" class="fas fa-search" onclick="passvalues()"></button>
         </form>
         <input type="button" value="">
         <a class="btn-profile" href="..">Acceder</a>
         <script src="./../js/navbar.js"></script>
       </nav>
-      <section class="home">
-        <img class="img-slide active" src="../img/noticias-img/natacion.webp"></img>
-        <img class="img-slide" src="../img/noticias-img/Kimberly%20García.webp"></img>
-        <img class="img-slide" src="../img/noticias-img/Parcours-Jeux-Olympiq.webp"></img>
-        <img class="img-slide" src="../img/voluntarios-olimpiadas-paris2024.webp"></img>
-        <img class="img-slide" src="../img/noticias-img/tiraflecha_copitodenieve_ataquen_m.webp"></img>
-        <div class="content active">
-          <h1>Cómo clasificar en natación para París 2024<br></h1>
-          <p>La <b>natación</b> es uno de los deportes olímpicos más antiguos, ya que ha estado presente en todos los Juegos Olímpicos modernos desde Atenas 1896. La competición de natación de París 2024 contará con 852 atletas que competirán por las medallas en el Arena La Défense de París. A continuación encontrarás todo lo que necesitas saber sobre el número de atletas, el calendario y el camino hacia la clasificación.</p>
-          <a href="https://olympics.com/es/noticias/como-clasificar-natacion-juegos-olimpicos-paris-2024" target="_blank">ver m&aacute;s</a>
-        </div>
-        <div class="content">
-          <h1>Kimberly García y Yulimar Rojas, nominadas a mejor atleta del año<br></h1>
-          <p>Yulimar Rojas, de Venezuela, y Kimberly García, de Perú, son las reinas de ...</p>
-          <a href="https://olympics.com/es/noticias/kimberly-garcia-yulimar-rojas-nominadas-mejor-atleta-2022" target="_blank">ver m&aacute;s</a>
-        </div>
-        <div class="content">
-          <h1>Presentación de la ruta del maratón olímpico<br></h1>
-          <p>A menos de dos años de los Juegos, se ha confirmado la ruta para el maratón olímpico de París 2024. Rinde homenaje a un momento clave de la Revolución Francesa: la Marcha de las Mujeres en Versalles, el 5 de octubre de 1789...</p>
-          <a href="https://www.paris2024.org/en/olympic-marathon-route-confirmed/" target="_blank">ver m&aacute;s</a>
-        </div>
-        <div class="content">
-          <h1>Conviertete en Voluntario<br></h1>
-          <p>45.000 voluntarios se involucrarán para hacer de los Juegos Olímpicos de París 2024 un evento inolvidable. Ayudarán a crear una atmósfera única que reunirá a todo el mundo para compartir esta experiencia. Juntos, organizaremos Juegos espectaculares. Entonces, ¡prepárate para postularte, a partir de marzo de 2023!</p>
-          <a href="https://www.paris2024.org/en/volunteers/" target="_blank">ver m&aacute;s</a>
-        </div>
-        <div class="content">
-          <h1>Calendario de competición</h1>
-          <p>A falta de dos años para los Juegos de París 2024, se ha publicado el calendario oficial de competición. Consulta el calendario completo para saber exactamente cuándo competirán los mejores atletas del mundo en eventos como los 100 m libres, los 400 m vallas, el maratón olímpico...</p>
-          <a href="https://www.paris2024.org/en/competition-schedule-paris-2024/" target="_blank">ver m&aacute;s</a>
-        </div>
+      <section id="home" class="home">
         <div class="media-icons">
           <a href="https://www.facebook.com/Paris2024" target="_blank"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/paris2024/" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://twitter.com/Paris2024" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-        <div class="slider-navigation">
-          <div class="nav-btn active"></div>
-          <div class="nav-btn"></div>
-          <div class="nav-btn"></div>
-          <div class="nav-btn"></div>
-          <div class="nav-btn"></div>
-        </div>
-        <script src="../js/index-header-slider.js"></script>
+        <!--Dinamic content--> 
       </section>
     </div>
     <!---News Section --->
@@ -105,106 +68,14 @@
             </div>
           </div>
         </div>
-        <div class="load-more-product-container">
-          <div class="news-card">
-            <div class="news-image">
-              <img src="../img/noticias-img/mariana_pajon.jpg" class="news-thumb" alt="">
-              <a href="https://olympics.com/es/noticias/mariana-pajon-james-rodriguez-daniela-ospina-deporte-unirnos-amistad" target="_blank">
-                <button class="card-btn">ver noticia completa</button>
-              </a>
-            </div>
-            <div class="news-info">
-              <h2 class="news-title">Mariana Pajón: "Si hay algo lindo que hace el deporte es unirnos"</h2>
-              <p class="news-description">Mariana Pajón y James Rodríguez son dos de los grandes deportistas colombia...</p>
-            </div>
-          </div>
-          <div class="news-card">
-            <div class="news-image">
-              <img src="../img/noticias-img/Voleibol.webp" class="news-thumb" alt="">
-              <a href="https://olympics.com/es/noticias/programa-voleibol-juegos-olimpicos-paris-2024" target="_blank">
-                <button class="card-btn">ver noticia completa</button>
-              </a>
-            </div>
-            <div class="news-info">
-              <h2 class="news-title">Voleibol en los Juegos Olímpicos de París 2024: el calendario y las sedes</h2>
-              <p class="news-description">El voleibol forma parte del programa olímpico desde Tokio 1964 y se ha conv...</p>
-            </div>
-          </div>
-          <div class="news-card">
-            <div class="news-image">
-              <img src="../img/noticias-img/Voleibol-2.webp" class="news-thumb" alt="">
-              <a href="https://olympics.com/es/noticias/voleibol-femenino-equipos-torneo-clasificacion-olimpica-a-paris-2024" target="_blank">
-                <button class="card-btn">ver noticia completa</button>
-              </a>
-            </div>
-            <div class="news-info">
-              <h2 class="news-title">Equipos invitados para el Torneo de Clasificación Olímpica a París 2024 en voleibol femenino</h2>
-              <p class="news-description">Hoy (lunes, 17 de octubre) la Federación Internacional de Voleibol (FIVB) h...</p>
-            </div>
-          </div>
-          <div class="news-card">
-            <div class="news-image">
-              <img src="../img/noticias-img/waterpolo-clasificacion.webp" class="news-thumb" alt="">
-              <a href="https://olympics.com/es/noticias/como-clasificar-en-waterpolo-a-juegos-olimpicos-paris-2024" target="_blank">
-                <button class="card-btn">ver noticia completa</button>
-              </a>
-            </div>
-            <div class="news-info">
-              <h2 class="news-title">Cómo clasificar en waterpolo a París 2024. Sistema de clasificación explicado</h2>
-              <p class="news-description">El waterpolo forma parte del programa olímpico desde París 1900, por lo que...</p>
-            </div>
-          </div>
-          <div class="news-card">
-            <div class="news-image">
-              <img src="../img/noticias-img/rifle.webp" class="news-thumb" alt="">
-              <a href="https://olympics.com/es/noticias/mundial-rifle-pistola-tiro-2022-clasificatorio-paris-2024-previa-como-ver" target="_blank">
-                <button class="card-btn">ver noticia completa</button>
-              </a>
-            </div>
-            <div class="news-info">
-              <h2 class="news-title">Mundial de Rifle y Pistola de la ISSF 2022 en El Cairo: previa, programa y cómo ver el clasificatorio a París 2024</h2>
-              <p class="news-description">Un total de 32 plazas para los Juegos Olímpicos de París 2024 se repartirán...</p>
-            </div>
-          </div>
-          <div class="news-card">
-            <div class="news-image">
-              <img src="../img/noticias-img/piragüismo-clasificacion.webp" class="news-thumb" alt="">
-              <a href="https://olympics.com/es/noticias/como-clasificar-en-piraguismo-en-esprint-a-paris-2024-el-sistema-de-clasificacio" target="_blank">
-                <button class="card-btn">ver noticia completa</button>
-              </a>
-            </div>
-            <div class="news-info">
-              <h2 class="news-title">Cómo clasificar en piragüismo en esprint a París 2024. Sistema de clasificación explicado</h2>
-              <p class="news-description">El piragüismo en esprint hizo su debut olímpico en Berlín 1936 con nueve pr...</p>
-            </div>
-          </div>
-          <div class="news-card">
-            <div class="news-image">
-              <img src="../img/noticias-img/bmx.jpg" class="news-thumb" alt="">
-              <a href="https://olympics.com/es/noticias/bmx-racing-juegos-suramericanos-asuncion-2022-dias-horarios-y-como-ver" target="_blank">
-                <button class="card-btn">ver noticia completa</button>
-              </a>
-            </div>
-            <div class="news-info">
-              <h2 class="news-title">BMX Racing en los Juegos Suramericanos Asunción 2022: días, horarios y cómo ver</h2>
-              <p class="news-description">Los XII Juegos Suramericanos Asunción 2022 tendrán lugar en Paraguay del 1 ...</p>
-            </div>
-          </div>
-          <div class="news-card">
-            <div class="news-image">
-              <img src="../img/noticias-img/natacion.webp" class="news-thumb" alt="">
-              <a href="https://olympics.com/es/noticias/como-clasificar-natacion-juegos-olimpicos-paris-2024" target="_blank">
-                <button class="card-btn">ver noticia completa</button>
-              </a>
-            </div>
-            <div class="news-info">
-              <h2 class="news-title">Cómo clasificar en natación para París 2024. Sistema de clasificación explicado</h2>
-              <p class="news-description">La natación tiene una larga y rica historia en los Juegos Olímpicos moderno...</p>
-            </div>
-          </div>
+        <div id="news-container" class="load-more-product-container">
+          <!--Dinamic content--> 
         </div>
       </div>
       <script src="../js/load-more-script.js"></script>
     </section>
+
+    <!-- Script Noticias -->
+    <script type="text/javascript" src="../js/ControllersJS/NoticiasController.js"></script>
   </body>
 </html>
