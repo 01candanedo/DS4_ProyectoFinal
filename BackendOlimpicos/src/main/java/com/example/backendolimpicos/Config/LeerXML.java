@@ -12,7 +12,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 public class LeerXML {
-    private String port, dbname, user;
+    private String port, dbname, user, pass;
 
     public String getPort() {
         return port;
@@ -26,6 +26,10 @@ public class LeerXML {
         return user;
     }
 
+    public String getPass() {
+        return pass;
+    }
+
     public void datosXML() throws ParserConfigurationException, SAXException, IOException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         Base64.Decoder decoder = Base64.getUrlDecoder();
@@ -37,5 +41,7 @@ public class LeerXML {
         dbname = new String(decoder.decode(dbname));
         user = documento.getElementsByTagName("user").item(0).getTextContent();
         user = new String(decoder.decode(user));
+        pass = documento.getElementsByTagName("pass").item(0).getTextContent();
+        pass = new String(decoder.decode(pass));
     }
 }

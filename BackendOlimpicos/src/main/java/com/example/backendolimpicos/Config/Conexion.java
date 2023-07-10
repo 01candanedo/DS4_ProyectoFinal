@@ -6,12 +6,12 @@ import java.sql.SQLException;
 
 public class Conexion {
     public Connection openDb() {
-        //LeerXML obj_leer = new LeerXML();
+        LeerXML obj_leer = new LeerXML();
         try {
-            //obj_leer.datosXML();
-            String url = "jdbc:mariadb://localhost:3306/olimpicosdb";
+            obj_leer.datosXML();
+            String url = "jdbc:mariadb://localhost:"+obj_leer.getPort()+"/"+obj_leer.getDbname()+"";
             Class.forName("org.mariadb.jdbc.Driver");
-            return DriverManager.getConnection(url, "root", "");
+            return DriverManager.getConnection(url, obj_leer.getUser(), obj_leer.getPass());
         } catch (SQLException e) {
             int x = 1;
         } catch (ClassNotFoundException cnfe) {
